@@ -241,7 +241,7 @@ export const testScripts = {
   
     testResults.push({
       test: 'The function returns a new array (not a reference to arr1, or arr2).',
-      passed: combineArrs(arr1, arr2) !== arr1 || combineArrs(arr1, arr2) !== arr2,
+      passed: combineArrs(arr1, arr2) !== arr1 && combineArrs(arr1, arr2) !== arr2,
       result: printResult(),
     });
     testResults.push({
@@ -271,6 +271,43 @@ export const testScripts = {
       result: JSON.stringify(
         combineArrs(['mIxedCasing', 'mIXedCase', 'MixedcaSes'], ['MIXEDCASED', 'mistake', 'Mistaken']),
       ),
+    });
+  
+    return testResults;
+  };
+  
+  runTests();`,
+  snakeToCamelTestScript: `const runTests = () => {
+    const testResults = [];
+    testResults.push({
+      test: 'User created a function called snakeToCamel.',
+      passed: typeof snakeToCamel === 'function',
+      result: typeof snakeToCamel,
+    });
+    testResults.push({
+      test: 'Function returns a string',
+      passed: typeof snakeToCamel('python_style') === 'string',
+      result: typeof snakeToCamel('python_style'),
+    });
+    testResults.push({
+      test: 'snakeToCamel("python_style") returns "pythonStyle"',
+      passed: snakeToCamel('python_style') === 'pythonStyle',
+      result: snakeToCamel('python_style'),
+    });
+    testResults.push({
+      test: 'snakeToCamel("did_you_use_regex") returns "didYouUseRegex"',
+      passed: snakeToCamel('did_you_use_regex') === 'didYouUseRegex',
+      result: snakeToCamel('did_you_use_regex'),
+    });
+    testResults.push({
+      test: 'snakeToCamel("what_about_stack_overflow") returns "pythonStyle"',
+      passed: snakeToCamel('what_about_stack_overflow') === 'whatAboutStackOverflow',
+      result: snakeToCamel('what_about_stack_overflow'),
+    });
+    testResults.push({
+      test: 'snakeToCamel("Bad_ExAMPle_Of_SnakE_Case") returns "badExampleOfSnakeCase"',
+      passed: snakeToCamel('Bad_ExAMPle_Of_SnakE_Case') === 'badExampleOfSnakeCase',
+      result: snakeToCamel('Bad_ExAMPle_Of_SnakE_Case'),
     });
   
     return testResults;

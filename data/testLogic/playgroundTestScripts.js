@@ -1,74 +1,48 @@
 /* 
   testCriteria: [
-      'User created a function called combineArrs',
-      'Function returns an array',
-      'The Function returns a new array (not a reference to arr1 or arr2)',
-      'combineArrs([1, 3, 5], [2, 4, 6]) returns [1, 2, 3, 4, 5, 6]',
-      'combineArrs(["dogs", "cats", "hampsters"], ["snakes", "rats", "chickens"] returns ["cats", "chickens", "dogs", "hampsters", "rats", "snakes"])',
-      'combineArrs([5, -3, -1, 8, 2], [10, 9, -2, -4, 7]) returns [-4, -3, -2, -1, 2, 5, 7, 8, 9, 10]',
-      'combineArrs(["mIxedCasing", "mIXedCase", "MixedcaSes"], ["MIXEDCASED", "mistake", "Mistaken"] returns ["mistake", "Mistaken", "mIXedCase", "MIXEDCASED", "MixedcaSes", "mIxedCasing"])',
+      'User create a function called snakeToCamel',
+      'Function returns a string',
+      'snakeToCamel("python_style") returns "pythonStyle"',
+      'snakeToCamel("did_you_use_regex") returns "didYouUseRegex',
+      'snakeToCamel("what_about_stack_overflow") returns "whatAboutStackOverflow',
     ],
 */
 
-const combineArrs = (arr1, arr2) => {
+const snakeToCamel = (arr1, arr2) => {
   return arr1 === arr2;
 };
 
 const runTests = () => {
   const testResults = [];
   testResults.push({
-    test: 'User created a function called combineArrs.',
-    passed: typeof combineArrs === 'function',
-    result: typeof combineArrs,
+    test: 'User created a function called snakeToCamel.',
+    passed: typeof snakeToCamel === 'function',
+    result: typeof snakeToCamel,
   });
   testResults.push({
-    test: 'Function returns an array.',
-    passed: Array.isArray(combineArrs([1, 3, 5], [2, 4, 6])),
-    result: JSON.stringify(combineArrs([1, 3, 5], [2, 4, 6])),
-  });
-
-  const printResult = () => {
-    let arr1 = [1, 3, 5];
-    let arr2 = [2, 4, 6];
-    let result = combineArrs(arr1, arr2);
-
-    if (result === arr1) return 'Output array references arr1';
-    else if (result === arr2) return 'Output array references arr2';
-    else return 'New array created';
-  };
-
-  testResults.push({
-    test: 'The function returns a new array (not a reference to arr1, or arr2).',
-    passed: combineArrs(arr1, arr2) !== arr1 || combineArrs(arr1, arr2) !== arr2,
-    result: printResult(),
+    test: 'Function returns a string',
+    passed: typeof snakeToCamel('python_style') === 'string',
+    result: typeof snakeToCamel('python_style'),
   });
   testResults.push({
-    test: 'combineArrs([1, 3, 5], [2, 4, 6]) returns [1, 2, 3, 4, 5, 6]',
-    passed: JSON.stringify(combineArrs([1, 3, 5], [2, 4, 6])) === JSON.stringify([1, 2, 3, 4, 5, 6]),
-    result: JSON.stringify(combineArrs([1, 3, 5], [2, 4, 6])),
+    test: 'snakeToCamel("python_style") returns "pythonStyle"',
+    passed: snakeToCamel('python_style') === 'pythonStyle',
+    result: snakeToCamel('python_style'),
   });
   testResults.push({
-    test: 'combineArrs(["dogs", "cats", "hampsters"], ["snakes", "rats", "chickens"]) returns [1, 2, 3, 4, 5, 6]',
-    passed:
-      JSON.stringify(combineArrs(['dogs', 'cats', 'hampsters'], ['snakes', 'rats', 'chickens'])) ===
-      JSON.stringify(['cats', 'chickens', 'dogs', 'hampsters', 'rats', 'snakes']),
-    result: JSON.stringify(combineArrs(['dogs', 'cats', 'hampsters'], ['snakes', 'rats', 'chickens'])),
+    test: 'snakeToCamel("did_you_use_regex") returns "didYouUseRegex"',
+    passed: snakeToCamel('did_you_use_regex') === 'didYouUseRegex',
+    result: snakeToCamel('did_you_use_regex'),
   });
   testResults.push({
-    test: 'combineArrs([1, 3, 5], [2, 4, 6]) returns [1, 2, 3, 4, 5, 6]',
-    passed:
-      JSON.stringify(combineArrs([5, -3, -1, 8, 2], [10, 9, -2, -4, 7])) ===
-      JSON.stringify([-4, -3, -2, -1, 2, 5, 7, 8, 9, 10]),
-    result: JSON.stringify(combineArrs([5, -3, -1, 8, 2], [10, 9, -2, -4, 7])),
+    test: 'snakeToCamel("what_about_stack_overflow") returns "pythonStyle"',
+    passed: snakeToCamel('what_about_stack_overflow') === 'whatAboutStackOverflow',
+    result: snakeToCamel('what_about_stack_overflow'),
   });
   testResults.push({
-    test: 'combineArrs([1, 3, 5], [2, 4, 6]) returns [1, 2, 3, 4, 5, 6]',
-    passed:
-      JSON.stringify(combineArrs(['mIxedCasing', 'mIXedCase', 'MixedcaSes'], ['MIXEDCASED', 'mistake', 'Mistaken'])) ===
-      JSON.stringify(['mistake', 'Mistaken', 'mIXedCase', 'MIXEDCASED', 'MixedcaSes', 'mIxedCasing']),
-    result: JSON.stringify(
-      combineArrs(['mIxedCasing', 'mIXedCase', 'MixedcaSes'], ['MIXEDCASED', 'mistake', 'Mistaken']),
-    ),
+    test: 'snakeToCamel("Bad_ExAMPle_Of_SnakE_Case") returns "badExampleOfSnakeCase"',
+    passed: snakeToCamel('Bad_ExAMPle_Of_SnakE_Case') === 'badExampleOfSnakeCase',
+    result: snakeToCamel('Bad_ExAMPle_Of_SnakE_Case'),
   });
 
   return testResults;

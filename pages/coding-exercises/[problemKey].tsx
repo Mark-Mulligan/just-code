@@ -143,6 +143,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     'find-the-index-1',
     'compare-two-objs',
     'combine-two-arrays',
+    'snake-to-camel',
   ];
 
   let staticPaths: codingExerciseStaticPath[] = [];

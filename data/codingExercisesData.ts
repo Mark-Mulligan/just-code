@@ -130,4 +130,21 @@ export const codingExercisesData: codingExerciseData = {
       'combineArrs(["mIxedCasing", "mIXedCase", "MixedcaSes"], ["MIXEDCASED", "mistake", "Mistaken"]) returns ["mistake", "Mistaken", "mIXedCase", "MIXEDCASED", "MixedcaSes", "mIxedCasing"])',
     ],
   },
+
+  'snake-to-camel': {
+    title: 'Snakecase to Camelcase',
+    description: 'Create a function that converts a snake case string to a camel case string.',
+    instructions:
+      'Create a function that takes in one argument, a snake case string, and converts that string into camel case',
+    testScriptCode: testScripts.snakeToCamelTestScript,
+    startingCode: 'const snakeToCamel = (str) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+    testCriteria: [
+      'User create a function called snakeToCamel',
+      'Function returns a string',
+      'snakeToCamel("python_style") returns "pythonStyle"',
+      'snakeToCamel("did_you_use_regex") returns "didYouUseRegex',
+      'snakeToCamel("what_about_stack_overflow") returns "whatAboutStackOverflow',
+      'snakeToCamel("Bad_ExAMPle_Of_SnakE_Case") returns "badExampleOfSnakeCase"',
+    ],
+  },
 };
