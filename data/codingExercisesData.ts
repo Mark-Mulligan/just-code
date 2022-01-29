@@ -117,8 +117,8 @@ export const codingExercisesData: codingExerciseData = {
     title: 'Combine Two Arrays',
     description: 'Create a function that combines two arrays into one array that is sorted.',
     instructions:
-      'create a fucntion that takes in two agruments, both arrays, and combines them into a new array. This array must also be sorted. The arrays will have either strings or numbers so make sure the function can sort alphabetically. Also watch out for capitalization in the string values.',
-    testScriptCode: testScripts.compareTwoObjsTestScript,
+      'Create a fucntion that takes in two agruments, both arrays, and combines them into a new array. This array must also be sorted. The arrays will have either strings or numbers so make sure the function can sort alphabetically. Also watch out for capitalization in the string values.',
+    testScriptCode: testScripts.combineTwoArraysTestScript,
     startingCode: 'const combineArrs = (arr1, arr2) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
     testCriteria: [
       'User created a function called combineArrs',

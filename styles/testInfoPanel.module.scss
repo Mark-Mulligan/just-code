@@ -1,5 +1,7 @@
 .testInfoPanel {
   .testResults {
+    overflow: auto;
+
     li {
       margin-bottom: 10px;
     }
