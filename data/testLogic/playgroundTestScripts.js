@@ -1,43 +1,44 @@
 /* 
-  testCriteria: [
-      'User created a function called reverseStr',
-      'function returns a string',
-      'sum("Hello World") returns "dlroW olleH"',
-      'sum("Reverse Me") returns "eM esreveR"',
-      'sum("racecar") returns "racecar"',
-    ],
+  'User created a function called removeDuplicates',
+      'Function returns an array',
+      'removeDuplcates([1, 2, 1, 3, 2, 3, 4]) returns [1, 2, 3, 4]',
+      'removeDuplcates(["Sam", "Frodo", "Sam", "Gollum", "Gollum", "Aragon"]) returns ["Sam", "Frodo", "Gollum", "Aragon"]',
+      'removeDuplcates([10, 10, "test", "test", 73, "73"]) returns [10, "test", 73, "73"]',
 */
 
-const reverseStr = (arr1, arr2) => {
-  return arr1 === arr2;
+const removeDuplicates = (arr) => {
+  return arr;
 };
 
 const runTests = () => {
   const testResults = [];
   testResults.push({
-    test: 'User created a function called reverseStr.',
-    passed: typeof reverseStr === 'function',
-    result: typeof reverseStr,
+    test: 'User created a function called removeDuplicates.',
+    passed: typeof removeDuplicates === 'function',
+    result: typeof removeDuplicates,
   });
   testResults.push({
-    test: 'Function returns a string',
-    passed: typeof reverseStr('test') === 'string',
-    result: typeof reverseStr('test'),
+    test: 'Function returns an array.',
+    passed: Array.isArray(removeDuplicates([1, 2, 2, 3, 4])),
+    result: JSON.stringify(removeDuplicates([1, 2, 2, 3, 4])),
   });
   testResults.push({
-    test: 'reverseStr("Hello World") returns "dlroW olleH"',
-    passed: reverseStr('Hello World') === 'dlroW olleH',
-    result: reverseStr('Hellow World'),
+    test: 'removeDuplcates([1, 2, 1, 3, 2, 3, 4]) returns [1, 2, 3, 4]',
+    passed: JSON.stringify(removeDuplicates([1, 2, 1, 3, 2, 3, 4])) === JSON.stringify([1, 2, 3, 4]),
+    result: JSON.stringify(removeDuplicates([1, 2, 1, 3, 2, 3, 4])),
   });
   testResults.push({
-    test: 'reverseStr("Reverse Me") returns "eM esreveR"',
-    passed: reverseStr('Reverse Me') === 'eM esreveR',
-    result: reverseStr('Reverse Me'),
+    test: 'removeDuplcates([1, 2, 1, 3, 2, 3, 4]) returns [1, 2, 3, 4]',
+    passed:
+      JSON.stringify(removeDuplicates(['Sam', 'Frodo', 'Sam', 'Gollum', 'Gollum', 'Aragon'])) ===
+      JSON.stringify(['Sam', 'Frodo', 'Gollum', 'Aragon']),
+    result: JSON.stringify(removeDuplicates(['Sam', 'Frodo', 'Sam', 'Gollum', 'Gollum', 'Aragon'])),
   });
   testResults.push({
-    test: 'reverseStr("racecar") returns "racecar"',
-    passed: reverseStr('racecar') === 'racecar',
-    result: reverseStr('racecar'),
+    test: 'removeDuplcates(["Sam", "Frodo", "Sam", "Gollum", "Gollum", "Aragon"]) returns ["Sam", "Frodo", "Gollum", "Aragon"]',
+    passed:
+      JSON.stringify(removeDuplicates([10, 10, 'test', 'test', 73, '73'])) === JSON.stringify([10, 'test', 73, '73']),
+    result: JSON.stringify(removeDuplicates([10, 10, 'test', 'test', 73, '73'])),
   });
 
   return testResults;

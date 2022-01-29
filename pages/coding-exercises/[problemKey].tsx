@@ -138,6 +138,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     'sum-two-ints',
     'reverse-string',
     'sort-array-ints',
+    'remove-duplicates-array',
     'count-the-vowels',
     'largest-num-in-array',
     'sort-the-days',

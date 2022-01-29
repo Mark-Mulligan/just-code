@@ -46,11 +46,28 @@ export const codingExercisesData: codingExerciseData = {
     startingCode: 'const sortArr = (numArr) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
     testCriteria: [
       'User created a function called sortArr',
+      'Function returns an array',
       'sortArr([1, 2, 6, 4, 2]) returns [1, 2, 2, 4, 6]',
       'sortArr([10, -3, 2, -1, 7, 9]) returns [-3, -1, 2, 7, 9, 10]',
       'sortArr([-1, 1000, 10, 22, -22, 3]) returns [-22, -1, 3, 10, 22, 1000]',
     ],
   },
+  'remove-duplicates-array': {
+    title: 'Remove Duplicates From Array',
+    description: 'Create a function that removes the duplicate values from a given array.',
+    instructions:
+      'Create a function that takes in a single argument, an array, and returns an array with all the duplicates removed. For the purpose of this problem, you can return a new array or the orignal one modified, your choice.',
+    testScriptCode: testScripts.removeDuplicatesArrTestScript,
+    startingCode: 'const removeDuplicates = (arr) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+    testCriteria: [
+      'User created a function called removeDuplicates',
+      'Function returns an array',
+      'removeDuplcates([1, 2, 1, 3, 2, 3, 4]) returns [1, 2, 3, 4]',
+      'removeDuplcates(["Sam", "Frodo", "Sam", "Gollum", "Gollum", "Aragon"]) returns ["Sam", "Frodo", "Gollum", "Aragon"]',
+      'removeDuplcates([10, 10, "test", "test", 73, "73"]) returns [10, "test", 73, "73"]',
+    ],
+  },
+
   'largest-num-in-array': {
     title: 'Find Largest Number',
     description: 'Create a function that returns a the largest number from an array of integers',
