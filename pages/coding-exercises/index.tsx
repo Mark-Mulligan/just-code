@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import React, { SyntheticEvent, useState } from 'react';
 import { Container, Button, Form, Dropdown, DropdownProps } from 'semantic-ui-react';
-import { getCodingExerciseOverviews } from '../../utils/dataFetching';
+import { codingExercisesData } from '../../data/codingExercisesData';
 import { getItemsComplete } from '../../utils/localStorage';
 import ExerciseList from '../../components/ExerciseList';
 import { allExerciseOverviewData } from '../../types';
@@ -80,11 +80,9 @@ const CodingExercises: NextPage<CodingExercisesProps> = ({ codingExercisesOvervi
 export default CodingExercises;
 
 export const getStaticProps = async () => {
-  const codingExercisesOverviews = getCodingExerciseOverviews();
-
   return {
     props: {
-      codingExercisesOverviews: codingExercisesOverviews,
+      codingExercisesOverviews: codingExercisesData,
     },
   };
 };

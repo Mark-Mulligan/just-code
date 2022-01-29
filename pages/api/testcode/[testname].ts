@@ -13,12 +13,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const { userCode } = req.body;
 
     // get test script to add to user input
-
-    let testScriptName = codingExercisesData[testname].testScriptName as
-      | 'sumTwoIntsTestScript'
-      | 'sortArrayIntsTestScript';
-    let testScriptCode = testScripts[testScriptName];
-
+    let testScriptCode = codingExercisesData[testname].testScriptCode;
     let testResults = [] as testResult[];
 
     // for developer de-bugging purposes

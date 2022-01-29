@@ -1,4 +1,5 @@
 import { codingExerciseOverview } from '../types';
+import { testScripts } from './testLogic';
 
 interface codingExerciseData {
   [key: string]: codingExerciseOverview;
@@ -10,7 +11,7 @@ export const codingExercisesData: codingExerciseData = {
     description: 'Created a function that returns the sum of two integers',
     instructions:
       'Create a function that takes in two arguments (num1 & num2 that will both be integers) and returns a number that is the sum of the two integers provided.',
-    testScriptName: 'sumTwoIntsTestScript',
+    testScriptCode: testScripts.sumTwoIntsTestScript,
     startingCode: 'const sum = (num1, num2) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
     testCriteria: [
       'User created a function called sum',
@@ -25,7 +26,7 @@ export const codingExercisesData: codingExerciseData = {
     description: 'Create a function that returns a sorted array of integers',
     instructions:
       'Create a function that takes in one argument (an array of integers) and a new array with those same integers sorted from least to greatest.',
-    testScriptName: 'sortArrayIntsTestScript',
+    testScriptCode: testScripts.sortArrayIntsTestScript,
     startingCode: 'const sortArr = (numArr) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
     testCriteria: [
       'User created a function called sortArr',
@@ -38,7 +39,7 @@ export const codingExercisesData: codingExerciseData = {
     title: 'Find Largest Number',
     description: 'Create a function that returns a the largest number from an array of integers',
     instructions: 'Given a function that takes in an array of integers, return the largest number from that array.',
-    testScriptName: 'largestNumInArrayTestScript',
+    testScriptCode: testScripts.largestNumInArrayTestScript,
     startingCode: 'const largestNum = (numArr) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
     testCriteria: [
       'User created a function called largestNum',
@@ -53,7 +54,7 @@ export const codingExercisesData: codingExerciseData = {
     description: 'Create a function that counts the number of vowels there are in a string.',
     instructions:
       'Given a function that takes in a string, return the number of vowels that occur in that string.  Vowels will be a,e,i,o,u, and y.  Make sure to look for upper and lower case letters.',
-    testScriptName: 'countTheVowelsTestScript',
+    testScriptCode: testScripts.countTheVowelsTestScript,
     startingCode: 'const vowelCount = (str) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
     testCriteria: [
       'User created a function called vowelCount',
@@ -68,7 +69,7 @@ export const codingExercisesData: codingExerciseData = {
     description: 'Create a function that sorts the given days of the week.',
     instructions:
       "Create a function that takes in a string of days seperated by commas (ex. 'mon,wed,tues').  Return a string of days sorted with Monday being the start of the week and sunday being the last. The possible values in the provided string are 'mon', 'tues', 'wed', 'thurs', 'fri', 'sat', 'sun'.",
-    testScriptName: 'sortTheDaysTestScript',
+    testScriptCode: testScripts.sortTheDaysTestScript,
     startingCode: 'const sortDays = (dayStr) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
     testCriteria: [
       'User created a function called sortDays',
@@ -84,7 +85,7 @@ export const codingExercisesData: codingExerciseData = {
     description: 'Create a function that returns the index of a give value in an array.',
     instructions:
       'Create a function that takes in two arguments, an array and a target value. The function will return the index of that value in the array. If the target value is not in the array or the array is empty, return -1.',
-    testScriptName: 'findTheIndex1TestScript',
+    testScriptCode: testScripts.findTheIndex1TestScript,
     startingCode: 'const findIndex = (sourceArr, targetValue) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
     testCriteria: [
       'User created a function called findIndex',
