@@ -1,53 +1,76 @@
 /* 
- testCriteria: [
-      'User created a function called compareObjs',
-      'Functions reutrns a boolean',
-      'compareObjs({ name: "John", job: "Web Developer" }, { name: "Steve", job: "Welder" }) returns false',
-      'compareObjs({ title: "The Witcher", streaming: "Netflix" }, { title: "The Witcher", streaming: "Netflix" }) returns true',
-      'compareObjs({ favorites: { food: "pizza", color: "green" }, age: 27 }, { age: 27, { food: "pizza", color: "green" }}) returns true',
+  testCriteria: [
+      'User created a function called combineArrs',
+      'Function returns an array',
+      'The Function returns a new array (not a reference to arr1 or arr2)',
+      'combineArrs([1, 3, 5], [2, 4, 6]) returns [1, 2, 3, 4, 5, 6]',
+      'combineArrs(["dogs", "cats", "hampsters"], ["snakes", "rats", "chickens"] returns ["cats", "chickens", "dogs", "hampsters", "rats", "snakes"])',
+      'combineArrs([5, -3, -1, 8, 2], [10, 9, -2, -4, 7]) returns [-4, -3, -2, -1, 2, 5, 7, 8, 9, 10]',
+      'combineArrs(["mIxedCasing", "mIXedCase", "MixedcaSes"], ["MIXEDCASED", "mistake", "Mistaken"] returns ["mistake", "Mistaken", "mIXedCase", "MIXEDCASED", "MixedcaSes", "mIxedCasing"])',
     ],
 */
 
-const compareObjs = (obj1, obj2) => {
-  return obj1 === obj2;
+const combineArrs = (arr1, arr2) => {
+  return arr1 === arr2;
 };
 
 const runTests = () => {
   const testResults = [];
   testResults.push({
-    test: 'User created a function called compareObjs.',
-    passed: typeof compareObjs === 'function',
-    result: typeof compareObjs,
+    test: 'User created a function called combineArrs.',
+    passed: typeof combineArrs === 'function',
+    result: typeof combineArrs,
   });
   testResults.push({
-    test: 'Function returns a boolean',
-    passed: typeof compareObjs({ name: 'test' }, { name: 'test' }) === 'boolean',
-    result: typeof compareObjs({ name: 'test' }, { name: 'test' }),
+    test: 'Function returns an array.',
+    passed: Array.isArray(combineArrs([1, 3, 5], [2, 4, 6])),
+    result: JSON.stringify(combineArrs([1, 3, 5], [2, 4, 6])),
+  });
+
+  const printResult = () => {
+    let arr1 = [1, 3, 5];
+    let arr2 = [2, 4, 6];
+    let result = combineArrs(arr1, arr2);
+
+    if (result === arr1) return 'Output array references arr1';
+    else if (result === arr2) return 'Output array references arr2';
+    else return 'New array created';
+  };
+
+  testResults.push({
+    test: 'The function returns a new array (not a reference to arr1, or arr2).',
+    passed: combineArrs(arr1, arr2) !== arr1 || combineArrs(arr1, arr2) !== arr2,
+    result: printResult(),
   });
   testResults.push({
-    test: 'compareObjs({ name: "John", job: "Web Developer" }, { name: "Steve", job: "Welder" }) returns false',
-    passed: compareObjs({ name: 'John', job: 'Web Developer' }, { name: 'Steve', job: 'Welder' }) === false,
-    result: compareObjs({ name: 'John', job: 'Web Developer' }, { name: 'Steve', job: 'Welder' }),
+    test: 'combineArrs([1, 3, 5], [2, 4, 6]) returns [1, 2, 3, 4, 5, 6]',
+    passed: JSON.stringify(combineArrs([1, 3, 5], [2, 4, 6])) === JSON.stringify([1, 2, 3, 4, 5, 6]),
+    result: JSON.stringify(combineArrs([1, 3, 5], [2, 4, 6])),
   });
   testResults.push({
-    test: 'compareObjs({ title: "The Witcher", streaming: "Netflix" }, { title: "The Witcher", streaming: "Netflix" })  returns true',
+    test: 'combineArrs(["dogs", "cats", "hampsters"], ["snakes", "rats", "chickens"]) returns [1, 2, 3, 4, 5, 6]',
     passed:
-      compareObjs({ title: 'The Witcher', streaming: 'Netflix' }, { title: 'The Witcher', streaming: 'Netflix' }) ===
-      true,
-    result: compareObjs({ title: 'The Witcher', streaming: 'Netflix' }, { title: 'The Witcher', streaming: 'Netflix' }),
+      JSON.stringify(combineArrs(['dogs', 'cats', 'hampsters'], ['snakes', 'rats', 'chickens'])) ===
+      JSON.stringify(['cats', 'chickens', 'dogs', 'hampsters', 'rats', 'snakes']),
+    result: JSON.stringify(combineArrs(['dogs', 'cats', 'hampsters'], ['snakes', 'rats', 'chickens'])),
   });
   testResults.push({
-    test: 'compareObjs({ favorites: { food: "pizza", color: "green" }, age: 27 }, { age: 27, favorites: {food: "pizza", color: "green" }}) returns true',
+    test: 'combineArrs([1, 3, 5], [2, 4, 6]) returns [1, 2, 3, 4, 5, 6]',
     passed:
-      compareObjs(
-        { favorites: { food: 'pizza', color: 'green' }, age: 27 },
-        { age: 27, favorites: { food: 'pizza', color: 'green' } },
-      ) === true,
-    result: compareObjs(
-      { favorites: { food: 'pizza', color: 'green' }, age: 27 },
-      { age: 27, favorites: { food: 'pizza', color: 'green' } },
+      JSON.stringify(combineArrs([5, -3, -1, 8, 2], [10, 9, -2, -4, 7])) ===
+      JSON.stringify([-4, -3, -2, -1, 2, 5, 7, 8, 9, 10]),
+    result: JSON.stringify(combineArrs([5, -3, -1, 8, 2], [10, 9, -2, -4, 7])),
+  });
+  testResults.push({
+    test: 'combineArrs([1, 3, 5], [2, 4, 6]) returns [1, 2, 3, 4, 5, 6]',
+    passed:
+      JSON.stringify(combineArrs(['mIxedCasing', 'mIXedCase', 'MixedcaSes'], ['MIXEDCASED', 'mistake', 'Mistaken'])) ===
+      JSON.stringify(['mistake', 'Mistaken', 'mIXedCase', 'MIXEDCASED', 'MixedcaSes', 'mIxedCasing']),
+    result: JSON.stringify(
+      combineArrs(['mIxedCasing', 'mIXedCase', 'MixedcaSes'], ['MIXEDCASED', 'mistake', 'Mistaken']),
     ),
   });
+
   return testResults;
 };
 
