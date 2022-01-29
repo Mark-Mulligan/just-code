@@ -8,17 +8,33 @@ interface codingExerciseData {
 export const codingExercisesData: codingExerciseData = {
   'sum-two-ints': {
     title: 'Sum Two Integers',
-    description: 'Created a function that returns the sum of two integers',
+    description: 'Create a function that returns the sum of two integers.',
     instructions:
       'Create a function that takes in two arguments (num1 & num2 that will both be integers) and returns a number that is the sum of the two integers provided.',
     testScriptCode: testScripts.sumTwoIntsTestScript,
     startingCode: 'const sum = (num1, num2) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
     testCriteria: [
       'User created a function called sum',
-      'function returns a number',
+      'Function returns a number',
       'sum(1, 2) returns 3',
       'sum(5, 10) returns 15',
-      'sum(-1, -4 returns -5',
+      'sum(-1, -4) returns -5',
+    ],
+  },
+
+  'reverse-string': {
+    title: 'Reverse A String',
+    description: 'Create a function that returns a string reversed.',
+    instructions:
+      'Create a function that takes in a single argument, a string, and returns a reversed version of that string.',
+    testScriptCode: testScripts.reversStringTestScript,
+    startingCode: 'const reverseStr = (str) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+    testCriteria: [
+      'User created a function called reverseStr',
+      'Function returns a string',
+      'reverseStr("Hello World") returns "dlroW olleH"',
+      'reverseStr("Reverse Me") returns "eM esreveR"',
+      'reverseStr("racecar") returns "racecar"',
     ],
   },
   'sort-array-ints': {
