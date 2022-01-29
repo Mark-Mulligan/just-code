@@ -2,7 +2,7 @@ export type codingExerciseOverview = {
   title: string;
   description: string;
   instructions: string;
-  testScript: string;
+  testScriptName: string;
   startingCode: string;
   testCriteria: string[];
 };

@@ -1,8 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { testScripts } from '../../../data/testLogic';
-import fs from 'fs';
+// import fs from 'fs';
 import { VM } from 'vm2';
 import { testResult } from '../../../types';
+import { codingExercisesData } from '../../../data/codingExercisesData';
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const vm = new VM({ timeout: 1000, sandbox: {} });
@@ -12,8 +13,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const { userCode } = req.body;
 
     // get test script to add to user input
-    const testOverviewData = JSON.parse(fs.readFileSync('data/codingExercisesData.json', 'utf-8'));
-    let testScriptName = testOverviewData[testname].testScriptName as
+
+    let testScriptName = codingExercisesData[testname].testScriptName as
       | 'sumTwoIntsTestScript'
       | 'sortArrayIntsTestScript';
     let testScriptCode = testScripts[testScriptName];
