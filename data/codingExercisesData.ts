@@ -53,7 +53,7 @@ export const codingExercisesData: codingExerciseData = {
     title: 'Count The Vowels',
     description: 'Create a function that counts the number of vowels there are in a string.',
     instructions:
-      'Given a function that takes in a string, return the number of vowels that occur in that string.  Vowels will be a,e,i,o,u, and y.  Make sure to look for upper and lower case letters.',
+      'Given a function that takes in a string, return the number of vowels that occur in that string.  Vowels will be a,e,i,o,u (we will not count y). Make sure to look for upper and lower case letters.',
     testScriptCode: testScripts.countTheVowelsTestScript,
     startingCode: 'const vowelCount = (str) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
     testCriteria: [

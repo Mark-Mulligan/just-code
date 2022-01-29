@@ -93,8 +93,8 @@ export const testScripts = {
       result: vowelCount('This is a test sentence.'),
     });
     testResults.push({
-      test: 'vowelCount("If you have not checked out FreeCodeCamp, you should. It is Awesome!!!") returns 27',
-      passed: vowelCount('If you have not checked out FreeCodeCamp, you should. It is Awesome!!!') === 27,
+      test: 'vowelCount("If you have not checked out FreeCodeCamp, you should. It is Awesome!!!") returns 25',
+      passed: vowelCount('If you have not checked out FreeCodeCamp, you should. It is Awesome!!!') === 25,
       result: vowelCount('If you have not checked out FreeCodeCamp, you should. It is Awesome!!!'),
     });
     testResults.push({
