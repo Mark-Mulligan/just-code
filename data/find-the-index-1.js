@@ -1,14 +1,6 @@
 const findIndex = (sourceArr, targetValue) => {
   // Add Code Below
-  let result = 0;
-
-  for (let i = 0; i < sourceArr.length; i++) {
-    if (sourceArr[i] === targetValue) {
-      return i;
-    }
-  }
-
-  return result;
+  return sourceArr.indexOf(targetValue);
 
   // Add Code Above
 }
