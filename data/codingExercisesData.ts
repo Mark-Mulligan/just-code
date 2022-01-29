@@ -96,4 +96,20 @@ export const codingExercisesData: codingExerciseData = {
       "findIndex(['apple', 'orange', 'grape'], 'pineapple') returns -1",
     ],
   },
+
+  'compare-two-objs': {
+    title: 'Compare Two Objects',
+    description: 'Create a function that sees if two objects contain the same key, value pairs.',
+    instructions:
+      'Create a function that takes in two arguments, two objects, and returns a boolean of whether or not those two objects have the same key, value pairs. Remember, objects in javascript are reference types so you can use === to compare them.',
+    testScriptCode: testScripts.compareTwoObjsTestScript,
+    startingCode: 'const compareObjs = (obj1, obj2) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+    testCriteria: [
+      'User created a function called compareObjs',
+      'Functions reutrns a boolean',
+      'compareObjs({ name: "John", job: "Web Developer" }, { name: "Steve", job: "Welder" }) returns false',
+      'compareObjs({ title: "The Witcher", streaming: "Netflix" }, { title: "The Witcher", streaming: "Netflix" }) returns true',
+      'compareObjs({ favorites: { food: "pizza", color: "green" }, age: 27 }, { age: 27, favorites: {food: "pizza", color: "green" }}) returns true',
+    ],
+  },
 };

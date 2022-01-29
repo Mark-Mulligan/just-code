@@ -1,47 +1,52 @@
-/* "testCriteria": [
-  "User created a function called findIndex",
-  "Function returns a number",
-  "findIndex([0, 2, 10, -10, 3], -10) returns 3",
-  "findIndex(['testing', 'test', 'tester', 'tested'], 'test') returns 1",
-  "findIndex([]) returns -1",
-  "findIndex(['apple', 'orange', 'grape'], 'pineapple') returns -1"
-] */
+/* 
+ testCriteria: [
+      'User created a function called compareObjs',
+      'Functions reutrns a boolean',
+      'compareObjs({ name: "John", job: "Web Developer" }, { name: "Steve", job: "Welder" }) returns false',
+      'compareObjs({ title: "The Witcher", streaming: "Netflix" }, { title: "The Witcher", streaming: "Netflix" }) returns true',
+      'compareObjs({ favorites: { food: "pizza", color: "green" }, age: 27 }, { age: 27, { food: "pizza", color: "green" }}) returns true',
+    ],
+*/
 
-const findIndex = (inputArr, targetValue) => {
-  return inputArr.indexOf(targetValue);
+const compareObjs = (obj1, obj2) => {
+  return obj1 === obj2;
 };
 
 const runTests = () => {
   const testResults = [];
   testResults.push({
-    test: 'User created a function called findIndex.',
-    passed: typeof findIndex === 'function',
-    result: typeof findIndex,
+    test: 'User created a function called compareObjs.',
+    passed: typeof compareObjs === 'function',
+    result: typeof compareObjs,
   });
   testResults.push({
-    test: 'Function returns a string',
-    passed: typeof findIndex([1, 2, 3, 4]) === 'number',
-    result: typeof findIndex([1, 2, 3, 4]),
+    test: 'Function returns a boolean',
+    passed: typeof compareObjs({ name: 'test' }, { name: 'test' }) === 'boolean',
+    result: typeof compareObjs({ name: 'test' }, { name: 'test' }),
   });
   testResults.push({
-    test: 'findIndex([0, 2, 10, -10, 3], -10) returns 3',
-    passed: findIndex([0, 2, 10, -10, 3], -10) === 3,
-    result: findIndex([0, 2, 10, -10, 3], -10),
+    test: 'compareObjs({ name: "John", job: "Web Developer" }, { name: "Steve", job: "Welder" }) returns false',
+    passed: compareObjs({ name: 'John', job: 'Web Developer' }, { name: 'Steve', job: 'Welder' }) === false,
+    result: compareObjs({ name: 'John', job: 'Web Developer' }, { name: 'Steve', job: 'Welder' }),
   });
   testResults.push({
-    test: 'findIndex(["testing", "test", "tester", "tested"], "test") returns 1',
-    passed: findIndex(['testing', 'test', 'tester', 'tested'], 'test') === 1,
-    result: findIndex(['testing', 'test', 'tester', 'tested'], 'test'),
+    test: 'compareObjs({ title: "The Witcher", streaming: "Netflix" }, { title: "The Witcher", streaming: "Netflix" })  returns true',
+    passed:
+      compareObjs({ title: 'The Witcher', streaming: 'Netflix' }, { title: 'The Witcher', streaming: 'Netflix' }) ===
+      true,
+    result: compareObjs({ title: 'The Witcher', streaming: 'Netflix' }, { title: 'The Witcher', streaming: 'Netflix' }),
   });
   testResults.push({
-    test: 'findIndex([], "something") returns -1',
-    passed: findIndex([], 'something') === -1,
-    result: findIndex([], 'something'),
-  });
-  testResults.push({
-    test: 'findIndex([]) returns -1',
-    passed: findIndex(['apple', 'orange', 'grape'], 'pineapple') === -1,
-    result: findIndex(['apple', 'orange', 'grape'], 'pineapple'),
+    test: 'compareObjs({ favorites: { food: "pizza", color: "green" }, age: 27 }, { age: 27, favorites: {food: "pizza", color: "green" }}) returns true',
+    passed:
+      compareObjs(
+        { favorites: { food: 'pizza', color: 'green' }, age: 27 },
+        { age: 27, favorites: { food: 'pizza', color: 'green' } },
+      ) === true,
+    result: compareObjs(
+      { favorites: { food: 'pizza', color: 'green' }, age: 27 },
+      { age: 27, favorites: { food: 'pizza', color: 'green' } },
+    ),
   });
   return testResults;
 };
