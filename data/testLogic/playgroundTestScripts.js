@@ -1,43 +1,124 @@
 /* 
-  testCriteria: [
-      'User created a function called rockPaperScissors',
+   testCriteria: [
+      'User create a function called ticTacToe',
       'Function returns a string',
-      'rockPaperScissors("rock") returns "paper"',
-      'rockPaperScissors("paper") returns "scissors"',
-      'rockPaperScissors("scissors") returns "rock"',
+      'ticTacToe([["X", "X", "X"], ["O", "O", "X"], ["X", "O", "O"]]) returns "X wins"',
+      'ticTacToe([["X", "O", "X"], ["O", "O", "X"], ["", "", "X"]]) returns "X wins"',
+      'ticTacToe([["X", "X", "O"], ["X", "O", ""], ["O", "", ""]]) returns "O wins"',
+      'ticTacToe([["O", "X", "X"], ["", "O", ""], ["X", "", "O"]]) returns "O wins"',
+      'ticTacToe([["X", "", "O"], ["X", "O", ""], ["X", "O", "X"]]) returns "X wins"',
+      'ticTacToe([["X", "O", "O"], ["O", "X", "X"], ["X", "X", "O"]]) returns "tie"',
     ],
 */
 
-const rockPaperScissors = (arr) => {
-  return arr;
+const ticTacToe = (gameboard) => {
+  return gameboard;
 };
 
 const runTests = () => {
   const testResults = [];
   testResults.push({
-    test: 'User created a function rockPaperScissors.',
-    passed: typeof rockPaperScissors === 'function',
-    result: typeof rockPaperScissors,
+    test: 'User created a function ticTacToe.',
+    passed: typeof ticTacToe === 'function',
+    result: typeof ticTacToe,
   });
   testResults.push({
     test: 'Function returns a string.',
-    passed: typeof rockPaperScissors('rock') === 'string',
-    result: typeof rockPaperScissors('rock'),
+    passed:
+      typeof ticTacToe([
+        ['X', 'O', 'O'],
+        ['O', 'X', 'X'],
+        ['X', 'X', 'O'],
+      ]) === 'string',
+    result: typeof ticTacToe([
+      ['X', 'O', 'O'],
+      ['O', 'X', 'X'],
+      ['X', 'X', 'O'],
+    ]),
   });
   testResults.push({
-    test: 'rockPaperScissors("rock") returns "paper"',
-    passed: rockPaperScissors('rock') === 'paper',
-    result: rockPaperScissors('rock'),
+    test: 'ticTacToe([["X", "X", "X"], ["O", "O", "X"], ["X", "O", "O"]]) returns "X wins"',
+    passed:
+      ticTacToe([
+        ['X', 'X', 'X'],
+        ['O', 'O', 'X'],
+        ['X', 'O', 'O'],
+      ]) === 'X wins',
+    result: ticTacToe([
+      ['X', 'X', 'X'],
+      ['O', 'O', 'X'],
+      ['X', 'O', 'O'],
+    ]),
   });
   testResults.push({
-    test: 'rockPaperScissors("paper") returns "scissors"',
-    passed: rockPaperScissors('scissors') === 'scissors',
-    result: rockPaperScissors('scissors'),
+    test: 'ticTacToe([["X", "O", "X"], ["O", "O", "X"], ["", "", "X"]]) returns "X wins"',
+    passed:
+      ticTacToe([
+        ['X', 'O', 'X'],
+        ['O', 'O', 'X'],
+        ['', '', 'X'],
+      ]) === 'X wins',
+    result: ticTacToe([
+      ['X', 'O', 'X'],
+      ['O', 'O', 'X'],
+      ['', '', 'X'],
+    ]),
   });
   testResults.push({
-    test: 'rockPaperScissors("scissors") returns "rock"',
-    passed: rockPaperScissors('scissors') === 'rock',
-    result: rockPaperScissors('scissors'),
+    test: 'ticTacToe([["X", "X", "O"], ["X", "O", ""], ["O", "", ""]]) returns "O wins"',
+    passed:
+      ticTacToe([
+        ['X', 'X', 'O'],
+        ['X', 'O', ''],
+        ['O', '', ''],
+      ]) === 'O wins',
+    result: ticTacToe([
+      ['X', 'X', 'O'],
+      ['X', 'O', ''],
+      ['O', '', ''],
+    ]),
+  });
+  testResults.push({
+    test: 'ticTacToe([["O", "X", "X"], ["", "O", ""], ["X", "", "O"]]) returns "O wins"',
+    passed:
+      ticTacToe([
+        ['O', 'X', 'X'],
+        ['', 'O', ''],
+        ['X', '', 'O'],
+      ]) === 'O wins',
+    result: ticTacToe([
+      ['O', 'X', 'X'],
+      ['', 'O', ''],
+      ['X', '', 'O'],
+    ]),
+  });
+  testResults.push({
+    test: 'ticTacToe([["X", "", "O"], ["X", "O", ""], ["X", "O", "X"]]) returns "X wins"',
+    passed:
+      ticTacToe([
+        ['X', '', 'O'],
+        ['X', 'O', ''],
+        ['X', 'O', 'X'],
+      ]) === 'X wins',
+    result: ticTacToe([
+      ['X', '', 'O'],
+      ['X', 'O', ''],
+      ['X', 'O', 'X'],
+    ]),
+  });
+  testResults.push({
+    test: 'ticTacToe([["X", "O", "O"], ["O", "X", "X"], ["X", "X", "O"]]) returns "tie"',
+    passed:
+      ticTacToe([
+        ['X', 'O', 'O'],
+        ['O', 'X', 'X'],
+        ['X', 'X', 'O'],
+      ]) === 'tie',
+    result: ticTacToe([
+      ['X', 'O', 'O'],
+      ['O', 'X', 'X'],
+      ['X', 'X', 'O'],
+    ]),
   });
 
   return testResults;
