@@ -136,6 +136,7 @@ export default PracticeProblem;
 export const getStaticPaths: GetStaticPaths = async () => {
   const codingExercises = [
     'sum-two-ints',
+    'find-the-total-length',
     'reverse-string',
     'sort-array-ints',
     'remove-duplicates-array',

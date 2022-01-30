@@ -1,44 +1,44 @@
 /* 
-  'User created a function called removeDuplicates',
-      'Function returns an array',
-      'removeDuplcates([1, 2, 1, 3, 2, 3, 4]) returns [1, 2, 3, 4]',
-      'removeDuplcates(["Sam", "Frodo", "Sam", "Gollum", "Gollum", "Aragon"]) returns ["Sam", "Frodo", "Gollum", "Aragon"]',
-      'removeDuplcates([10, 10, "test", "test", 73, "73"]) returns [10, "test", 73, "73"]',
+ testCriteria: [
+      'User created a function called totalLength',
+      'Function returns a number',
+      'totalLength(["Somebody", "once", "told", "me"]) returns 18',
+      'totalLength(["the", "world", "is", "gonna", "roll", "me"]) return 21',
+      'totalLength(["I", "aint", "the", "sharpest", "tool", "in", "the", "shed"]) returns 29'
+    ]
 */
 
-const removeDuplicates = (arr) => {
+const totalLength = (arr) => {
   return arr;
 };
 
 const runTests = () => {
   const testResults = [];
   testResults.push({
-    test: 'User created a function called removeDuplicates.',
-    passed: typeof removeDuplicates === 'function',
-    result: typeof removeDuplicates,
+    test: 'User created a function totalLength.',
+    passed: typeof totalLength === 'function',
+    result: typeof totalLength,
   });
   testResults.push({
-    test: 'Function returns an array.',
-    passed: Array.isArray(removeDuplicates([1, 2, 2, 3, 4])),
-    result: JSON.stringify(removeDuplicates([1, 2, 2, 3, 4])),
+    test: 'Function returns a number.',
+    passed: typeof totalLength(['this', 'is', 'a', 'test']) === 'number',
+    result: typeof totalLength(['this', 'is', 'a', 'test']),
   });
   testResults.push({
-    test: 'removeDuplcates([1, 2, 1, 3, 2, 3, 4]) returns [1, 2, 3, 4]',
-    passed: JSON.stringify(removeDuplicates([1, 2, 1, 3, 2, 3, 4])) === JSON.stringify([1, 2, 3, 4]),
-    result: JSON.stringify(removeDuplicates([1, 2, 1, 3, 2, 3, 4])),
+    test: 'totalLength(["Somebody", "once", "told", "me"]) returns 18',
+    passed: totalLength(['Somebody', 'once', 'told', 'me']) === 18,
+    result: totalLength(['Somebody', 'once', 'told', 'me']),
   });
   testResults.push({
-    test: 'removeDuplcates([1, 2, 1, 3, 2, 3, 4]) returns [1, 2, 3, 4]',
-    passed:
-      JSON.stringify(removeDuplicates(['Sam', 'Frodo', 'Sam', 'Gollum', 'Gollum', 'Aragon'])) ===
-      JSON.stringify(['Sam', 'Frodo', 'Gollum', 'Aragon']),
-    result: JSON.stringify(removeDuplicates(['Sam', 'Frodo', 'Sam', 'Gollum', 'Gollum', 'Aragon'])),
+    test: 'totalLength(["the", "world", "is", "gonna", "roll", "me"]) return 21',
+    passed: totalLength(['the', 'world', 'is', 'gonna', 'roll', 'me']) === 21,
+    result: totalLength(['the', 'world', 'is', 'gonna', 'roll', 'me']),
   });
+
   testResults.push({
-    test: 'removeDuplcates(["Sam", "Frodo", "Sam", "Gollum", "Gollum", "Aragon"]) returns ["Sam", "Frodo", "Gollum", "Aragon"]',
-    passed:
-      JSON.stringify(removeDuplicates([10, 10, 'test', 'test', 73, '73'])) === JSON.stringify([10, 'test', 73, '73']),
-    result: JSON.stringify(removeDuplicates([10, 10, 'test', 'test', 73, '73'])),
+    test: 'totalLength(["I", "aint", "the", "sharpest", "tool", "in", "the", "shed"] returns 29',
+    passed: totalLength(['I', 'aint', 'the', 'sharpest', 'tool', 'in', 'the', 'shed']) === 29,
+    result: totalLength(['I', 'aint', 'the', 'sharpest', 'tool', 'in', 'the', 'shed']),
   });
 
   return testResults;

@@ -22,6 +22,22 @@ export const codingExercisesData: codingExerciseData = {
     ],
   },
 
+  'find-the-total-length': {
+    title: 'Find The Total Length',
+    description: 'Create a function that finds the total length of all the string in an array combined.',
+    instructions:
+      'Create a function that takes in an array of strings. Return the length of all the strings in that array combined. In others words, the length of what the string would be if all elements of the array were combined into one long string.',
+    testScriptCode: testScripts.findTheTotalLengthTestScript,
+    startingCode: 'const totalLength = (strArr) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+    testCriteria: [
+      'User created a function called totalLength',
+      'Function returns a number',
+      'totalLength(["Somebody", "once", "told", "me"]) returns 18',
+      'totalLength(["the", "world", "is", "gonna", "roll", "me"]) return 21',
+      'totalLength(["I", "aint", "the", "sharpest", "tool", "in", "the", "shed"]) returns 29',
+    ],
+  },
+
   'reverse-string': {
     title: 'Reverse A String',
     description: 'Create a function that returns a string reversed.',
