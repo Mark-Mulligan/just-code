@@ -1,124 +1,49 @@
 /* 
    testCriteria: [
-      'User create a function called ticTacToe',
-      'Function returns a string',
-      'ticTacToe([["X", "X", "X"], ["O", "O", "X"], ["X", "O", "O"]]) returns "X wins"',
-      'ticTacToe([["X", "O", "X"], ["O", "O", "X"], ["", "", "X"]]) returns "X wins"',
-      'ticTacToe([["X", "X", "O"], ["X", "O", ""], ["O", "", ""]]) returns "O wins"',
-      'ticTacToe([["O", "X", "X"], ["", "O", ""], ["X", "", "O"]]) returns "O wins"',
-      'ticTacToe([["X", "", "O"], ["X", "O", ""], ["X", "O", "X"]]) returns "X wins"',
-      'ticTacToe([["X", "O", "O"], ["O", "X", "X"], ["X", "X", "O"]]) returns "tie"',
+      'User created a function called tipCalc',
+      'tipCalc returns a string',
+      'tipCalc("$25.97", "20%") returns $5.19',
+      'tipCalc("$43.28", "21%") returns $9.09',
+      'tipCalc("$12.63", "18%") returns $2.27',
+      'tipCalc("101.73", "25%") returns $25.43',
     ],
 */
 
-const ticTacToe = (gameboard) => {
+const tipCalc = (gameboard) => {
   return gameboard;
 };
 
 const runTests = () => {
   const testResults = [];
   testResults.push({
-    test: 'User created a function ticTacToe.',
-    passed: typeof ticTacToe === 'function',
-    result: typeof ticTacToe,
+    test: 'User created a function tipCalc.',
+    passed: typeof tipCalc === 'function',
+    result: typeof tipCalc,
   });
   testResults.push({
     test: 'Function returns a string.',
-    passed:
-      typeof ticTacToe([
-        ['X', 'O', 'O'],
-        ['O', 'X', 'X'],
-        ['X', 'X', 'O'],
-      ]) === 'string',
-    result: typeof ticTacToe([
-      ['X', 'O', 'O'],
-      ['O', 'X', 'X'],
-      ['X', 'X', 'O'],
-    ]),
+    passed: typeof tipCalc('$25.97', '20%') === 'string',
+    result: typeof tipCalc('$25.97', '20%'),
   });
   testResults.push({
-    test: 'ticTacToe([["X", "X", "X"], ["O", "O", "X"], ["X", "O", "O"]]) returns "X wins"',
-    passed:
-      ticTacToe([
-        ['X', 'X', 'X'],
-        ['O', 'O', 'X'],
-        ['X', 'O', 'O'],
-      ]) === 'X wins',
-    result: ticTacToe([
-      ['X', 'X', 'X'],
-      ['O', 'O', 'X'],
-      ['X', 'O', 'O'],
-    ]),
+    test: 'tipCalc("$25.97", "20%") returns $5.19',
+    passed: tipCalc('$25.97', '20%') === '$5.19',
+    result: tipCalc('$25.97', '20%'),
   });
   testResults.push({
-    test: 'ticTacToe([["X", "O", "X"], ["O", "O", "X"], ["", "", "X"]]) returns "X wins"',
-    passed:
-      ticTacToe([
-        ['X', 'O', 'X'],
-        ['O', 'O', 'X'],
-        ['', '', 'X'],
-      ]) === 'X wins',
-    result: ticTacToe([
-      ['X', 'O', 'X'],
-      ['O', 'O', 'X'],
-      ['', '', 'X'],
-    ]),
+    test: 'tipCalc("$43.28", "21%") returns $9.09',
+    passed: tipCalc('$43.28', '21%') === '$9.09',
+    result: tipCalc('$43.28', '21%'),
   });
   testResults.push({
-    test: 'ticTacToe([["X", "X", "O"], ["X", "O", ""], ["O", "", ""]]) returns "O wins"',
-    passed:
-      ticTacToe([
-        ['X', 'X', 'O'],
-        ['X', 'O', ''],
-        ['O', '', ''],
-      ]) === 'O wins',
-    result: ticTacToe([
-      ['X', 'X', 'O'],
-      ['X', 'O', ''],
-      ['O', '', ''],
-    ]),
+    test: 'tipCalc("$12.63", "18%") returns $2.27',
+    passed: tipCalc('$12.63', '18%') === '$2.27',
+    result: tipCalc('$12.63', '18%'),
   });
   testResults.push({
-    test: 'ticTacToe([["O", "X", "X"], ["", "O", ""], ["X", "", "O"]]) returns "O wins"',
-    passed:
-      ticTacToe([
-        ['O', 'X', 'X'],
-        ['', 'O', ''],
-        ['X', '', 'O'],
-      ]) === 'O wins',
-    result: ticTacToe([
-      ['O', 'X', 'X'],
-      ['', 'O', ''],
-      ['X', '', 'O'],
-    ]),
-  });
-  testResults.push({
-    test: 'ticTacToe([["X", "", "O"], ["X", "O", ""], ["X", "O", "X"]]) returns "X wins"',
-    passed:
-      ticTacToe([
-        ['X', '', 'O'],
-        ['X', 'O', ''],
-        ['X', 'O', 'X'],
-      ]) === 'X wins',
-    result: ticTacToe([
-      ['X', '', 'O'],
-      ['X', 'O', ''],
-      ['X', 'O', 'X'],
-    ]),
-  });
-  testResults.push({
-    test: 'ticTacToe([["X", "O", "O"], ["O", "X", "X"], ["X", "X", "O"]]) returns "tie"',
-    passed:
-      ticTacToe([
-        ['X', 'O', 'O'],
-        ['O', 'X', 'X'],
-        ['X', 'X', 'O'],
-      ]) === 'tie',
-    result: ticTacToe([
-      ['X', 'O', 'O'],
-      ['O', 'X', 'X'],
-      ['X', 'X', 'O'],
-    ]),
+    test: 'tipCalc("101.73", "25%") returns $25.43',
+    passed: tipCalc('$101.73', '25%') === '$25.43',
+    result: tipCalc('$101.73', '25%'),
   });
 
   return testResults;

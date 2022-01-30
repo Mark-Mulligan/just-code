@@ -69,6 +69,20 @@ export const codingExercisesData: codingExerciseData = {
       'reverseStr("racecar") returns "racecar"',
     ],
   },
+  'largest-num-in-array': {
+    title: 'Find Largest Number',
+    description: 'Create a function that returns a the largest number from an array of integers',
+    instructions: 'Given a function that takes in an array of integers, return the largest number from that array.',
+    testScriptCode: testScripts.largestNumInArrayTestScript,
+    startingCode: 'const largestNum = (numArr) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+    testCriteria: [
+      'User created a function called largestNum',
+      'function return a number',
+      'largestNum([1, 8, 10, 5, 12]) returns 12',
+      'largestNum([-4, 1, 80, 2, 1]) returns 80',
+      'largestNum([-5, -2, -1, -3, -20]) returns -1',
+    ],
+  },
   'sort-array-ints': {
     title: 'Sort Array Of Integers',
     description: 'Create a function that returns a sorted array of integers',
@@ -82,6 +96,53 @@ export const codingExercisesData: codingExerciseData = {
       'sortArr([1, 2, 6, 4, 2]) returns [1, 2, 2, 4, 6]',
       'sortArr([10, -3, 2, -1, 7, 9]) returns [-3, -1, 2, 7, 9, 10]',
       'sortArr([-1, 1000, 10, 22, -22, 3]) returns [-22, -1, 3, 10, 22, 1000]',
+    ],
+  },
+  'find-the-index-1': {
+    title: 'Find the Index (Level 1)',
+    description: 'Create a function that returns the index of a give value in an array.',
+    instructions:
+      'Create a function that takes in two arguments, an array and a target value. The function will return the index of that value in the array. If the target value is not in the array or the array is empty, return -1.',
+    testScriptCode: testScripts.findTheIndex1TestScript,
+    startingCode: 'const findIndex = (sourceArr, targetValue) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+    testCriteria: [
+      'User created a function called findIndex',
+      'Function returns a number',
+      'findIndex([0, 2, 10, -10, 3], -10) returns 3',
+      "findIndex(['testing', 'test', 'tester', 'tested'], 'test') returns 1",
+      "findIndex([], 'something') returns -1",
+      "findIndex(['apple', 'orange', 'grape'], 'pineapple') returns -1",
+    ],
+  },
+  'count-the-vowels': {
+    title: 'Count The Vowels',
+    description: 'Create a function that counts the number of vowels there are in a string.',
+    instructions:
+      'Given a function that takes in a string, return the number of vowels that occur in that string.  Vowels will be a,e,i,o,u (we will not count y). Make sure to look for upper and lower case letters.',
+    testScriptCode: testScripts.countTheVowelsTestScript,
+    startingCode: 'const vowelCount = (str) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+    testCriteria: [
+      'User created a function called vowelCount',
+      'vowelCount returns a number',
+      "vowelCount('This is a test sentence.') returns 7",
+      "vowelCount('If you have not checked out FreeCodeCamp, you should. It is Awesome!!!') returns 27",
+      "vowelCount('THIS IS UPPER CASE. this is lowercase.') returns 12",
+    ],
+  },
+  'calculate-the-tip': {
+    title: 'Tip Calculator',
+    description: 'Create function that determines how much tip should be left on a meal dining out.',
+    instructions:
+      'Create a function that takes in two arguments, the meal price(a string such as "$24.94") and the tip percent (a string such as "20%"), and returns the amount the tip should be. This amout should be return as a string in dollar format (ex. "$5.23", $10.00"). Include two digits for the decimal place even if they are 0.',
+    testScriptCode: testScripts.calculateTheTipTestScript,
+    startingCode: 'const tipCalc = (mealPrice, tipPercent) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+    testCriteria: [
+      'User created a function called tipCalc',
+      'tipCalc returns a string',
+      'tipCalc("$25.97", "20%") returns $5.19',
+      'tipCalc("$43.28", "21%") returns $9.09',
+      'tipCalc("$12.63", "18%") returns $2.27',
+      'tipCalc("101.73", "25%") returns $25.43',
     ],
   },
   'remove-duplicates-array': {
@@ -100,35 +161,6 @@ export const codingExercisesData: codingExerciseData = {
     ],
   },
 
-  'largest-num-in-array': {
-    title: 'Find Largest Number',
-    description: 'Create a function that returns a the largest number from an array of integers',
-    instructions: 'Given a function that takes in an array of integers, return the largest number from that array.',
-    testScriptCode: testScripts.largestNumInArrayTestScript,
-    startingCode: 'const largestNum = (numArr) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
-    testCriteria: [
-      'User created a function called largestNum',
-      'function return a number',
-      'largestNum([1, 8, 10, 5, 12]) returns 12',
-      'largestNum([-4, 1, 80, 2, 1]) returns 80',
-      'largestNum([-5, -2, -1, -3, -20]) returns -1',
-    ],
-  },
-  'count-the-vowels': {
-    title: 'Count The Vowels',
-    description: 'Create a function that counts the number of vowels there are in a string.',
-    instructions:
-      'Given a function that takes in a string, return the number of vowels that occur in that string.  Vowels will be a,e,i,o,u (we will not count y). Make sure to look for upper and lower case letters.',
-    testScriptCode: testScripts.countTheVowelsTestScript,
-    startingCode: 'const vowelCount = (str) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
-    testCriteria: [
-      'User created a function called vowelCount',
-      'vowelCount returns a number',
-      "vowelCount('This is a test sentence.') returns 7",
-      "vowelCount('If you have not checked out FreeCodeCamp, you should. It is Awesome!!!') returns 27",
-      "vowelCount('THIS IS UPPER CASE. this is lowercase.') returns 12",
-    ],
-  },
   'sort-the-days': {
     title: 'Sort The Days',
     description: 'Create a function that sorts the given days of the week.',
@@ -142,23 +174,6 @@ export const codingExercisesData: codingExerciseData = {
       "sortDays('mon,wed,tues,sat') returns 'mon,tues,wed,sat'",
       "sortDays('sun,sat,fri,thurs,wed,tues,mon') returns 'mon,tues,wed,thrus,fri,sat,sun'",
       "sortDays('wed,tues,sat,fri') returns 'tues,wed,fri,sat'",
-    ],
-  },
-
-  'find-the-index-1': {
-    title: 'Find the Index (Level 1)',
-    description: 'Create a function that returns the index of a give value in an array.',
-    instructions:
-      'Create a function that takes in two arguments, an array and a target value. The function will return the index of that value in the array. If the target value is not in the array or the array is empty, return -1.',
-    testScriptCode: testScripts.findTheIndex1TestScript,
-    startingCode: 'const findIndex = (sourceArr, targetValue) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
-    testCriteria: [
-      'User created a function called findIndex',
-      'Function returns a number',
-      'findIndex([0, 2, 10, -10, 3], -10) returns 3',
-      "findIndex(['testing', 'test', 'tester', 'tested'], 'test') returns 1",
-      "findIndex([], 'something') returns -1",
-      "findIndex(['apple', 'orange', 'grape'], 'pineapple') returns -1",
     ],
   },
 

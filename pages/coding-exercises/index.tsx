@@ -39,6 +39,11 @@ const CodingExercises: NextPage<CodingExercisesProps> = ({ codingExercisesOvervi
   return (
     <Container className={styles.container}>
       <h1 className={styles.title}>Coding Exercises</h1>
+
+      <p className={styles.completedTracker}>
+        {Object.keys(itemsComplete).length} / {Object.keys(codingExercisesOverviews).length} Completed
+      </p>
+
       <Form className={styles.searchContainer}>
         <Form.Field style={{ marginRight: 20, marginBottom: 20 }} inline>
           <input
