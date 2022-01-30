@@ -1,44 +1,43 @@
 /* 
- testCriteria: [
-      'User created a function called totalLength',
-      'Function returns a number',
-      'totalLength(["Somebody", "once", "told", "me"]) returns 18',
-      'totalLength(["the", "world", "is", "gonna", "roll", "me"]) return 21',
-      'totalLength(["I", "aint", "the", "sharpest", "tool", "in", "the", "shed"]) returns 29'
-    ]
+  testCriteria: [
+      'User created a function called rockPaperScissors',
+      'Function returns a string',
+      'rockPaperScissors("rock") returns "paper"',
+      'rockPaperScissors("paper") returns "scissors"',
+      'rockPaperScissors("scissors") returns "rock"',
+    ],
 */
 
-const totalLength = (arr) => {
+const rockPaperScissors = (arr) => {
   return arr;
 };
 
 const runTests = () => {
   const testResults = [];
   testResults.push({
-    test: 'User created a function totalLength.',
-    passed: typeof totalLength === 'function',
-    result: typeof totalLength,
+    test: 'User created a function rockPaperScissors.',
+    passed: typeof rockPaperScissors === 'function',
+    result: typeof rockPaperScissors,
   });
   testResults.push({
-    test: 'Function returns a number.',
-    passed: typeof totalLength(['this', 'is', 'a', 'test']) === 'number',
-    result: typeof totalLength(['this', 'is', 'a', 'test']),
+    test: 'Function returns a string.',
+    passed: typeof rockPaperScissors('rock') === 'string',
+    result: typeof rockPaperScissors('rock'),
   });
   testResults.push({
-    test: 'totalLength(["Somebody", "once", "told", "me"]) returns 18',
-    passed: totalLength(['Somebody', 'once', 'told', 'me']) === 18,
-    result: totalLength(['Somebody', 'once', 'told', 'me']),
+    test: 'rockPaperScissors("rock") returns "paper"',
+    passed: rockPaperScissors('rock') === 'paper',
+    result: rockPaperScissors('rock'),
   });
   testResults.push({
-    test: 'totalLength(["the", "world", "is", "gonna", "roll", "me"]) return 21',
-    passed: totalLength(['the', 'world', 'is', 'gonna', 'roll', 'me']) === 21,
-    result: totalLength(['the', 'world', 'is', 'gonna', 'roll', 'me']),
+    test: 'rockPaperScissors("paper") returns "scissors"',
+    passed: rockPaperScissors('scissors') === 'scissors',
+    result: rockPaperScissors('scissors'),
   });
-
   testResults.push({
-    test: 'totalLength(["I", "aint", "the", "sharpest", "tool", "in", "the", "shed"] returns 29',
-    passed: totalLength(['I', 'aint', 'the', 'sharpest', 'tool', 'in', 'the', 'shed']) === 29,
-    result: totalLength(['I', 'aint', 'the', 'sharpest', 'tool', 'in', 'the', 'shed']),
+    test: 'rockPaperScissors("scissors") returns "rock"',
+    passed: rockPaperScissors('scissors') === 'rock',
+    result: rockPaperScissors('scissors'),
   });
 
   return testResults;

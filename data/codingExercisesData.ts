@@ -22,6 +22,22 @@ export const codingExercisesData: codingExerciseData = {
     ],
   },
 
+  'rock-paper-scissors': {
+    title: 'Rock, Paper, Scissors',
+    description: 'Create a function that returns the winner choice in rock, paper, scissors.',
+    instructions:
+      'Create a function that takes in a string ("rock", "paper", or "scissors") and returns the hand that would beat it. For example, if "rock" is passed in, the function would return "paper"',
+    testScriptCode: testScripts.rockPaperScissorsTestScript,
+    startingCode: 'const rockPaperScissors = (turn) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+    testCriteria: [
+      'User created a function called rockPaperScissors',
+      'Function returns a string',
+      'rockPaperScissors("rock") returns "paper"',
+      'rockPaperScissors("paper") returns "scissors"',
+      'rockPaperScissors("scissors") returns "rock"',
+    ],
+  },
+
   'find-the-total-length': {
     title: 'Find The Total Length',
     description: 'Create a function that finds the total length of all the string in an array combined.',
