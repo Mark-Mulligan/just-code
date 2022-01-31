@@ -98,6 +98,22 @@ export const codingExercisesData: codingExerciseData = {
       'sortArr([-1, 1000, 10, 22, -22, 3]) returns [-22, -1, 3, 10, 22, 1000]',
     ],
   },
+  'historical-day': {
+    title: 'Historical Day',
+    description: 'Create a function that takes a date string and returns what day of the week that date occured on.',
+    instructions:
+      'Create a function that takes in one arguement, a date string formatted like "10-19-1987", and returns what day of the week that date occured on.  Return values should be one of the follow: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday.',
+    testScriptCode: testScripts.historicalDayTestScript,
+    startingCode: 'const findDay = (dateStr) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+    testCriteria: [
+      'User created a function called findDay',
+      'Function returns a string',
+      'findDay("10-19-1987") returns "Monday"',
+      'findDay("05-25-1977") returns "Wednesday',
+      'findDay("07-21-1969") returns "Monday"',
+      'findDay("06-29-2007") returns "Friday"',
+    ],
+  },
   'find-the-index-1': {
     title: 'Find the Index (Level 1)',
     description: 'Create a function that returns the index of a give value in an array.',

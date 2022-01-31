@@ -1,49 +1,49 @@
 /* 
    testCriteria: [
-      'User created a function called tipCalc',
-      'tipCalc returns a string',
-      'tipCalc("$25.97", "20%") returns $5.19',
-      'tipCalc("$43.28", "21%") returns $9.09',
-      'tipCalc("$12.63", "18%") returns $2.27',
-      'tipCalc("101.73", "25%") returns $25.43',
+      'User created a function called findDay',
+      'Function returns a string',
+      'findDay("10-19-1987") returns "Monday"',
+      'findDay("05-25-1977") returns "Wednesday',
+      'findDay("07-21-1969") returns "Monday"',
+      'findDay("06-29-2007") returns "Friday"',
     ],
 */
 
-const tipCalc = (gameboard) => {
+const findDay = (gameboard) => {
   return gameboard;
 };
 
 const runTests = () => {
   const testResults = [];
   testResults.push({
-    test: 'User created a function tipCalc.',
-    passed: typeof tipCalc === 'function',
-    result: typeof tipCalc,
+    test: 'User created a function findDay.',
+    passed: typeof findDay === 'function',
+    result: typeof findDay,
   });
   testResults.push({
     test: 'Function returns a string.',
-    passed: typeof tipCalc('$25.97', '20%') === 'string',
-    result: typeof tipCalc('$25.97', '20%'),
+    passed: typeof findDay('10-19-1987') === 'string',
+    result: typeof findDay('10-19-1987'),
   });
   testResults.push({
-    test: 'tipCalc("$25.97", "20%") returns $5.19',
-    passed: tipCalc('$25.97', '20%') === '$5.19',
-    result: tipCalc('$25.97', '20%'),
+    test: 'findDay("10-19-1987") returns Monday',
+    passed: findDay('10-19-1987') === 'Monday',
+    result: findDay('10-19-1987'),
   });
   testResults.push({
-    test: 'tipCalc("$43.28", "21%") returns $9.09',
-    passed: tipCalc('$43.28', '21%') === '$9.09',
-    result: tipCalc('$43.28', '21%'),
+    test: 'findDay("05-25-1977") returns Wednesday',
+    passed: findDay('05-25-1977') === 'Wednesday',
+    result: findDay('05-25-1977'),
   });
   testResults.push({
-    test: 'tipCalc("$12.63", "18%") returns $2.27',
-    passed: tipCalc('$12.63', '18%') === '$2.27',
-    result: tipCalc('$12.63', '18%'),
+    test: 'findDay("07-21-1969") returns Monday',
+    passed: findDay('07-21-1969') === 'Monday',
+    result: findDay('07-21-1969'),
   });
   testResults.push({
-    test: 'tipCalc("101.73", "25%") returns $25.43',
-    passed: tipCalc('$101.73', '25%') === '$25.43',
-    result: tipCalc('$101.73', '25%'),
+    test: 'findDay("06-29-2007") returns "Friday"',
+    passed: findDay('06-29-2007') === 'Friday',
+    result: findDay('06-29-2007'),
   });
 
   return testResults;
