@@ -133,7 +133,7 @@ export const codingExercisesData: codingExerciseData = {
     title: 'Tip Calculator',
     description: 'Create function that determines how much tip should be left on a meal dining out.',
     instructions:
-      'Create a function that takes in two arguments, the meal price(a string such as "$24.94") and the tip percent (a string such as "20%"), and returns the amount the tip should be. This amout should be return as a string in dollar format (ex. "$5.23", $10.00"). Include two digits for the decimal place even if they are 0.',
+      'Create a function that takes in two arguments, the meal price (a string, ex. "$24.94") and the tip percent (a string, ex. "20%"), and returns the amount the tip should be. This amout should be return as a string in dollar format (ex. "$5.23", $10.00"). Include two digits for the decimal place even if they are 0.',
     testScriptCode: testScripts.calculateTheTipTestScript,
     startingCode: 'const tipCalc = (mealPrice, tipPercent) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
     testCriteria: [
@@ -142,7 +142,8 @@ export const codingExercisesData: codingExerciseData = {
       'tipCalc("$25.97", "20%") returns $5.19',
       'tipCalc("$43.28", "21%") returns $9.09',
       'tipCalc("$12.63", "18%") returns $2.27',
-      'tipCalc("101.73", "25%") returns $25.43',
+      'tipCalc("$101.73", "25%") returns $25.43',
+      'tipCalc("$10.91", "5%") retuns $0.55',
     ],
   },
   'remove-duplicates-array': {
