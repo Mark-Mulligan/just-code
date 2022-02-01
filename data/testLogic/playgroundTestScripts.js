@@ -1,49 +1,61 @@
 /* 
-   testCriteria: [
-      'User created a function called findDay',
-      'Function returns a string',
-      'findDay("10-19-1987") returns "Monday"',
-      'findDay("05-25-1977") returns "Wednesday',
-      'findDay("07-21-1969") returns "Monday"',
-      'findDay("06-29-2007") returns "Friday"',
-    ],
+   'User create a function called countUnique',
+      'Function returns an object',
+      'countUnique([1, 2, 1, 3, 4, 3, 3]) returns { 1: 2, 2: 1, 3: 3, 4: 1 }',
+      'countUnique(["Pam", "Jim", "Michael", "Pam", "Toby", "Jim", "Jim", "Michael"]) returns { Pam: 2, Jim: 3, Michael: 2, Toby: 1 }',
+      'countUnique(["test", 1, "test", 1, "test", 2, "test", 3]) returns { test: 4, 1: 2, 2: 1, 3: 1 }',
 */
 
-const findDay = (gameboard) => {
-  return gameboard;
+export const deepEqual = (obj1, obj2) => {
+  if (obj1 === obj2) return true;
+
+  if (isPrimitive(obj1) && isPrimitive(obj2)) return obj1 === obj2;
+
+  if (Object.keys(obj1).length !== Object.keys(obj2).length) return false;
+
+  for (let key in obj1) {
+    if (!(key in obj2)) return false;
+    if (!deepEqual(obj1[key], obj2[key])) return false;
+  }
+
+  return true;
 };
+
+function isPrimitive(obj) {
+  return obj !== Object(obj);
+}
 
 const runTests = () => {
   const testResults = [];
   testResults.push({
-    test: 'User created a function findDay.',
-    passed: typeof findDay === 'function',
-    result: typeof findDay,
+    test: 'User created a function countUnique.',
+    passed: typeof countUnique === 'function',
+    result: typeof countUnique,
   });
   testResults.push({
-    test: 'Function returns a string.',
-    passed: typeof findDay('10-19-1987') === 'string',
-    result: typeof findDay('10-19-1987'),
+    test: 'Function returns an Object.',
+    passed: typeof countUnique([1, 2, 1, 3, 4, 3, 3]) === 'object',
+    result: typeof countUnique([1, 2, 1, 3, 4, 3, 3]),
   });
   testResults.push({
-    test: 'findDay("10-19-1987") returns Monday',
-    passed: findDay('10-19-1987') === 'Monday',
-    result: findDay('10-19-1987'),
+    test: 'countUnique([1, 2, 1, 3, 4, 3, 3]) returns { 1: 2, 2: 1, 3: 3, 4: 1 }',
+    passed: deepEqual(countUnique([1, 2, 1, 3, 4, 3, 3]), { 1: 2, 2: 1, 3: 3, 4: 1 }),
+    result: JSON.stringify(countUnique([1, 2, 1, 3, 4, 3, 3])),
   });
   testResults.push({
-    test: 'findDay("05-25-1977") returns Wednesday',
-    passed: findDay('05-25-1977') === 'Wednesday',
-    result: findDay('05-25-1977'),
+    test: 'countUnique(["Pam", "Jim", "Michael", "Pam", "Toby", "Jim", "Jim", "Michael"]) returns  { Pam: 2, Jim: 3, Michael: 2, Toby: 1 }',
+    passed: deepEqual(countUnique(['Pam', 'Jim', 'Michael', 'Pam', 'Toby', 'Jim', 'Jim', 'Michael']), {
+      Pam: 2,
+      Jim: 3,
+      Michael: 2,
+      Toby: 1,
+    }),
+    result: JSON.stringify(countUnique(['Pam', 'Jim', 'Michael', 'Pam', 'Toby', 'Jim', 'Jim', 'Michael'])),
   });
   testResults.push({
-    test: 'findDay("07-21-1969") returns Monday',
-    passed: findDay('07-21-1969') === 'Monday',
-    result: findDay('07-21-1969'),
-  });
-  testResults.push({
-    test: 'findDay("06-29-2007") returns "Friday"',
-    passed: findDay('06-29-2007') === 'Friday',
-    result: findDay('06-29-2007'),
+    test: 'countUnique(["test", 1, "test", 1, "test", 2, "test", 3]) returns { test: 4, 1: 2, 2: 1, 3: 1 }',
+    passed: deepEqual(countUnique(['test', 1, 'test', 1, 'test', 2, 'test', 3]), { test: 4, 1: 2, 2: 1, 3: 1 }),
+    result: JSON.stringify(countUnique(['test', 1, 'test', 1, 'test', 2, 'test', 3])),
   });
 
   return testResults;

@@ -233,7 +233,7 @@ export const codingExercisesData: codingExerciseData = {
     description: 'Create a function that converts a snake case string to a camel case string.',
     instructions:
       'Create a function that takes in one argument, a snake case string, and converts that string into camel case',
-    testScriptCode: testScripts.snakeToCamelTestScript,
+    testScriptCode: testScripts.countUniqueValuesTestScript,
     startingCode: 'const snakeToCamel = (str) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
     testCriteria: [
       'User create a function called snakeToCamel',
