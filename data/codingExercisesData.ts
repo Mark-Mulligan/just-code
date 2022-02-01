@@ -233,7 +233,7 @@ export const codingExercisesData: codingExerciseData = {
     description: 'Create a function that converts a snake case string to a camel case string.',
     instructions:
       'Create a function that takes in one argument, a snake case string, and converts that string into camel case',
-    testScriptCode: testScripts.countUniqueValuesTestScript,
+    testScriptCode: testScripts.snakeToCamelTestScript,
     startingCode: 'const snakeToCamel = (str) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
     testCriteria: [
       'User create a function called snakeToCamel',
@@ -250,7 +250,7 @@ export const codingExercisesData: codingExerciseData = {
     description: 'Create a function that counts the unique values in an array',
     instructions:
       'Create a function that takes in one argument, an array, and returns an object. The return object will contains keys of all the unique items in that array with values that are the number of time that unique value occurs in the array.',
-    testScriptCode: testScripts.snakeToCamelTestScript,
+    testScriptCode: testScripts.countUniqueValuesTestScript,
     startingCode: 'const countUnique = (arr) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
     testCriteria: [
       'User create a function called countUnique',
