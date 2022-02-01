@@ -102,7 +102,7 @@ export const codingExercisesData: codingExerciseData = {
   },
   'prime-number': {
     title: 'Prime Number',
-    description: 'Create a function that determines wheter not a given number is a prime number.',
+    description: 'Create a function that determines wheter or not a given number is a prime number.',
     instructions:
       'Create a function called isPrime that takes in an integer and returns true if that integer is prime or false if it is not prime.',
     testScriptCode: testScripts.primeNumberTestScript,
