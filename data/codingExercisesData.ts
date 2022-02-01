@@ -88,7 +88,7 @@ export const codingExercisesData: codingExerciseData = {
   },
   'largest-num-in-array': {
     title: 'Find Largest Number',
-    description: 'Create a function that returns a the largest number from an array of integers',
+    description: 'Create a function that returns a the largest number from an array of integers.',
     instructions: 'Given a function that takes in an array of integers, return the largest number from that array.',
     testScriptCode: testScripts.largestNumInArrayTestScript,
     startingCode: 'const largestNum = (numArr) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
@@ -100,6 +100,25 @@ export const codingExercisesData: codingExerciseData = {
       'largestNum([-5, -2, -1, -3, -20]) returns -1',
     ],
   },
+  'prime-number': {
+    title: 'Prime Number',
+    description: 'Create a function that determines wheter not a given number is a prime number.',
+    instructions:
+      'Create a function called isPrime that takes in an integer and returns true if that integer is prime or false if it is not prime.',
+    testScriptCode: testScripts.primeNumberTestScript,
+    startingCode: 'const isPrime = (num) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+    testCriteria: [
+      'User created a function called isPrime',
+      'function return a boolean',
+      'isPrime(29) returns true',
+      'isPrime(32) returns false',
+      'isPrime(97) returns true',
+      'isPrime(100) returns false',
+      'isPrime(5851) returns true',
+      'isPrime(5853) returns false',
+    ],
+  },
+
   'sort-array-ints': {
     title: 'Sort Array Of Integers',
     description: 'Create a function that returns a sorted array of integers',

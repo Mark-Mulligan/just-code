@@ -1,49 +1,61 @@
 /* 
   testCriteria: [
-      'User created a function called evenOrOdd',
-      'Function returns a string',
-      'evenOrOdd(11) returns "odd"',
-      'evenOrOdd(30) returns "even"',
-      'evenOrOdd(17) returns "odd"',
-      'evenOrOdd(22) returns "even"',
+      'User created a function called isPrime',
+      'function return a boolean',
+      'isPrime(29) returns true',
+      'isPrime(32) returns false',
+      'isPrime(97) returns true',
+      'isPrime(100) returns false',
+      'isPrime(5851) returns true',
+      'isPrime(5853) returns false',
     ],
 */
 
-const evenOrOdd = (num) => {
+const isPrime = (num) => {
   return num;
 };
 
 const runTests = () => {
   const testResults = [];
   testResults.push({
-    test: 'User created a function evenOrOdd.',
-    passed: typeof evenOrOdd === 'function',
-    result: typeof evenOrOdd,
+    test: 'User created a function isPrime.',
+    passed: typeof isPrime === 'function',
+    result: typeof isPrime,
   });
   testResults.push({
-    test: 'Function returns a string.',
-    passed: typeof evenOrOdd(11) === 'string',
-    result: typeof evenOrOdd(11),
+    test: 'Function returns a boolean.',
+    passed: typeof isPrime(11) === 'boolean',
+    result: typeof isPrime(11),
   });
   testResults.push({
-    test: 'evenOrOdd(11) returns "odd"',
-    passed: evenOrOdd(11) === 'odd',
-    result: evenOrOdd(11),
+    test: 'isPrime(29) returns true',
+    passed: isPrime(29) === true,
+    result: JSON.stringify(isPrime(29)),
   });
   testResults.push({
-    test: 'evenOrOdd(30) returns "even"',
-    passed: evenOrOdd(30) === 'even',
-    result: evenOrOdd(30),
+    test: 'isPrime(32) returns false',
+    passed: isPrime(32) === false,
+    result: JSON.stringify(isPrime(32)),
   });
   testResults.push({
-    test: 'evenOrOdd(17) returns "odd"',
-    passed: evenOrOdd(17) === 'odd',
-    result: evenOrOdd(17),
+    test: 'isPrime(97) returns true',
+    passed: isPrime(97) === true,
+    result: JSON.stringify(isPrime(97)),
   });
   testResults.push({
-    test: 'evenOrOdd(22) returns "even"',
-    passed: evenOrOdd(22) === 'even',
-    result: evenOrOdd(22),
+    test: 'isPrime(100) returns false',
+    passed: isPrime(100) === false,
+    result: JSON.stringify(isPrime(100)),
+  });
+  testResults.push({
+    test: 'isPrime(5851) returns true',
+    passed: isPrime(5851) === true,
+    result: JSON.stringify(isPrime(5851)),
+  });
+  testResults.push({
+    test: 'isPrime(5853) returns false',
+    passed: isPrime(5853) === false,
+    result: JSON.stringify(isPrime(5853)),
   });
 
   return testResults;
