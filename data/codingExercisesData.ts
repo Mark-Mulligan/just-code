@@ -245,6 +245,22 @@ export const codingExercisesData: codingExerciseData = {
     ],
   },
 
+  'count-unique-values': {
+    title: 'Count The Unique Values',
+    description: 'Create a function that counts the unique values in an array',
+    instructions:
+      'Create a function that takes in one argument, an array, and returns an object. The return object will contains keys of all the unique items in that array with values that are the number of time that unique value occurs in the array.',
+    testScriptCode: testScripts.snakeToCamelTestScript,
+    startingCode: 'const countUnique = (arr) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+    testCriteria: [
+      'User create a function called countUnique',
+      'Function returns an object',
+      'countUnique([1, 2, 1, 3, 4, 3, 3]) returns { 1: 2, 2: 1, 3: 3, 4: 1 }',
+      'countUnique(["Pam", "Jim", "Michael", "Pam", "Toby", "Jim", "Jim", "Michael"]) returns { Pam: 2, Jim: 3, Michael: 2, Toby: 1 }',
+      'countUnique(["test", 1, "test", 1, "test", 2, "test", 3]) returns { test: 4, 1: 2, 2: 1, 3: 1 }',
+    ],
+  },
+
   'tic-tac-toe': {
     title: 'Tic-Tac-Toe',
     description: 'Create a function that determines the winner (if there is one) in a game of tic-tac-toe.',
