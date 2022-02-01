@@ -1,61 +1,49 @@
 /* 
-   'User create a function called countUnique',
-      'Function returns an object',
-      'countUnique([1, 2, 1, 3, 4, 3, 3]) returns { 1: 2, 2: 1, 3: 3, 4: 1 }',
-      'countUnique(["Pam", "Jim", "Michael", "Pam", "Toby", "Jim", "Jim", "Michael"]) returns { Pam: 2, Jim: 3, Michael: 2, Toby: 1 }',
-      'countUnique(["test", 1, "test", 1, "test", 2, "test", 3]) returns { test: 4, 1: 2, 2: 1, 3: 1 }',
+  testCriteria: [
+      'User created a function called evenOrOdd',
+      'Function returns a string',
+      'evenOrOdd(11) returns "odd"',
+      'evenOrOdd(30) returns "even"',
+      'evenOrOdd(17) returns "odd"',
+      'evenOrOdd(22) returns "even"',
+    ],
 */
 
-export const deepEqual = (obj1, obj2) => {
-  if (obj1 === obj2) return true;
-
-  if (isPrimitive(obj1) && isPrimitive(obj2)) return obj1 === obj2;
-
-  if (Object.keys(obj1).length !== Object.keys(obj2).length) return false;
-
-  for (let key in obj1) {
-    if (!(key in obj2)) return false;
-    if (!deepEqual(obj1[key], obj2[key])) return false;
-  }
-
-  return true;
+const evenOrOdd = (num) => {
+  return num;
 };
-
-function isPrimitive(obj) {
-  return obj !== Object(obj);
-}
 
 const runTests = () => {
   const testResults = [];
   testResults.push({
-    test: 'User created a function countUnique.',
-    passed: typeof countUnique === 'function',
-    result: typeof countUnique,
+    test: 'User created a function evenOrOdd.',
+    passed: typeof evenOrOdd === 'function',
+    result: typeof evenOrOdd,
   });
   testResults.push({
-    test: 'Function returns an Object.',
-    passed: typeof countUnique([1, 2, 1, 3, 4, 3, 3]) === 'object',
-    result: typeof countUnique([1, 2, 1, 3, 4, 3, 3]),
+    test: 'Function returns a string.',
+    passed: typeof evenOrOdd(11) === 'string',
+    result: typeof evenOrOdd(11),
   });
   testResults.push({
-    test: 'countUnique([1, 2, 1, 3, 4, 3, 3]) returns { 1: 2, 2: 1, 3: 3, 4: 1 }',
-    passed: deepEqual(countUnique([1, 2, 1, 3, 4, 3, 3]), { 1: 2, 2: 1, 3: 3, 4: 1 }),
-    result: JSON.stringify(countUnique([1, 2, 1, 3, 4, 3, 3])),
+    test: 'evenOrOdd(11) returns "odd"',
+    passed: evenOrOdd(11) === 'odd',
+    result: evenOrOdd(11),
   });
   testResults.push({
-    test: 'countUnique(["Pam", "Jim", "Michael", "Pam", "Toby", "Jim", "Jim", "Michael"]) returns  { Pam: 2, Jim: 3, Michael: 2, Toby: 1 }',
-    passed: deepEqual(countUnique(['Pam', 'Jim', 'Michael', 'Pam', 'Toby', 'Jim', 'Jim', 'Michael']), {
-      Pam: 2,
-      Jim: 3,
-      Michael: 2,
-      Toby: 1,
-    }),
-    result: JSON.stringify(countUnique(['Pam', 'Jim', 'Michael', 'Pam', 'Toby', 'Jim', 'Jim', 'Michael'])),
+    test: 'evenOrOdd(30) returns "even"',
+    passed: evenOrOdd(30) === 'even',
+    result: evenOrOdd(30),
   });
   testResults.push({
-    test: 'countUnique(["test", 1, "test", 1, "test", 2, "test", 3]) returns { test: 4, 1: 2, 2: 1, 3: 1 }',
-    passed: deepEqual(countUnique(['test', 1, 'test', 1, 'test', 2, 'test', 3]), { test: 4, 1: 2, 2: 1, 3: 1 }),
-    result: JSON.stringify(countUnique(['test', 1, 'test', 1, 'test', 2, 'test', 3])),
+    test: 'evenOrOdd(17) returns "odd"',
+    passed: evenOrOdd(17) === 'odd',
+    result: evenOrOdd(17),
+  });
+  testResults.push({
+    test: 'evenOrOdd(22) returns "even"',
+    passed: evenOrOdd(22) === 'even',
+    result: evenOrOdd(22),
   });
 
   return testResults;

@@ -22,6 +22,23 @@ export const codingExercisesData: codingExerciseData = {
     ],
   },
 
+  'even-or-odd': {
+    title: 'Even or Odd?',
+    description: 'Create a function that determines whether a number is even or odd.',
+    instructions:
+      'Create a function that takes in a single argument, an interger greater than 0, and returns "even" if the number is even or "odd" if the number is odd.',
+    testScriptCode: testScripts.evenOrOddTestScript,
+    startingCode: 'const evenOrOdd = (num) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+    testCriteria: [
+      'User created a function called evenOrOdd',
+      'Function returns a string',
+      'evenOrOdd(11) returns "odd"',
+      'evenOrOdd(30) returns "even"',
+      'evenOrOdd(17) returns "odd"',
+      'evenOrOdd(22) returns "even"',
+    ],
+  },
+
   'rock-paper-scissors': {
     title: 'Rock, Paper, Scissors',
     description: 'Create a function that returns the winner choice in rock, paper, scissors.',
