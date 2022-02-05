@@ -1,61 +1,50 @@
 /* 
   testCriteria: [
-      'User created a function called isPrime',
-      'function return a boolean',
-      'isPrime(29) returns true',
-      'isPrime(32) returns false',
-      'isPrime(97) returns true',
-      'isPrime(100) returns false',
-      'isPrime(5851) returns true',
-      'isPrime(5853) returns false',
+      'User created a function called militaryTimeConverter',
+      'Function returns a string',
+      'militaryTimeConverter("22:33:06") returns "10:33:06 PM"',
+      'militaryTimeConverter("08:15:27") returns "08:15:27 AM"',
+      'militaryTimeConverter("15:45:00") returns "03:45:00 PM"',
+      'militaryTimeConverter("18:00:10") returns "06:00:10 PM"',
     ],
 */
 
-const isPrime = (num) => {
+const militaryTimeConverter = (num) => {
   return num;
 };
 
 const runTests = () => {
   const testResults = [];
   testResults.push({
-    test: 'User created a function isPrime.',
-    passed: typeof isPrime === 'function',
-    result: typeof isPrime,
+    test: 'User created a function militaryTimeConverter.',
+    passed: typeof militaryTimeConverter === 'function',
+    result: typeof militaryTimeConverter,
   });
   testResults.push({
-    test: 'Function returns a boolean.',
-    passed: typeof isPrime(11) === 'boolean',
-    result: typeof isPrime(11),
+    test: 'Function returns a string.',
+    passed: typeof militaryTimeConverter('22:33:06') === 'string',
+    result: typeof militaryTimeConverter('22:33:06'),
   });
   testResults.push({
-    test: 'isPrime(29) returns true',
-    passed: isPrime(29) === true,
-    result: JSON.stringify(isPrime(29)),
+    test: 'militaryTimeConverter("22:33:06") returns "10:33:06 PM"',
+    passed: militaryTimeConverter('22:33:06') === '10:33:06 PM',
+    result: militaryTimeConverter('22:33:06'),
   });
   testResults.push({
-    test: 'isPrime(32) returns false',
-    passed: isPrime(32) === false,
-    result: JSON.stringify(isPrime(32)),
+    test: 'militaryTimeConverter("08:15:27") returns "08:15:27 AM"',
+    passed: militaryTimeConverter('08:15:27') === '08:15:27 AM',
+    result: militaryTimeConverter('08:15:27'),
+  });
+
+  testResults.push({
+    test: 'militaryTimeConverter("15:45:00") returns "03:45:00 PM"',
+    passed: militaryTimeConverter('15:45:00') === '03:45:00 PM',
+    result: militaryTimeConverter('15:45:00'),
   });
   testResults.push({
-    test: 'isPrime(97) returns true',
-    passed: isPrime(97) === true,
-    result: JSON.stringify(isPrime(97)),
-  });
-  testResults.push({
-    test: 'isPrime(100) returns false',
-    passed: isPrime(100) === false,
-    result: JSON.stringify(isPrime(100)),
-  });
-  testResults.push({
-    test: 'isPrime(5851) returns true',
-    passed: isPrime(5851) === true,
-    result: JSON.stringify(isPrime(5851)),
-  });
-  testResults.push({
-    test: 'isPrime(5853) returns false',
-    passed: isPrime(5853) === false,
-    result: JSON.stringify(isPrime(5853)),
+    test: 'militaryTimeConverter("18:00:10") returns "06:00:10 PM"',
+    passed: militaryTimeConverter('18:00:10') === '06:00:10 PM',
+    result: militaryTimeConverter('18:00:10'),
   });
 
   return testResults;

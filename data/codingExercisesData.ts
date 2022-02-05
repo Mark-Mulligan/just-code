@@ -166,6 +166,22 @@ export const codingExercisesData: codingExerciseData = {
       "findIndex(['apple', 'orange', 'grape'], 'pineapple') returns -1",
     ],
   },
+  'military-time-conversion': {
+    title: 'Military Time Conversion',
+    description: 'Convert a given military time to standard time with AM/PM.',
+    instructions:
+      'Create a function that takes in a military time string, and returns a new formated string with standard time using AM/PM',
+    testScriptCode: testScripts.militaryTimeConversionTestScript,
+    startingCode: 'const militaryTimeConverter = (timeStr) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+    testCriteria: [
+      'User created a function called militaryTimeConverter',
+      'Function returns a string',
+      'militaryTimeConverter("22:33:06") returns "10:33:06 PM"',
+      'militaryTimeConverter("08:15:27") returns "08:15:27 AM"',
+      'militaryTimeConverter("15:45:00") returns "03:45:00 PM"',
+      'militaryTimeConverter("18:00:10") returns "06:00:10 PM"',
+    ],
+  },
   'count-the-vowels': {
     title: 'Count The Vowels',
     description: 'Create a function that counts the number of vowels there are in a string.',
