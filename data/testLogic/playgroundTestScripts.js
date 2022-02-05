@@ -1,50 +1,70 @@
 /* 
   testCriteria: [
-      'User created a function called militaryTimeConverter',
-      'Function returns a string',
-      'militaryTimeConverter("22:33:06") returns "10:33:06 PM"',
-      'militaryTimeConverter("08:15:27") returns "08:15:27 AM"',
-      'militaryTimeConverter("15:45:00") returns "03:45:00 PM"',
-      'militaryTimeConverter("18:00:10") returns "06:00:10 PM"',
+      'User create a function called extractQueryParams',
+      'Function returns an object',
+      'extractQueryParams("https://example?search=test&length=3") returns { search: "test", length: "3" }',
+      'extractQueryParams("https://mysearchwebsite?q=google&results=50&past=false") returns  { q: "google", results: "50", past: "false" }',
+      'extractQueryParams("https://weather?city=dallas&forecast=3day&unit=fahrenheit") returns  { city: "dallas", forecast: "3day", unit="fahrenheit" }',
     ],
 */
 
-const militaryTimeConverter = (num) => {
+const deepEqual = (obj1, obj2) => {
+  if (obj1 === obj2) return true;
+
+  if (isPrimitive(obj1) && isPrimitive(obj2)) return obj1 === obj2;
+
+  if (Object.keys(obj1).length !== Object.keys(obj2).length) return false;
+
+  for (let key in obj1) {
+    if (!(key in obj2)) return false;
+    if (!deepEqual(obj1[key], obj2[key])) return false;
+  }
+
+  return true;
+};
+
+function isPrimitive(obj) {
+  return obj !== Object(obj);
+}
+
+const extractQueryParams = (num) => {
   return num;
 };
 
 const runTests = () => {
   const testResults = [];
   testResults.push({
-    test: 'User created a function militaryTimeConverter.',
-    passed: typeof militaryTimeConverter === 'function',
-    result: typeof militaryTimeConverter,
+    test: 'User create a function called extractQueryParams',
+    passed: typeof extractQueryParams === 'function',
+    result: typeof extractQueryParams,
   });
   testResults.push({
-    test: 'Function returns a string.',
-    passed: typeof militaryTimeConverter('22:33:06') === 'string',
-    result: typeof militaryTimeConverter('22:33:06'),
+    test: 'Function returns an object',
+    passed: typeof extractQueryParams('https://example?search=test&length=3') === 'object',
+    result: typeof extractQueryParams('https://example?search=test&length=3'),
   });
   testResults.push({
-    test: 'militaryTimeConverter("22:33:06") returns "10:33:06 PM"',
-    passed: militaryTimeConverter('22:33:06') === '10:33:06 PM',
-    result: militaryTimeConverter('22:33:06'),
+    test: 'extractQueryParams("https://example?search=test&length=3") returns { search: "test", length: "3" }',
+    passed: deepEqual(extractQueryParams('https://example?search=test&length=3'), { search: 'test', length: '3' }),
+    result: deepEqual(extractQueryParams('https://example?search=test&length=3')),
   });
   testResults.push({
-    test: 'militaryTimeConverter("08:15:27") returns "08:15:27 AM"',
-    passed: militaryTimeConverter('08:15:27') === '08:15:27 AM',
-    result: militaryTimeConverter('08:15:27'),
-  });
-
-  testResults.push({
-    test: 'militaryTimeConverter("15:45:00") returns "03:45:00 PM"',
-    passed: militaryTimeConverter('15:45:00') === '03:45:00 PM',
-    result: militaryTimeConverter('15:45:00'),
+    test: 'extractQueryParams("https://mysearchwebsite?q=google&results=50&past=false") returns { q: "google", results: "50", past: "false" }',
+    passed: deepEqual(extractQueryParams('https://mysearchwebsite?q=google&results=50&past=false'), {
+      q: 'google',
+      results: '50',
+      past: 'false',
+    }),
+    result: deepEqual(extractQueryParams('https://mysearchwebsite?q=google&results=50&past=false')),
   });
   testResults.push({
-    test: 'militaryTimeConverter("18:00:10") returns "06:00:10 PM"',
-    passed: militaryTimeConverter('18:00:10') === '06:00:10 PM',
-    result: militaryTimeConverter('18:00:10'),
+    test: 'extractQueryParams("https://weather?city=dallas&forecast=3day&unit=fahrenheit") returns { city: "dallas", forecast: "3day", unit: "fahrenheit" }',
+    passed: deepEqual(extractQueryParams('https://weather?city=dallas&forecast=3day&unit=fahrenheit'), {
+      city: 'dallas',
+      forecast: '3day',
+      unit: 'fahrenheit',
+    }),
+    result: deepEqual(extractQueryParams('https://weather?city=dallas&forecast=3day&unit=fahrenheit')),
   });
 
   return testResults;

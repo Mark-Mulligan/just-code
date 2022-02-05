@@ -313,6 +313,22 @@ export const codingExercisesData: codingExerciseData = {
     ],
   },
 
+  'query-parameters': {
+    title: 'Query Parameters',
+    description: 'Create a function that extracts the query paramters from a search url.',
+    instructions:
+      'Create a function called extractQueryParams that gets the query parameters from and search and stores them in an object. For example "https://example?search=test&length=3" would return { search: "test", length: "3" }. Normally I would recommend using URL and URLSearchParams api. However, due to the sandbox environment, you will not have access to these javascript apis, so you have have to find a different way to get the query parameters.',
+    testScriptCode: testScripts.queryParametersTestScript,
+    startingCode: 'const extractQueryParams = (urlStr) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+    testCriteria: [
+      'User create a function called extractQueryParams',
+      'Function returns an object',
+      'extractQueryParams("https://example?search=test&length=3") returns  { search: "test", length: "3" }',
+      'extractQueryParams("https://mysearchwebsite?q=google&results=50&past=false") returns  { q: "google", results: "50", past: "false" }',
+      'extractQueryParams("https://weather?city=dallas&forecast=3day&unit=fahrenheit") returns  { city: "dallas", forecast: "3day", unit: "fahrenheit" }',
+    ],
+  },
+
   'tic-tac-toe': {
     title: 'Tic-Tac-Toe',
     description: 'Create a function that determines the winner (if there is one) in a game of tic-tac-toe.',
