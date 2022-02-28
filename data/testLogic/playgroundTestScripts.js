@@ -110,9 +110,54 @@ const runTests = () => {
     ]),
   });
   testResults.push({
-    test: 'extractQueryParams("https://example?search=test&length=3") returns { search: "test", length: "3" }',
-    passed: deepEqual(worldTimezone('https://example?search=test&length=3'), { search: 'test', length: '3' }),
-    result: deepEqual(worldTimezone('https://example?search=test&length=3')),
+    test: `worldTimezone("04 Dec 1995 00:12:00 GMT", [
+      { location: "Samoa", offset: 13},
+      { location: "Seoul", offset: 9},
+      { location: "Istanbul", offset: 2},
+      { location: "London", offset: 0},
+      { location: "Eastern Time (US & Canada)", offset: -5},
+      { location: "Hawaii", offset: -10 },
+      { location: "International Date Line West", offset: -12 },
+    ]) returns { 
+      "Samoa": "01:12:00 PM",
+      "Seoul": "09:12:00 AM",
+      "Istanbul": "02:12:00 AM",
+      "London": "00:12:00 AM",
+      "Eastern Time (US & Canada)": "07:12:00: PM",
+      "Hawaii": "02:12:00 PM",
+      "International Date Line West": "12:12:00 PM",
+    }`,
+    passed: deepEqual(
+      worldTimezone('04 Dec 1995 00:12:00 GMT', [
+        { location: 'Samoa', offset: 13 },
+        { location: 'Seoul', offset: 9 },
+        { location: 'Istanbul', offset: 2 },
+        { location: 'London', offset: 0 },
+        { location: 'Eastern Time (US & Canada)', offset: -5 },
+        { location: 'Hawaii', offset: -10 },
+        { location: 'International Date Line West', offset: -12 },
+      ]),
+      {
+        Samoa: '01:12:00 PM',
+        Seoul: '09:12:00 AM',
+        Istanbul: '02:12:00 AM',
+        London: '00:12:00 AM',
+        'Eastern Time (US & Canada)': '07:12:00: PM',
+        Hawaii: '02:12:00 PM',
+        'International Date Line West': '12:12:00 PM',
+      },
+    ),
+    result: JSON.stringify(
+      worldTimezone('04 Dec 1995 00:12:00 GMT', [
+        { location: 'Samoa', offset: 13 },
+        { location: 'Seoul', offset: 9 },
+        { location: 'Istanbul', offset: 2 },
+        { location: 'London', offset: 0 },
+        { location: 'Eastern Time (US & Canada)', offset: -5 },
+        { location: 'Hawaii', offset: -10 },
+        { location: 'International Date Line West', offset: -12 },
+      ]),
+    ),
   });
   testResults.push({
     test: 'extractQueryParams("https://mysearchwebsite?q=google&results=50&past=false") returns { q: "google", results: "50", past: "false" }',
