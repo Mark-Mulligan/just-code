@@ -329,6 +329,73 @@ export const codingExercisesData: codingExerciseData = {
     ],
   },
 
+  'world-timezones': {
+    title: 'World Timezones',
+    description:
+      'Create a function that takes a UTC time stamp and converts it to the local time for a given region in the world.',
+    instructions:
+      'Create a function that takes in 3 arguments, location (string), inputDateTime (a UTC date timestamp), and offset (an integer that represents the difference between the target locations local time and UTC).  For example, Dallas, TX in the United states is -6 hours from UTC time. Hint, UTC is in military time so you will need to convert that to AM/PM.  Also, pay close attention to the test criteria examples so you format your result string correctly.',
+    testScriptCode: testScripts.queryParametersTestScript,
+    startingCode:
+      'const worldTimezone = (inputDateTime, locationObj) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+    testCriteria: [
+      'User create a function called worldTimezone',
+      'Function returns a string',
+      `worldTimezone("04 Dec 1995 00:12:00 GMT", [
+        { location: "Samoa", offset: 13},
+        { location: "Seoul", offset: 9},
+        { location: "Istanbul", offset: 2},
+        { location: "London", offset: 0},
+        { location: "Eastern Time (US & Canada)", offset: -5},
+        { location: "Hawaii", offset: -10 },
+        { location: "International Date Line West", offset: -12 },
+      ]) returns { 
+        "Samoa": "01:12:00 PM",
+        "Seoul": "09:12:00 AM",
+        "Istanbul": "02:12:00 AM",
+        "London": "00:12:00 AM",
+        "Eastern Time (US & Canada)": "07:12:00: PM",
+        "Hawaii": "02:12:00 PM",
+        "International Date Line West": "12:12:00 PM",
+      }`,
+      `worldTimezone("04 Dec 1995 23:25:00 GMT", [
+        { location: "Samoa", offset: 13},
+        { location: "Seoul", offset: 9},
+        { location: "Istanbul", offset: 2},
+        { location: "London", offset: 0},
+        { location: "Eastern Time (US & Canada)", offset: -5},
+        { location: "Hawaii", offset: -10 },
+        { location: "International Date Line West", offset: -12 },
+      ]) returns { 
+        "Samoa": "12:25:00 PM",
+        "Seoul": "08:25:00 AM",
+        "Istanbul": "01:25:00 AM",
+        "London": "11:25:00 PM",
+        "Eastern Time (US & Canada)": "06:25:00: PM",
+        "Hawaii": "01:25:00 PM",
+        "International Date Line West": "11:25:00 AM",
+      }`,
+      `worldTimezone("04 Dec 1995 13:55:00 GMT", [
+        { location: "Samoa", offset: 13},
+        { location: "Seoul", offset: 9},
+        { location: "Istanbul", offset: 2},
+        { location: "London", offset: 0},
+        { location: "Eastern Time (US & Canada)", offset: -5},
+        { location: "Hawaii", offset: -10 },
+        { location: "International Date Line West", offset: -12 },
+      ])`,
+      `worldTimezone("04 Dec 1995 06:10:00 GMT", [
+        { location: "Samoa", offset: 13},
+        { location: "Seoul", offset: 9},
+        { location: "Istanbul", offset: 2},
+        { location: "London", offset: 0},
+        { location: "Eastern Time (US & Canada)", offset: -5},
+        { location: "Hawaii", offset: -10 },
+        { location: "International Date Line West", offset: -12 },
+      ])`,
+    ],
+  },
+
   'tic-tac-toe': {
     title: 'Tic-Tac-Toe',
     description: 'Create a function that determines the winner (if there is one) in a game of tic-tac-toe.',
