@@ -160,6 +160,56 @@ const runTests = () => {
     ),
   });
   testResults.push({
+    test: `worldTimezone("04 Dec 1995 23:25:00 GMT" GMT", [
+      { location: "Samoa", offset: 13},
+      { location: "Seoul", offset: 9},
+      { location: "Istanbul", offset: 2},
+      { location: "London", offset: 0},
+      { location: "Eastern Time (US & Canada)", offset: -5},
+      { location: "Hawaii", offset: -10 },
+      { location: "International Date Line West", offset: -12 },
+    ]) returns { 
+      "Samoa": "12:25:00 PM",
+      "Seoul": "08:25:00 AM",
+      "Istanbul": "01:25:00 AM",
+      "London": "11:25:00 PM",
+      "Eastern Time (US & Canada)": "06:25:00: PM",
+      "Hawaii": "01:25:00 PM",
+      "International Date Line West": "11:25:00 AM",
+    }`,
+    passed: deepEqual(
+      worldTimezone('04 Dec 1995 23:25:00 GMT', [
+        { location: 'Samoa', offset: 13 },
+        { location: 'Seoul', offset: 9 },
+        { location: 'Istanbul', offset: 2 },
+        { location: 'London', offset: 0 },
+        { location: 'Eastern Time (US & Canada)', offset: -5 },
+        { location: 'Hawaii', offset: -10 },
+        { location: 'International Date Line West', offset: -12 },
+      ]),
+      {
+        Samoa: '12:25:00 PM',
+        Seoul: '08:25:00 AM',
+        Istanbul: '01:25:00 AM',
+        London: '11:25:00 PM',
+        'Eastern Time (US & Canada)': '06:25:00: PM',
+        Hawaii: '01:25:00 PM',
+        'International Date Line West': '11:25:00 AM',
+      },
+    ),
+    result: JSON.stringify(
+      worldTimezone('04 Dec 1995 23:25:00 GMT', [
+        { location: 'Samoa', offset: 13 },
+        { location: 'Seoul', offset: 9 },
+        { location: 'Istanbul', offset: 2 },
+        { location: 'London', offset: 0 },
+        { location: 'Eastern Time (US & Canada)', offset: -5 },
+        { location: 'Hawaii', offset: -10 },
+        { location: 'International Date Line West', offset: -12 },
+      ]),
+    ),
+  });
+  testResults.push({
     test: 'extractQueryParams("https://mysearchwebsite?q=google&results=50&past=false") returns { q: "google", results: "50", past: "false" }',
     passed: deepEqual(worldTimezone('https://mysearchwebsite?q=google&results=50&past=false'), {
       q: 'google',
