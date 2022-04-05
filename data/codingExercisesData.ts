@@ -76,7 +76,7 @@ export const codingExercisesData: codingExerciseData = {
     description: 'Create a function that returns a string reversed.',
     instructions:
       'Create a function that takes in a single argument, a string, and returns a reversed version of that string.',
-    testScriptCode: testScripts.reversStringTestScript,
+    testScriptCode: testScripts.reverseStringTestScript,
     startingCode: 'const reverseStr = (str) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
     testCriteria: [
       'User created a function called reverseStr',

@@ -1,75 +1,17 @@
 import { sumTwoIntTests } from './testScripts/sumTwoInt';
 import { evenOrOddTests } from './testScripts/evenOrOdd';
 import { rockPaperScissorsTests } from './testScripts/rockPaperScissors';
+import { findTheTotalLengthTests } from './testScripts/findTheTotalLength';
+import { reverseStringTests } from './testScripts/reverseString';
+import { largestNumInArrayTests } from './testScripts/largestNumInArray';
 
 export const testScripts = {
   sumTwoIntsTestScript: `const runTests = ${sumTwoIntTests.toString()} \n runTests();`,
   evenOrOddTestScript: `const runTests = ${evenOrOddTests.toString()} \n runTests();`,
   rockPaperScissorsTestScript: `const runTests = ${rockPaperScissorsTests.toString()} \n runTests();`,
-  findTheTotalLengthTestScript: `const runTests = () => {
-    const testResults = [];
-    testResults.push({
-      test: 'User created a function totalLength.',
-      passed: typeof totalLength === 'function',
-      result: typeof totalLength,
-    });
-    testResults.push({
-      test: 'Function returns a number.',
-      passed: typeof totalLength(['this', 'is', 'a', 'test']) === 'number',
-      result: typeof totalLength(['this', 'is', 'a', 'test']),
-    });
-    testResults.push({
-      test: 'totalLength(["Somebody", "once", "told", "me"]) returns 18',
-      passed: totalLength(['Somebody', 'once', 'told', 'me']) === 18,
-      result: totalLength(['Somebody', 'once', 'told', 'me']),
-    });
-    testResults.push({
-      test: 'totalLength(["the", "world", "is", "gonna", "roll", "me"]) return 21',
-      passed: totalLength(['the', 'world', 'is', 'gonna', 'roll', 'me']) === 21,
-      result: totalLength(['the', 'world', 'is', 'gonna', 'roll', 'me']),
-    });
-    testResults.push({
-      test: 'totalLength(["I", "aint", "the", "sharpest", "tool", "in", "the", "shed"] returns 29',
-      passed: totalLength(['I', 'aint', 'the', 'sharpest', 'tool', 'in', 'the', 'shed']) === 29,
-      result: totalLength(['I', 'aint', 'the', 'sharpest', 'tool', 'in', 'the', 'shed']),
-    });
-  
-    return testResults;
-  };
-  
-  runTests();`,
-  reversStringTestScript: `const runTests = () => {
-    const testResults = [];
-    testResults.push({
-      test: 'User created a function called reverseStr.',
-      passed: typeof reverseStr === 'function',
-      result: typeof reverseStr,
-    });
-    testResults.push({
-      test: 'Function returns a string',
-      passed: typeof reverseStr('test') === 'string',
-      result: typeof reverseStr('test'),
-    });
-    testResults.push({
-      test: 'reverseStr("Hello World") returns "dlroW olleH"',
-      passed: reverseStr('Hello World') === 'dlroW olleH',
-      result: reverseStr('Hellow World'),
-    });
-    testResults.push({
-      test: 'reverseStr("Reverse Me") returns "eM esreveR"',
-      passed: reverseStr('Reverse Me') === 'eM esreveR',
-      result: reverseStr('Reverse Me'),
-    });
-    testResults.push({
-      test: 'reverseStr("racecar") returns "racecar"',
-      passed: reverseStr('racecar') === 'racecar',
-      result: reverseStr('racecar'),
-    });
-  
-    return testResults;
-  };
-  
-  runTests();`,
+  findTheTotalLengthTestScript: `const runTests = ${findTheTotalLengthTests.toString()} \n runTests();`,
+  reverseStringTestScript: `const runTests = ${reverseStringTests.toString()} \n runTests();`,
+  largestNumInArrayTestScript: `const runTests = ${largestNumInArrayTests.toString()} \n runTests();`,
   primeNumberTestScript: `const runTests = () => {
     const testResults = [];
     testResults.push({
@@ -180,30 +122,6 @@ export const testScripts = {
       result: JSON.stringify(removeDuplicates([10, 10, 'test', 'test', 73, '73'])),
     });
   
-    return testResults;
-  };
-  
-  runTests();`,
-
-  largestNumInArrayTestScript: `const runTests = () => {
-    const testResults = [];
-    testResults.push({ test: 'User created a function called largestNum.', passed: typeof largestNum === 'function', result: typeof largestNum });
-    testResults.push({ test: 'Function returns a number', passed: typeof largestNum([1, 2, 3, 4]) === 'number', result: typeof largestNum([1, 2, 3, 4]) });
-    testResults.push({
-      test: 'largestNum([1, 8, 10, 5, 12]) returns 12',
-      passed: largestNum([1, 8, 10, 5, 12]) === 12,
-      result: largestNum([1, 8, 10, 5, 12])
-    });
-    testResults.push({
-      test: 'largestNum([1, 8, 10, 5, 12]) returns 80',
-      passed: largestNum([-4, 1, 80, 2, 1]) === 80,
-      result: largestNum([-4, 1, 80, 2, 1])
-    });
-    testResults.push({
-      test: 'largestNum([-5, -2, -1, -3, -20]) returns -1',
-      passed: largestNum([-5, -2, -1, -3, -20]) === -1,
-      result: largestNum([-5, -2, -1, -3, -20])
-    });
     return testResults;
   };
   
