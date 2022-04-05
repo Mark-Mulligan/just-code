@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-// import fs from 'fs';
+import fs from 'fs';
 import { VM } from 'vm2';
 import { testResult } from '../../../types';
 import { codingExercisesData } from '../../../data/codingExercisesData';
@@ -17,7 +17,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
     // for developer de-bugging purposes
     // Don't remove but also don't push to prod.  It will break in prod environment
-    // fs.writeFileSync(`data/${testname}.js`, `${userCode}\n${testScriptCode}`);
+    fs.writeFileSync(`data/${testname}.js`, `${userCode}\n${testScriptCode}`);
 
     try {
       testResults = vm.run(`${userCode}\n${testScriptCode}`);

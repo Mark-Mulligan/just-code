@@ -332,12 +332,12 @@ export const codingExercisesData: codingExerciseData = {
   'world-timezones': {
     title: 'World Timezones',
     description:
-      'Create a function that takes a UTC time stamp and converts it to the local time for a given region in the world.',
+      'Create a function that takes a GMT time stamp and converts it to the local time for a given region in the world.',
     instructions:
-      'Create a function that takes in 3 arguments, location (string), inputDateTime (a UTC date timestamp), and offset (an integer that represents the difference between the target locations local time and UTC).  For example, Dallas, TX in the United states is -6 hours from UTC time. Hint, UTC is in military time so you will need to convert that to AM/PM.  Also, pay close attention to the test criteria examples so you format your result string correctly.',
+      'Create a function that takes in 2 arguments, inputDateTime - a GMT time, locationArr - An array objects with two properties, location (string) and offset (integer indicating the locations offset from GMT).  For example, Dallas, TX in the United states is -6 hours from GMT time. Hint, GMT is in military time so you will need to convert that to AM/PM.  Also, pay close attention to the test criteria examples so you format your result object correctly.',
     testScriptCode: testScripts.queryParametersTestScript,
     startingCode:
-      'const worldTimezone = (inputDateTime, locationObj) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+      'const worldTimezone = (inputDateTime, locationArr) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
     testCriteria: [
       'User create a function called worldTimezone',
       'Function returns a string',
