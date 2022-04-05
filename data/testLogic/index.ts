@@ -4,6 +4,10 @@ import { rockPaperScissorsTests } from './testScripts/rockPaperScissors';
 import { findTheTotalLengthTests } from './testScripts/findTheTotalLength';
 import { reverseStringTests } from './testScripts/reverseString';
 import { largestNumInArrayTests } from './testScripts/largestNumInArray';
+import { primeNumberTests } from './testScripts/primeNumber';
+import { sortArrayIntsTests } from './testScripts/sortArrayInts';
+import { removeDuplicatesArrTests } from './testScripts/removeDuplicatesArr';
+import { militaryTimeConversionTests } from './testScripts/militaryTimeConversion';
 
 export const testScripts = {
   sumTwoIntsTestScript: `const runTests = ${sumTwoIntTests.toString()} \n runTests();`,
@@ -12,160 +16,10 @@ export const testScripts = {
   findTheTotalLengthTestScript: `const runTests = ${findTheTotalLengthTests.toString()} \n runTests();`,
   reverseStringTestScript: `const runTests = ${reverseStringTests.toString()} \n runTests();`,
   largestNumInArrayTestScript: `const runTests = ${largestNumInArrayTests.toString()} \n runTests();`,
-  primeNumberTestScript: `const runTests = () => {
-    const testResults = [];
-    testResults.push({
-      test: 'User created a function isPrime.',
-      passed: typeof isPrime === 'function',
-      result: typeof isPrime,
-    });
-    testResults.push({
-      test: 'Function returns a boolean.',
-      passed: typeof isPrime(11) === 'boolean',
-      result: typeof isPrime(11),
-    });
-    testResults.push({
-      test: 'isPrime(29) returns true',
-      passed: isPrime(29) === true,
-      result: JSON.stringify(isPrime(29)),
-    });
-    testResults.push({
-      test: 'isPrime(32) returns false',
-      passed: isPrime(32) === false,
-      result: JSON.stringify(isPrime(32)),
-    });
-    testResults.push({
-      test: 'isPrime(97) returns true',
-      passed: isPrime(97) === true,
-      result: JSON.stringify(isPrime(97)),
-    });
-    testResults.push({
-      test: 'isPrime(100) returns false',
-      passed: isPrime(100) === false,
-      result: JSON.stringify(isPrime(100)),
-    });
-    testResults.push({
-      test: 'isPrime(5851) returns true',
-      passed: isPrime(5851) === true,
-      result: JSON.stringify(isPrime(5851)),
-    });
-    testResults.push({
-      test: 'isPrime(5853) returns false',
-      passed: isPrime(5853) === false,
-      result: JSON.stringify(isPrime(5853)),
-    });
-  
-    return testResults;
-  };
-  
-  runTests();`,
-
-  sortArrayIntsTestScript: `const runTests = () => {
-    const testResults = [];
-    testResults.push({
-      test: 'User created a function called sortArr.',
-      passed: typeof sortArr === 'function',
-      result: typeof sortArr,
-    });
-    testResults.push({
-      test: 'Function returns an array',
-      passed: Array.isArray(sortArr([1, 4, 3, 2])),
-      result: JSON.stringify(sortArr([1, 4, 3, 2])),
-    });
-    testResults.push({
-      test: 'sortArr([1, 2, 6, 4, 2]) returns [1, 2, 2, 4, 6] ',
-      passed: JSON.stringify(sortArr([1, 2, 6, 4, 2])) === JSON.stringify([1, 2, 2, 4, 6]),
-      result: JSON.stringify(sortArr([1, 2, 6, 4, 2])),
-    });
-    testResults.push({
-      test: 'sortArr([10, -3, 2, -1, 7, 9]) returns [-3, -1, 2, 7, 9, 10]',
-      passed: JSON.stringify(sortArr([10, -3, 2, -1, 7, 9])) === JSON.stringify([-3, -1, 2, 7, 9, 10]),
-      result: JSON.stringify(sortArr([10, -3, 2, -1, 7, 9])),
-    });
-    testResults.push({
-      test: 'sortArr([-1, 1000, 10, 22, -22, 3]) returns [-22, -1, 3, 10, 22, 1000]',
-      passed: JSON.stringify(sortArr([-1, 1000, 10, 22, -22, 3])) === JSON.stringify([-22, -1, 3, 10, 22, 1000]),
-      result: JSON.stringify(sortArr([-1, 1000, 10, 22, -22, 3])),
-    });
-    return testResults;
-  };
-  
-  runTests();`,
-  removeDuplicatesArrTestScript: `const runTests = () => {
-    const testResults = [];
-    testResults.push({
-      test: 'User created a function called removeDuplicates.',
-      passed: typeof removeDuplicates === 'function',
-      result: typeof removeDuplicates,
-    });
-    testResults.push({
-      test: 'Function returns an array.',
-      passed: Array.isArray(removeDuplicates([1, 2, 2, 3, 4])),
-      result: JSON.stringify(removeDuplicates([1, 2, 2, 3, 4])),
-    });
-    testResults.push({
-      test: 'removeDuplcates([1, 2, 1, 3, 2, 3, 4]) returns [1, 2, 3, 4]',
-      passed: JSON.stringify(removeDuplicates([1, 2, 1, 3, 2, 3, 4])) === JSON.stringify([1, 2, 3, 4]),
-      result: JSON.stringify(removeDuplicates([1, 2, 1, 3, 2, 3, 4])),
-    });
-    testResults.push({
-      test: 'removeDuplcates([1, 2, 1, 3, 2, 3, 4]) returns [1, 2, 3, 4]',
-      passed:
-        JSON.stringify(removeDuplicates(['Sam', 'Frodo', 'Sam', 'Gollum', 'Gollum', 'Aragon'])) ===
-        JSON.stringify(['Sam', 'Frodo', 'Gollum', 'Aragon']),
-      result: JSON.stringify(removeDuplicates(['Sam', 'Frodo', 'Sam', 'Gollum', 'Gollum', 'Aragon'])),
-    });
-    testResults.push({
-      test: 'removeDuplcates(["Sam", "Frodo", "Sam", "Gollum", "Gollum", "Aragon"]) returns ["Sam", "Frodo", "Gollum", "Aragon"]',
-      passed:
-        JSON.stringify(removeDuplicates([10, 10, 'test', 'test', 73, '73'])) === JSON.stringify([10, 'test', 73, '73']),
-      result: JSON.stringify(removeDuplicates([10, 10, 'test', 'test', 73, '73'])),
-    });
-  
-    return testResults;
-  };
-  
-  runTests();`,
-
-  militaryTimeConversionTestScript: `const runTests = () => {
-    const testResults = [];
-    testResults.push({
-      test: 'User created a function militaryTimeConverter.',
-      passed: typeof militaryTimeConverter === 'function',
-      result: typeof militaryTimeConverter,
-    });
-    testResults.push({
-      test: 'Function returns a string.',
-      passed: typeof militaryTimeConverter('22:33:06') === 'string',
-      result: typeof militaryTimeConverter('22:33:06'),
-    });
-    testResults.push({
-      test: 'militaryTimeConverter("22:33:06") returns "10:33:06 PM"',
-      passed: militaryTimeConverter('22:33:06') === '10:33:06 PM',
-      result: militaryTimeConverter('22:33:06'),
-    });
-    testResults.push({
-      test: 'militaryTimeConverter("08:15:27") returns "08:15:27 AM"',
-      passed: militaryTimeConverter('08:15:27') === '08:15:27 AM',
-      result: militaryTimeConverter('08:15:27'),
-    });
-  
-    testResults.push({
-      test: 'militaryTimeConverter("15:45:00") returns "03:45:00 PM"',
-      passed: militaryTimeConverter('15:45:00') === '03:45:00 PM',
-      result: militaryTimeConverter('15:45:00'),
-    });
-    testResults.push({
-      test: 'militaryTimeConverter("18:00:10") returns "06:00:10 PM"',
-      passed: militaryTimeConverter('18:00:10') === '06:00:10 PM',
-      result: militaryTimeConverter('18:00:10'),
-    });
-  
-    return testResults;
-  };
-  
-  runTests();`,
-
+  primeNumberTestScript: `const runTests = ${primeNumberTests.toString()} \n runTests();`,
+  sortArrayIntsTestScript: `const runTests = ${sortArrayIntsTests.toString()} \n runTests();`,
+  removeDuplicatesArrTestScript: `const runTests = ${removeDuplicatesArrTests.toString()} \n runTests();`,
+  militaryTimeConversionTestScript: `const runTests = ${militaryTimeConversionTests.toString()} \n runTests();`,
   countTheVowelsTestScript: `const runTests = () => {
     const testResults = [];
     testResults.push({
