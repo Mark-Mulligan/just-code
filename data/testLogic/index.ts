@@ -8,236 +8,34 @@ import { primeNumberTests } from './testScripts/primeNumber';
 import { sortArrayIntsTests } from './testScripts/sortArrayInts';
 import { removeDuplicatesArrTests } from './testScripts/removeDuplicatesArr';
 import { militaryTimeConversionTests } from './testScripts/militaryTimeConversion';
+import { countTheVowelsTests } from './testScripts/countTheVowels';
+import { calculateTheTipTests } from './testScripts/calculateTheTip';
+import { sortTheDaysTests } from './testScripts/sortTheDays';
+import { historicalDaysTests } from './testScripts/historicalDay';
+import { findTheIndexTests } from './testScripts/findTheIndex';
+import { compareTwoObjsTests } from './testScripts/compareTwoObjs';
+
+const createTestScriptString = (testFunc: Function) => {
+  return `const runTests = ${testFunc.toString()} \n runTests();`;
+};
 
 export const testScripts = {
-  sumTwoIntsTestScript: `const runTests = ${sumTwoIntTests.toString()} \n runTests();`,
-  evenOrOddTestScript: `const runTests = ${evenOrOddTests.toString()} \n runTests();`,
-  rockPaperScissorsTestScript: `const runTests = ${rockPaperScissorsTests.toString()} \n runTests();`,
-  findTheTotalLengthTestScript: `const runTests = ${findTheTotalLengthTests.toString()} \n runTests();`,
-  reverseStringTestScript: `const runTests = ${reverseStringTests.toString()} \n runTests();`,
-  largestNumInArrayTestScript: `const runTests = ${largestNumInArrayTests.toString()} \n runTests();`,
-  primeNumberTestScript: `const runTests = ${primeNumberTests.toString()} \n runTests();`,
-  sortArrayIntsTestScript: `const runTests = ${sortArrayIntsTests.toString()} \n runTests();`,
-  removeDuplicatesArrTestScript: `const runTests = ${removeDuplicatesArrTests.toString()} \n runTests();`,
-  militaryTimeConversionTestScript: `const runTests = ${militaryTimeConversionTests.toString()} \n runTests();`,
-  countTheVowelsTestScript: `const runTests = () => {
-    const testResults = [];
-    testResults.push({
-      test: 'User created a function called vowelCount.',
-      passed: typeof vowelCount === 'function',
-      result: typeof vowelCount,
-    });
-    testResults.push({
-      test: 'Function returns a number',
-      passed: typeof vowelCount('abcdefg') === 'number',
-      result: typeof vowelCount('abcdefg'),
-    });
-    testResults.push({
-      test: 'vowelCount("This is a test sentence.") returns 7 ',
-      passed: vowelCount('This is a test sentence.') === 7,
-      result: vowelCount('This is a test sentence.'),
-    });
-    testResults.push({
-      test: 'vowelCount("If you have not checked out FreeCodeCamp, you should. It is Awesome!!!") returns 25',
-      passed: vowelCount('If you have not checked out FreeCodeCamp, you should. It is Awesome!!!') === 25,
-      result: vowelCount('If you have not checked out FreeCodeCamp, you should. It is Awesome!!!'),
-    });
-    testResults.push({
-      test: 'vowelCount("THIS IS UPPER CASE. this is lowercase.") returns 12',
-      passed: vowelCount('THIS IS UPPER CASE. this is lowercase.') === 12,
-      result: vowelCount('THIS IS UPPER CASE. this is lowercase.'),
-    });
-    return testResults;
-  };
-  
-  runTests();`,
-  calculateTheTipTestScript: `const runTests = () => {
-    const testResults = [];
-    testResults.push({
-      test: 'User created a function tipCalc.',
-      passed: typeof tipCalc === 'function',
-      result: typeof tipCalc,
-    });
-    testResults.push({
-      test: 'Function returns a string.',
-      passed: typeof tipCalc('$25.97', '20%') === 'string',
-      result: typeof tipCalc('$25.97', '20%'),
-    });
-    testResults.push({
-      test: 'tipCalc("$25.97", "20%") returns $5.19',
-      passed: tipCalc('$25.97', '20%') === '$5.19',
-      result: tipCalc('$25.97', '20%'),
-    });
-    testResults.push({
-      test: 'tipCalc("$43.28", "21%") returns $9.09',
-      passed: tipCalc('$43.28', '21%') === '$9.09',
-      result: tipCalc('$43.28', '21%'),
-    });
-    testResults.push({
-      test: 'tipCalc("$12.63", "18%") returns $2.27',
-      passed: tipCalc('$12.63', '18%') === '$2.27',
-      result: tipCalc('$12.63', '18%'),
-    });
-    testResults.push({
-      test: 'tipCalc("101.73", "25%") returns $25.43',
-      passed: tipCalc('$101.73', '25%') === '$25.43',
-      result: tipCalc('$101.73', '25%'),
-    });
-    testResults.push({
-      test: 'tipCalc("$10.91", "5%") retuns $0.55',
-      passed: tipCalc("$10.91", "5%") === '$0.55',
-      result: tipCalc("$10.91", "5%"),
-    });
-  
-    return testResults;
-  };
-  
-  runTests();`,
-  sortTheDaysTestScript: `const runTests = () => {
-    const testResults = [];
-    testResults.push({
-      test: 'User created a function called sortDays.',
-      passed: typeof sortDays === 'function',
-      result: typeof sortDays,
-    });
-    testResults.push({
-      test: 'Function returns a string',
-      passed: typeof sortDays('mon,wed,tues') === 'string',
-      result: typeof sortDays('mon,wed,tues'),
-    });
-    testResults.push({
-      test: 'sortDays("mon,wed,tues,sat") returns "mon,tues,wed,sat" ',
-      passed: sortDays('mon,wed,tues,sat') === 'mon,tues,wed,sat',
-      result: sortDays('mon,wed,tues,sat'),
-    });
-    testResults.push({
-      test: 'sortDays("sun,sat,fri,thurs,wed,tues,mon") returns "mon,tues,wed,thurs,fri,sat,sun"',
-      passed: sortDays('sun,sat,fri,thurs,wed,tues,mon') === 'mon,tues,wed,thurs,fri,sat,sun',
-      result: sortDays('sun,sat,fri,thurs,wed,tues,mon'),
-    });
-    testResults.push({
-      test: 'vowelCount("wed,tues,sat,fri") returns "tues,wed,fri,sat"',
-      passed: sortDays('wed,tues,sat,fri') === 'tues,wed,fri,sat',
-      result: sortDays('wed,tues,sat,fri'),
-    });
-    return testResults;
-  };
-  
-  runTests();`,
-  historicalDayTestScript: `const runTests = () => {
-    const testResults = [];
-    testResults.push({
-      test: 'User created a function findDay.',
-      passed: typeof findDay === 'function',
-      result: typeof findDay,
-    });
-    testResults.push({
-      test: 'Function returns a string.',
-      passed: typeof findDay('10-19-1987') === 'string',
-      result: typeof findDay('10-19-1987'),
-    });
-    testResults.push({
-      test: 'findDay("10-19-1987") returns Monday',
-      passed: findDay('10-19-1987') === 'Monday',
-      result: findDay('10-19-1987'),
-    });
-    testResults.push({
-      test: 'findDay("05-25-1977") returns Wednesday',
-      passed: findDay('05-25-1977') === 'Wednesday',
-      result: findDay('05-25-1977'),
-    });
-    testResults.push({
-      test: 'findDay("07-21-1969") returns Monday',
-      passed: findDay('07-21-1969') === 'Monday',
-      result: findDay('07-21-1969'),
-    });
-    testResults.push({
-      test: 'findDay("06-29-2007") returns "Friday"',
-      passed: findDay('06-29-2007') === 'Friday',
-      result: findDay('06-29-2007'),
-    });
-  
-    return testResults;
-  };
-  
-  runTests();`,
-  findTheIndex1TestScript: `const runTests = () => {
-    const testResults = [];
-    testResults.push({
-      test: 'User created a function called findIndex.',
-      passed: typeof findIndex === 'function',
-      result: typeof findIndex,
-    });
-    testResults.push({
-      test: 'Function returns a string',
-      passed: typeof findIndex([1, 2, 3, 4]) === 'number',
-      result: typeof findIndex([1, 2, 3, 4]),
-    });
-    testResults.push({
-      test: 'findIndex([0, 2, 10, -10, 3], -10) returns 3',
-      passed: findIndex([0, 2, 10, -10, 3], -10) === 3,
-      result: findIndex([0, 2, 10, -10, 3], -10),
-    });
-    testResults.push({
-      test: 'findIndex(["testing", "test", "tester", "tested"], "test") returns 1',
-      passed: findIndex(['testing', 'test', 'tester', 'tested'], 'test') === 1,
-      result: findIndex(['testing', 'test', 'tester', 'tested'], 'test'),
-    });
-    testResults.push({
-      test: 'findIndex([], "something") returns -1',
-      passed: findIndex([], 'something') === -1,
-      result: findIndex([], 'something'),
-    });
-    testResults.push({
-      test: 'findIndex([]) returns -1',
-      passed: findIndex(['apple', 'orange', 'grape'], 'pineapple') === -1,
-      result: findIndex(['apple', 'orange', 'grape'], 'pineapple'),
-    });
-    return testResults;
-  };
-  
-  runTests();`,
-
-  compareTwoObjsTestScript: `const runTests = () => {
-    const testResults = [];
-    testResults.push({
-      test: 'User created a function called compareObjs.',
-      passed: typeof compareObjs === 'function',
-      result: typeof compareObjs,
-    });
-    testResults.push({
-      test: 'Function returns a boolean',
-      passed: typeof compareObjs({ name: 'test' }, { name: 'test' }) === 'boolean',
-      result: typeof compareObjs({ name: 'test' }, { name: 'test' }),
-    });
-    testResults.push({
-      test: 'compareObjs({ name: "John", job: "Web Developer" }, { name: "Steve", job: "Welder" }) returns false',
-      passed: compareObjs({ name: 'John', job: 'Web Developer' }, { name: 'Steve', job: 'Welder' }) === false,
-      result: JSON.stringify(compareObjs({ name: 'John', job: 'Web Developer' }, { name: 'Steve', job: 'Welder' })),
-    });
-    testResults.push({
-      test: 'compareObjs({ title: "The Witcher", streaming: "Netflix" }, { title: "The Witcher", streaming: "Netflix" })  returns true',
-      passed:
-        compareObjs({ title: 'The Witcher', streaming: 'Netflix' }, { title: 'The Witcher', streaming: 'Netflix' }) ===
-        true,
-      result: JSON.stringify(compareObjs({ title: 'The Witcher', streaming: 'Netflix' }, { title: 'The Witcher', streaming: 'Netflix' })),
-    });
-    testResults.push({
-      test: 'compareObjs({ favorites: { food: "pizza", color: "green" }, age: 27 }, { age: 27, favorites: {food: "pizza", color: "green" }}) returns true',
-      passed:
-        compareObjs(
-          { favorites: { food: 'pizza', color: 'green' }, age: 27 },
-          { age: 27, favorites: { food: 'pizza', color: 'green' } },
-        ) === true,
-      result: JSON.stringify(compareObjs(
-        { favorites: { food: 'pizza', color: 'green' }, age: 27 },
-        { age: 27, favorites: { food: 'pizza', color: 'green' } },
-      )),
-    });
-    return testResults;
-  };
-  
-  runTests();`,
+  sumTwoIntsTestScript: createTestScriptString(sumTwoIntTests),
+  evenOrOddTestScript: createTestScriptString(evenOrOddTests),
+  rockPaperScissorsTestScript: createTestScriptString(rockPaperScissorsTests),
+  findTheTotalLengthTestScript: createTestScriptString(findTheTotalLengthTests),
+  reverseStringTestScript: createTestScriptString(reverseStringTests),
+  largestNumInArrayTestScript: createTestScriptString(largestNumInArrayTests),
+  primeNumberTestScript: createTestScriptString(primeNumberTests),
+  sortArrayIntsTestScript: createTestScriptString(sortArrayIntsTests),
+  removeDuplicatesArrTestScript: createTestScriptString(removeDuplicatesArrTests),
+  militaryTimeConversionTestScript: createTestScriptString(militaryTimeConversionTests),
+  countTheVowelsTestScript: createTestScriptString(countTheVowelsTests),
+  calculateTheTipTestScript: createTestScriptString(calculateTheTipTests),
+  sortTheDaysTestScript: createTestScriptString(sortTheDaysTests),
+  historicalDayTestScript: createTestScriptString(historicalDaysTests),
+  findTheIndex1TestScript: createTestScriptString(findTheIndexTests),
+  compareTwoObjsTestScript: createTestScriptString(compareTwoObjsTests),
   combineTwoArraysTestScript: `const runTests = () => {
     const testResults = [];
     testResults.push({
