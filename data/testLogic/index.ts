@@ -1,41 +1,11 @@
 import { sumTwoIntTests } from './testScripts/sumTwoInt';
 import { evenOrOddTests } from './testScripts/evenOrOdd';
+import { rockPaperScissorsTests } from './testScripts/rockPaperScissors';
 
 export const testScripts = {
   sumTwoIntsTestScript: `const runTests = ${sumTwoIntTests.toString()} \n runTests();`,
   evenOrOddTestScript: `const runTests = ${evenOrOddTests.toString()} \n runTests();`,
-  rockPaperScissorsTestScript: `const runTests = () => {
-    const testResults = [];
-    testResults.push({
-      test: 'User created a function rockPaperScissors.',
-      passed: typeof rockPaperScissors === 'function',
-      result: typeof rockPaperScissors,
-    });
-    testResults.push({
-      test: 'Function returns a string.',
-      passed: typeof rockPaperScissors('rock') === 'string',
-      result: typeof rockPaperScissors('rock'),
-    });
-    testResults.push({
-      test: 'rockPaperScissors("rock") returns "paper"',
-      passed: rockPaperScissors('rock') === 'paper',
-      result: rockPaperScissors('rock'),
-    });
-    testResults.push({
-      test: 'rockPaperScissors("paper") returns "scissors"',
-      passed: rockPaperScissors('paper') === 'scissors',
-      result: rockPaperScissors('paper'),
-    });
-    testResults.push({
-      test: 'rockPaperScissors("scissors") returns "rock"',
-      passed: rockPaperScissors('scissors') === 'rock',
-      result: rockPaperScissors('scissors'),
-    });
-  
-    return testResults;
-  };
-  
-  runTests();`,
+  rockPaperScissorsTestScript: `const runTests = ${rockPaperScissorsTests.toString()} \n runTests();`,
   findTheTotalLengthTestScript: `const runTests = () => {
     const testResults = [];
     testResults.push({
