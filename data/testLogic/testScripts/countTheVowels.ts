@@ -1,4 +1,20 @@
-export const countTheVowelsTests = () => {
+import { createTestScriptString } from '../../../utils/testScripts';
+
+const vowelCount = (text: string) => {
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  let result = 0;
+  let textArr = text.split('');
+
+  textArr.forEach((char) => {
+    if (vowels.includes(char.toLowerCase())) {
+      result++;
+    }
+  });
+
+  return result;
+};
+
+const countTheVowelsTests = () => {
   const testResults = [];
   testResults.push({
     test: 'User created a function called vowelCount.',
@@ -27,3 +43,5 @@ export const countTheVowelsTests = () => {
   });
   return testResults;
 };
+
+export const countTheVowelsTestScript = createTestScriptString(countTheVowelsTests);

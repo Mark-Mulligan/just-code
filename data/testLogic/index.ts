@@ -8,7 +8,7 @@ import { primeNumberTests } from './testScripts/primeNumber';
 import { sortArrayIntsTests } from './testScripts/sortArrayInts';
 import { removeDuplicatesArrTests } from './testScripts/removeDuplicatesArr';
 import { militaryTimeConversionTests } from './testScripts/militaryTimeConversion';
-import { countTheVowelsTests } from './testScripts/countTheVowels';
+import { countTheVowelsTestScript } from './testScripts/countTheVowels';
 import { calculateTheTipTestScript } from './testScripts/calculateTheTip';
 import { sortTheDaysTests } from './testScripts/sortTheDays';
 import { historicalDaysTests } from './testScripts/historicalDay';
@@ -16,7 +16,7 @@ import { findTheIndexTests } from './testScripts/findTheIndex';
 import { compareTwoObjsTestScript } from './testScripts/compareTwoObjs';
 import { combineTwoArraysTestScript } from './testScripts/combineTwoArrays';
 import { snakeToCamelTests } from './testScripts/snakeToCamel';
-import { countUniqueValuesTests } from './testScripts/countUniqueValues';
+import { countUniqueValuesTestScript } from './testScripts/countUniqueValues';
 import { queryParametersTests } from './testScripts/queryParameters';
 
 import { object_equals } from '../../utils/utilityFunctions';
@@ -49,7 +49,7 @@ export const testScripts = {
   sortArrayIntsTestScript: createTestScriptString(sortArrayIntsTests),
   removeDuplicatesArrTestScript: createTestScriptString(removeDuplicatesArrTests),
   militaryTimeConversionTestScript: createTestScriptString(militaryTimeConversionTests),
-  countTheVowelsTestScript: createTestScriptString(countTheVowelsTests),
+  countTheVowelsTestScript,
   calculateTheTipTestScript,
   sortTheDaysTestScript: createTestScriptString(sortTheDaysTests),
   historicalDayTestScript: createTestScriptString(historicalDaysTests),
@@ -57,7 +57,7 @@ export const testScripts = {
   compareTwoObjsTestScript,
   combineTwoArraysTestScript,
   snakeToCamelTestScript: createTestScriptString(snakeToCamelTests),
-  countUniqueValuesTestScript: createTestScriptString(countUniqueValuesTests),
+  countUniqueValuesTestScript,
   queryParametersTestScript: createTestScriptString(queryParametersTests, [
     { name: 'object_equals', func: object_equals },
   ]),
