@@ -1,4 +1,4 @@
-import { sumTwoIntTests } from './testScripts/sumTwoInt';
+import { sumTwoIntsTestScript } from './testScripts/sumTwoInt';
 import { evenOrOddTests } from './testScripts/evenOrOdd';
 import { rockPaperScissorsTests } from './testScripts/rockPaperScissors';
 import { findTheTotalLengthTests } from './testScripts/findTheTotalLength';
@@ -39,7 +39,7 @@ const createTestScriptString = (testFunc: Function, utilFuncs?: testUtilFunction
 };
 
 export const testScripts = {
-  sumTwoIntsTestScript: createTestScriptString(sumTwoIntTests),
+  sumTwoIntsTestScript,
   evenOrOddTestScript: createTestScriptString(evenOrOddTests),
   rockPaperScissorsTestScript: createTestScriptString(rockPaperScissorsTests),
   findTheTotalLengthTestScript: createTestScriptString(findTheTotalLengthTests),

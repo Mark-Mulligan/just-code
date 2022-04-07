@@ -1,6 +1,10 @@
-let sum = () => {};
+import { createTestScriptString } from '../../../utils/testScripts';
 
-export const sumTwoIntTests = () => {
+const sum = (num1: number, num2: number) => {
+  return num1 + num2;
+};
+
+const sumTwoIntsTests = () => {
   const testResults = [];
   testResults.push({
     test: 'User created a function called sum.',
@@ -17,3 +21,5 @@ export const sumTwoIntTests = () => {
   testResults.push({ test: 'sum(-1, -4) returns -5', passed: sum(-1, -4) === -5, result: sum(-1, -4) });
   return testResults;
 };
+
+export const sumTwoIntsTestScript = createTestScriptString(sumTwoIntsTests);
