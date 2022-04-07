@@ -1,4 +1,10 @@
-export const combineTwoArraysTests = () => {
+import { createTestScriptString } from '../../../utils/testScripts';
+
+const combineArrs = (arr1: any[], arr2: any[]) => {
+  return [] as any[];
+};
+
+const combineTwoArraysTests = () => {
   const testResults = [];
   testResults.push({
     test: 'User created a function called combineArrs.',
@@ -58,3 +64,5 @@ export const combineTwoArraysTests = () => {
 
   return testResults;
 };
+
+export const combineTwoArraysTestScript = createTestScriptString(combineTwoArraysTests);

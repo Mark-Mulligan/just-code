@@ -3,18 +3,18 @@ import { evenOrOddTestScript } from './testScripts/evenOrOdd';
 import { rockPaperScissorsTestScript } from './testScripts/rockPaperScissors';
 import { findTheTotalLengthTestScript } from './testScripts/findTheTotalLength';
 import { reverseStringTestScript } from './testScripts/reverseString';
-import { largestNumInArrayTests } from './testScripts/largestNumInArray';
+import { largestNumInArrayTestScript } from './testScripts/largestNumInArray';
 import { primeNumberTests } from './testScripts/primeNumber';
 import { sortArrayIntsTests } from './testScripts/sortArrayInts';
 import { removeDuplicatesArrTests } from './testScripts/removeDuplicatesArr';
 import { militaryTimeConversionTests } from './testScripts/militaryTimeConversion';
 import { countTheVowelsTests } from './testScripts/countTheVowels';
-import { calculateTheTipTests } from './testScripts/calculateTheTip';
+import { calculateTheTipTestScript } from './testScripts/calculateTheTip';
 import { sortTheDaysTests } from './testScripts/sortTheDays';
 import { historicalDaysTests } from './testScripts/historicalDay';
 import { findTheIndexTests } from './testScripts/findTheIndex';
 import { compareTwoObjsTestScript } from './testScripts/compareTwoObjs';
-import { combineTwoArraysTests } from './testScripts/combineTwoArrays';
+import { combineTwoArraysTestScript } from './testScripts/combineTwoArrays';
 import { snakeToCamelTests } from './testScripts/snakeToCamel';
 import { countUniqueValuesTests } from './testScripts/countUniqueValues';
 import { queryParametersTests } from './testScripts/queryParameters';
@@ -44,18 +44,18 @@ export const testScripts = {
   rockPaperScissorsTestScript,
   findTheTotalLengthTestScript,
   reverseStringTestScript,
-  largestNumInArrayTestScript: createTestScriptString(largestNumInArrayTests),
+  largestNumInArrayTestScript,
   primeNumberTestScript: createTestScriptString(primeNumberTests),
   sortArrayIntsTestScript: createTestScriptString(sortArrayIntsTests),
   removeDuplicatesArrTestScript: createTestScriptString(removeDuplicatesArrTests),
   militaryTimeConversionTestScript: createTestScriptString(militaryTimeConversionTests),
   countTheVowelsTestScript: createTestScriptString(countTheVowelsTests),
-  calculateTheTipTestScript: createTestScriptString(calculateTheTipTests),
+  calculateTheTipTestScript,
   sortTheDaysTestScript: createTestScriptString(sortTheDaysTests),
   historicalDayTestScript: createTestScriptString(historicalDaysTests),
   findTheIndex1TestScript: createTestScriptString(findTheIndexTests),
   compareTwoObjsTestScript,
-  combineTwoArraysTestScript: createTestScriptString(combineTwoArraysTests),
+  combineTwoArraysTestScript,
   snakeToCamelTestScript: createTestScriptString(snakeToCamelTests),
   countUniqueValuesTestScript: createTestScriptString(countUniqueValuesTests),
   queryParametersTestScript: createTestScriptString(queryParametersTests, [

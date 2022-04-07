@@ -1,4 +1,10 @@
-export const calculateTheTipTests = () => {
+import { createTestScriptString } from '../../../utils/testScripts';
+
+const tipCalc = (bill: string, pctTip: string) => {
+  return '';
+};
+
+const calculateTheTipTests = () => {
   const testResults = [];
   testResults.push({
     test: 'User created a function tipCalc.',
@@ -38,3 +44,5 @@ export const calculateTheTipTests = () => {
 
   return testResults;
 };
+
+export const calculateTheTipTestScript = createTestScriptString(calculateTheTipTests);

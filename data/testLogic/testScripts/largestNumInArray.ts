@@ -1,4 +1,16 @@
-export const largestNumInArrayTests = () => {
+import { createTestScriptString } from '../../../utils/testScripts';
+
+const largestNum = (numArr: number[]) => {
+  let largestNum = numArr[0];
+
+  for (let i = 1; i < numArr.length; i++) {
+    if (numArr[i] > largestNum) largestNum = numArr[i];
+  }
+
+  return largestNum;
+};
+
+const largestNumInArrayTests = () => {
   const testResults = [];
   testResults.push({
     test: 'User created a function called largestNum.',
@@ -27,3 +39,5 @@ export const largestNumInArrayTests = () => {
   });
   return testResults;
 };
+
+export const largestNumInArrayTestScript = createTestScriptString(largestNumInArrayTests);
