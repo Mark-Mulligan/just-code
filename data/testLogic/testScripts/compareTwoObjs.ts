@@ -1,4 +1,10 @@
-export const compareTwoObjsTests = () => {
+import { createTestScriptString } from '../../../utils/testScripts';
+
+const compareObjs = (obj1: any, obj2: any): boolean => {
+  return true;
+};
+
+const compareTwoObjsTests = () => {
   const testResults = [];
   testResults.push({
     test: 'User created a function called compareObjs.',
@@ -40,3 +46,5 @@ export const compareTwoObjsTests = () => {
   });
   return testResults;
 };
+
+export const compareTwoObjsTestScript = createTestScriptString(compareTwoObjsTests);

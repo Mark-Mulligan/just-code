@@ -13,7 +13,7 @@ import { calculateTheTipTests } from './testScripts/calculateTheTip';
 import { sortTheDaysTests } from './testScripts/sortTheDays';
 import { historicalDaysTests } from './testScripts/historicalDay';
 import { findTheIndexTests } from './testScripts/findTheIndex';
-import { compareTwoObjsTests } from './testScripts/compareTwoObjs';
+import { compareTwoObjsTestScript } from './testScripts/compareTwoObjs';
 import { combineTwoArraysTests } from './testScripts/combineTwoArrays';
 import { snakeToCamelTests } from './testScripts/snakeToCamel';
 import { countUniqueValuesTests } from './testScripts/countUniqueValues';
@@ -54,7 +54,7 @@ export const testScripts = {
   sortTheDaysTestScript: createTestScriptString(sortTheDaysTests),
   historicalDayTestScript: createTestScriptString(historicalDaysTests),
   findTheIndex1TestScript: createTestScriptString(findTheIndexTests),
-  compareTwoObjsTestScript: createTestScriptString(compareTwoObjsTests),
+  compareTwoObjsTestScript,
   combineTwoArraysTestScript: createTestScriptString(combineTwoArraysTests),
   snakeToCamelTestScript: createTestScriptString(snakeToCamelTests),
   countUniqueValuesTestScript: createTestScriptString(countUniqueValuesTests),
