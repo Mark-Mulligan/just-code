@@ -1,4 +1,12 @@
-export const rockPaperScissorsTests = () => {
+import { createTestScriptString } from '../../../utils/testScripts';
+
+const rockPaperScissors = (hand: string) => {
+  if (hand === 'rock') return 'paper';
+  if (hand === 'paper') return 'scissors';
+  return 'rock';
+};
+
+const rockPaperScissorsTests = () => {
   const testResults = [];
   testResults.push({
     test: 'User created a function rockPaperScissors.',
@@ -28,3 +36,5 @@ export const rockPaperScissorsTests = () => {
 
   return testResults;
 };
+
+export const rockPaperScissorsTestScript = createTestScriptString(rockPaperScissorsTests);

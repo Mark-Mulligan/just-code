@@ -1,4 +1,10 @@
-export const evenOrOddTests = () => {
+import { createTestScriptString } from '../../../utils/testScripts';
+
+const evenOrOdd = (num: number) => {
+  return num % 2 === 0 ? 'even' : 'odd';
+};
+
+const evenOrOddTests = () => {
   const testResults = [];
   testResults.push({
     test: 'User created a function evenOrOdd.',
@@ -33,3 +39,5 @@ export const evenOrOddTests = () => {
 
   return testResults;
 };
+
+export const evenOrOddTestScript = createTestScriptString(evenOrOddTests);
