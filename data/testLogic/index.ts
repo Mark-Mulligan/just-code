@@ -1,8 +1,8 @@
 import { sumTwoIntsTestScript } from './testScripts/sumTwoInt';
 import { evenOrOddTestScript } from './testScripts/evenOrOdd';
 import { rockPaperScissorsTestScript } from './testScripts/rockPaperScissors';
-import { findTheTotalLengthTests } from './testScripts/findTheTotalLength';
-import { reverseStringTests } from './testScripts/reverseString';
+import { findTheTotalLengthTestScript } from './testScripts/findTheTotalLength';
+import { reverseStringTestScript } from './testScripts/reverseString';
 import { largestNumInArrayTests } from './testScripts/largestNumInArray';
 import { primeNumberTests } from './testScripts/primeNumber';
 import { sortArrayIntsTests } from './testScripts/sortArrayInts';
@@ -42,8 +42,8 @@ export const testScripts = {
   sumTwoIntsTestScript,
   evenOrOddTestScript,
   rockPaperScissorsTestScript,
-  findTheTotalLengthTestScript: createTestScriptString(findTheTotalLengthTests),
-  reverseStringTestScript: createTestScriptString(reverseStringTests),
+  findTheTotalLengthTestScript,
+  reverseStringTestScript,
   largestNumInArrayTestScript: createTestScriptString(largestNumInArrayTests),
   primeNumberTestScript: createTestScriptString(primeNumberTests),
   sortArrayIntsTestScript: createTestScriptString(sortArrayIntsTests),

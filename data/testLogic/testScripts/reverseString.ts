@@ -1,4 +1,10 @@
-export const reverseStringTests = () => {
+import { createTestScriptString } from '../../../utils/testScripts';
+
+const reverseStr = (inputStr: string) => {
+  return inputStr.split('').reverse().join('');
+};
+
+const reverseStringTests = () => {
   const testResults = [];
   testResults.push({
     test: 'User created a function called reverseStr.',
@@ -28,3 +34,5 @@ export const reverseStringTests = () => {
 
   return testResults;
 };
+
+export const reverseStringTestScript = createTestScriptString(reverseStringTests);

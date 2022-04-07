@@ -1,4 +1,10 @@
-export const findTheTotalLengthTests = () => {
+import { createTestScriptString } from '../../../utils/testScripts';
+
+const totalLength = (inputArr: string[]) => {
+  return inputArr.join('').length;
+};
+
+const findTheTotalLengthTests = () => {
   const testResults = [];
   testResults.push({
     test: 'User created a function totalLength.',
@@ -28,3 +34,5 @@ export const findTheTotalLengthTests = () => {
 
   return testResults;
 };
+
+export const findTheTotalLengthTestScript = createTestScriptString(findTheTotalLengthTests);
