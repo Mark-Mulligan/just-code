@@ -1,8 +1,36 @@
 import { createTestScriptString } from '../../../utils/testScripts';
-import { deepEqual } from '../../../utils/utilityFunctions';
 
-const countUnique = (inputArr: any[]) => {
-  return [] as any[];
+function isPrimitive(obj: { [key: string]: any }) {
+  return obj !== Object(obj);
+}
+
+const deepEqual = (obj1: { [key: string]: any }, obj2: { [key: string]: any }) => {
+  if (obj1 === obj2) return true;
+
+  if (isPrimitive(obj1) && isPrimitive(obj2)) return obj1 === obj2;
+
+  if (Object.keys(obj1).length !== Object.keys(obj2).length) return false;
+
+  for (let key in obj1) {
+    if (!(key in obj2)) return false;
+    if (!deepEqual(obj1[key], obj2[key])) return false;
+  }
+
+  return true;
+};
+
+const countUnique = (arr: any[]) => {
+  const result: any = {};
+
+  arr.forEach((item) => {
+    if (!result.hasOwnProperty(item)) {
+      result[item] = 1;
+    } else {
+      result[item] += 1;
+    }
+  });
+
+  return result;
 };
 
 const countUniqueValuesTests = () => {
@@ -42,5 +70,6 @@ const countUniqueValuesTests = () => {
 };
 
 export const countUniqueValuesTestScript = createTestScriptString(countUniqueValuesTests, [
+  { name: 'isPrimitive', func: isPrimitive },
   { name: 'deepEqual', func: deepEqual },
 ]);
