@@ -1,4 +1,12 @@
-export const findTheIndexTests = () => {
+import { createTestScriptString } from '../../../utils/testScripts';
+
+const findIndex = (source: string[] | number[], target: string | number) => {
+  for (let i = 0; i < source.length; i++) {
+    if (source[i] === target) return i;
+  }
+};
+
+const findTheIndexTests = () => {
   const testResults = [];
   testResults.push({
     test: 'User created a function called findIndex.',
@@ -7,8 +15,8 @@ export const findTheIndexTests = () => {
   });
   testResults.push({
     test: 'Function returns a string',
-    passed: typeof findIndex([1, 2, 3, 4]) === 'number',
-    result: typeof findIndex([1, 2, 3, 4]),
+    passed: typeof findIndex([1, 2, 3, 4], 2) === 'number',
+    result: typeof findIndex([1, 2, 3, 4], 2),
   });
   testResults.push({
     test: 'findIndex([0, 2, 10, -10, 3], -10) returns 3',
@@ -32,3 +40,5 @@ export const findTheIndexTests = () => {
   });
   return testResults;
 };
+
+export const findTheIndex1TestScript = createTestScriptString(findTheIndexTests);

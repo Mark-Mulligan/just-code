@@ -1,4 +1,10 @@
-export const primeNumberTests = () => {
+import { createTestScriptString } from '../../../utils/testScripts';
+
+const isPrime = (num: number) => {
+  return true;
+};
+
+const primeNumberTests = () => {
   const testResults = [];
   testResults.push({
     test: 'User created a function isPrime.',
@@ -43,3 +49,5 @@ export const primeNumberTests = () => {
 
   return testResults;
 };
+
+export const primeNumberTestScript = createTestScriptString(primeNumberTests);

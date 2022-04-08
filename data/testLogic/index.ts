@@ -4,20 +4,20 @@ import { rockPaperScissorsTestScript } from './testScripts/rockPaperScissors';
 import { findTheTotalLengthTestScript } from './testScripts/findTheTotalLength';
 import { reverseStringTestScript } from './testScripts/reverseString';
 import { largestNumInArrayTestScript } from './testScripts/largestNumInArray';
-import { primeNumberTests } from './testScripts/primeNumber';
+import { primeNumberTestScript } from './testScripts/primeNumber';
 import { sortArrayIntsTests } from './testScripts/sortArrayInts';
-import { removeDuplicatesArrTests } from './testScripts/removeDuplicatesArr';
-import { militaryTimeConversionTests } from './testScripts/militaryTimeConversion';
+import { removeDuplicatesArrTestScript } from './testScripts/removeDuplicatesArr';
+import { militaryTimeConversionTestScript } from './testScripts/militaryTimeConversion';
 import { countTheVowelsTestScript } from './testScripts/countTheVowels';
 import { calculateTheTipTestScript } from './testScripts/calculateTheTip';
 import { sortTheDaysTests } from './testScripts/sortTheDays';
-import { historicalDaysTests } from './testScripts/historicalDay';
-import { findTheIndexTests } from './testScripts/findTheIndex';
+import { historicalDayTestScript } from './testScripts/historicalDay';
+import { findTheIndex1TestScript } from './testScripts/findTheIndex';
 import { compareTwoObjsTestScript } from './testScripts/compareTwoObjs';
 import { combineTwoArraysTestScript } from './testScripts/combineTwoArrays';
 import { snakeToCamelTests } from './testScripts/snakeToCamel';
 import { countUniqueValuesTestScript } from './testScripts/countUniqueValues';
-import { queryParametersTests } from './testScripts/queryParameters';
+import { queryParametersTestScript } from './testScripts/queryParameters';
 
 import { object_equals } from '../../utils/utilityFunctions';
 
@@ -45,22 +45,20 @@ export const testScripts = {
   findTheTotalLengthTestScript,
   reverseStringTestScript,
   largestNumInArrayTestScript,
-  primeNumberTestScript: createTestScriptString(primeNumberTests),
+  primeNumberTestScript,
   sortArrayIntsTestScript: createTestScriptString(sortArrayIntsTests),
-  removeDuplicatesArrTestScript: createTestScriptString(removeDuplicatesArrTests),
-  militaryTimeConversionTestScript: createTestScriptString(militaryTimeConversionTests),
+  removeDuplicatesArrTestScript,
+  militaryTimeConversionTestScript,
   countTheVowelsTestScript,
   calculateTheTipTestScript,
   sortTheDaysTestScript: createTestScriptString(sortTheDaysTests),
-  historicalDayTestScript: createTestScriptString(historicalDaysTests),
-  findTheIndex1TestScript: createTestScriptString(findTheIndexTests),
+  historicalDayTestScript,
+  findTheIndex1TestScript,
   compareTwoObjsTestScript,
   combineTwoArraysTestScript,
   snakeToCamelTestScript: createTestScriptString(snakeToCamelTests),
   countUniqueValuesTestScript,
-  queryParametersTestScript: createTestScriptString(queryParametersTests, [
-    { name: 'object_equals', func: object_equals },
-  ]),
+  queryParametersTestScript,
 
   ticTacToeTestScript: `const runTests = () => {
     const testResults = [];

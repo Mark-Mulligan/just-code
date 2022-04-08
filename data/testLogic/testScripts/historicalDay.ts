@@ -1,4 +1,10 @@
-export const historicalDaysTests = () => {
+import { createTestScriptString } from '../../../utils/testScripts';
+
+const findDay = (inputDate: string) => {
+  return '';
+};
+
+const historicalDayTests = () => {
   const testResults = [];
   testResults.push({
     test: 'User created a function findDay.',
@@ -33,3 +39,5 @@ export const historicalDaysTests = () => {
 
   return testResults;
 };
+
+export const historicalDayTestScript = createTestScriptString(historicalDayTests);

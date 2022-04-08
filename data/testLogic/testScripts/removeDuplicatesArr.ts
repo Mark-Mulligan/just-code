@@ -1,3 +1,9 @@
+import { createTestScriptString } from '../../../utils/testScripts';
+
+const removeDuplicates = (inputArr: any[]) => {
+  return inputArr;
+};
+
 export const removeDuplicatesArrTests = () => {
   const testResults = [];
   testResults.push({
@@ -31,3 +37,5 @@ export const removeDuplicatesArrTests = () => {
 
   return testResults;
 };
+
+export const removeDuplicatesArrTestScript = createTestScriptString(removeDuplicatesArrTests);

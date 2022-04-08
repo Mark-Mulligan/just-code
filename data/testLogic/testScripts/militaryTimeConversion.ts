@@ -1,4 +1,10 @@
-export const militaryTimeConversionTests = () => {
+import { createTestScriptString } from '../../../utils/testScripts';
+
+const militaryTimeConverter = (time: string) => {
+  return time;
+};
+
+const militaryTimeConversionTests = () => {
   const testResults = [];
   testResults.push({
     test: 'User created a function militaryTimeConverter.',
@@ -34,3 +40,5 @@ export const militaryTimeConversionTests = () => {
 
   return testResults;
 };
+
+export const militaryTimeConversionTestScript = createTestScriptString(militaryTimeConversionTests);
