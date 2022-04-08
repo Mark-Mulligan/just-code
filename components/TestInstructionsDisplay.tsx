@@ -10,9 +10,13 @@ const TestInstructionsDisplay = ({ codingExerciseOverview }: testCriteriaDisplay
       <h2>{codingExerciseOverview.title}</h2>
       <p>{codingExerciseOverview.instructions}</p>
       <h3>Test Criteria</h3>
-      <ul>
+      <ul style={{ paddingInlineStart: 20 }}>
         {codingExerciseOverview.testCriteria.map((test, index) => {
-          return <li key={`test-${index}`}>{test}</li>;
+          return (
+            <li key={`test-${index}`} style={{ whiteSpace: 'pre-line', marginBottom: 5 }}>
+              <code>{test}</code>
+            </li>
+          );
         })}
       </ul>
     </>

@@ -42,11 +42,15 @@ const TestResultsDisplay = ({ testResults, numTestsPassed, overallResult, errorM
               return (
                 <li key={`test-result-${index}`}>
                   <div>
-                    {testResult.test} :{' '}
-                    {testResult.passed ? <Icon color="green" name="check" /> : <Icon color="red" name="close" />}
+                    <code>
+                      {testResult.test}{' '}
+                      {testResult.passed ? <Icon color="green" name="check" /> : <Icon color="red" name="close" />}
+                    </code>
                   </div>
                   <div>
-                    Your code returned --{`>`} {testResult.result}
+                    <code>
+                      Your code returned --{`>`} {testResult.result}
+                    </code>
                   </div>
                 </li>
               );
