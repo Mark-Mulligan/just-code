@@ -1,4 +1,10 @@
-export const snakeToCamelTests = () => {
+import { createTestScriptString } from '../../../utils/testScripts';
+
+const snakeToCamel = (inputStr: string) => {
+  return inputStr;
+};
+
+const snakeToCamelTests = () => {
   const testResults = [];
   testResults.push({
     test: 'User created a function called snakeToCamel.',
@@ -33,3 +39,5 @@ export const snakeToCamelTests = () => {
 
   return testResults;
 };
+
+export const snakeToCamelTestScript = createTestScriptString(snakeToCamelTests);

@@ -1,4 +1,10 @@
-export const sortArrayIntsTests = () => {
+import { createTestScriptString } from '../../../utils/testScripts';
+
+const sortArr = (inputArr: number[]) => {
+  return inputArr;
+};
+
+const sortArrayIntsTests = () => {
   const testResults = [];
   testResults.push({
     test: 'User created a function called sortArr.',
@@ -27,3 +33,5 @@ export const sortArrayIntsTests = () => {
   });
   return testResults;
 };
+
+export const sortArrayIntsTestScript = createTestScriptString(sortArrayIntsTests);

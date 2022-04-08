@@ -1,4 +1,10 @@
-export const sortTheDaysTests = () => {
+import { createTestScriptString } from '../../../utils/testScripts';
+
+const sortDays = (inputStr: string) => {
+  return inputStr;
+};
+
+const sortTheDaysTests = () => {
   const testResults = [];
   testResults.push({
     test: 'User created a function called sortDays.',
@@ -27,3 +33,5 @@ export const sortTheDaysTests = () => {
   });
   return testResults;
 };
+
+export const sortTheDaysTestScript = createTestScriptString(sortTheDaysTests);
