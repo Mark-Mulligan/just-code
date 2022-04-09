@@ -4,6 +4,7 @@ import { rockPaperScissorsTestScript } from './testScripts/rockPaperScissors';
 import { findTheTotalLengthTestScript } from './testScripts/findTheTotalLength';
 import { reverseStringTestScript } from './testScripts/reverseString';
 import { largestNumInArrayTestScript } from './testScripts/largestNumInArray';
+import { checkObjectKeysTestScript } from './testScripts/checkObjectKeys';
 import { primeNumberTestScript } from './testScripts/primeNumber';
 import { sortArrayIntsTestScript } from './testScripts/sortArrayInts';
 import { removeDuplicatesArrTestScript } from './testScripts/removeDuplicatesArr';
@@ -27,6 +28,7 @@ export const testScripts = {
   findTheTotalLengthTestScript,
   reverseStringTestScript,
   largestNumInArrayTestScript,
+  checkObjectKeysTestScript,
   primeNumberTestScript,
   sortArrayIntsTestScript,
   removeDuplicatesArrTestScript,

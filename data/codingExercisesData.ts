@@ -100,6 +100,24 @@ export const codingExercisesData: codingExerciseData = {
       'largestNum([-5, -2, -1, -3, -20]) returns -1',
     ],
   },
+
+  'check-object-keys': {
+    title: 'Check Key in Object',
+    description: 'Create a function that determines wether a given key exsits in an object',
+    instructions:
+      'Create a function called hasKey that takes in an object, and targetKey as a string.  The function should return a boolean value based on whether the given object contains the target key.',
+    testScriptCode: testScripts.checkObjectKeysTestScript,
+    startingCode: 'const hasKey = (obj, targetKey) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+    testCriteria: [
+      'User created a function called hasKey',
+      'function returns a boolean',
+      'hasKey({ firstName: "Mark", lastName: "Mulligan" }, "firstName") \n returns true',
+      'hasKey({ label: "Program on", value: "1" }, "labels") \n returns false',
+      'hasKey({ dates: ["12-4-2022", "12-11-2022"], amounts: [10, 20] }, "dates") \n returns true',
+      'hasKey({ test: "Test", tester: "Tester" }, "testing") \n returns false',
+    ],
+  },
+
   'prime-number': {
     title: 'Prime Number',
     description: 'Create a function that determines wheter or not a given number is a prime number.',
