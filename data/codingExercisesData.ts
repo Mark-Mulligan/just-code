@@ -168,6 +168,17 @@ export const codingExercisesData: codingExerciseData = {
       'findDay("06-29-2007") returns "Friday"',
     ],
   },
+
+  'alphabetize-names': {
+    title: 'Alphabetize Names',
+    description: 'Create a function that returns a list of name objects alphabetized.',
+    instructions:
+      'Create a function alphabetizeNames that takes in an two arguments, an array of name objects { firstName: string, lastName: string }. and a string that represents which to order by (either "firstName" or "lastName").  Return a new array container all the name objects in the correct alphabetic order.',
+    testScriptCode: testScripts.historicalDayTestScript,
+    startingCode: 'const alphabetizeNames = (nameList, sortBy) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+    testCriteria: ['User created a function called alphabetizeNames', 'Function returns a array of name objects'],
+  },
+
   'find-the-index-1': {
     title: 'Find the Index (Level 1)',
     description: 'Create a function that returns the index of a give value in an array.',
