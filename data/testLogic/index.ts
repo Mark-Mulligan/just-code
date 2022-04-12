@@ -13,6 +13,7 @@ import { countTheVowelsTestScript } from './testScripts/countTheVowels';
 import { calculateTheTipTestScript } from './testScripts/calculateTheTip';
 import { sortTheDaysTestScript } from './testScripts/sortTheDays';
 import { historicalDayTestScript } from './testScripts/historicalDay';
+import { alphabetizeNamesTestScript } from './testScripts/alphabetizeNames';
 import { findTheIndex1TestScript } from './testScripts/findTheIndex';
 import { compareTwoObjsTestScript } from './testScripts/compareTwoObjs';
 import { combineTwoArraysTestScript } from './testScripts/combineTwoArrays';
@@ -37,6 +38,7 @@ export const testScripts = {
   calculateTheTipTestScript,
   sortTheDaysTestScript,
   historicalDayTestScript,
+  alphabetizeNamesTestScript,
   findTheIndex1TestScript,
   compareTwoObjsTestScript,
   combineTwoArraysTestScript,

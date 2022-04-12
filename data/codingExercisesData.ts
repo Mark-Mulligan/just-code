@@ -174,9 +174,20 @@ export const codingExercisesData: codingExerciseData = {
     description: 'Create a function that returns a list of name objects alphabetized.',
     instructions:
       'Create a function alphabetizeNames that takes in an two arguments, an array of name objects { firstName: string, lastName: string }. and a string that represents which to order by (either "firstName" or "lastName").  Return a new array container all the name objects in the correct alphabetic order.',
-    testScriptCode: testScripts.historicalDayTestScript,
+    testScriptCode: testScripts.alphabetizeNamesTestScript,
     startingCode: 'const alphabetizeNames = (nameList, sortBy) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
-    testCriteria: ['User created a function called alphabetizeNames', 'Function returns a array of name objects'],
+    testCriteria: [
+      'User created a function called alphabetizeNames',
+      'Function returns a array of name objects',
+      `alphabetizeNames(
+      [
+        { first: 'Harry', last: 'Potter' },
+        { first: 'Ron', last: 'Weasly' },
+        { first: 'Draco', last: 'Malfoy' },
+      ],
+      'last',
+    ), \n returns [{ first: 'Draco', last: 'Malfoy'}, { first: 'Harry', last: 'Potter' }, { first: 'Ron', last: 'Weasly' }]`,
+    ],
   },
 
   'find-the-index-1': {
