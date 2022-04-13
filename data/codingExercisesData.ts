@@ -173,7 +173,7 @@ export const codingExercisesData: codingExerciseData = {
     title: 'Alphabetize Names',
     description: 'Create a function that returns a list of name objects alphabetized.',
     instructions:
-      'Create a function alphabetizeNames that takes in an two arguments, an array of name objects { firstName: string, lastName: string }. and a string that represents which to order by (either "firstName" or "lastName").  Return a new array container all the name objects in the correct alphabetic order.',
+      'Create a function alphabetizeNames that takes in an two arguments, an array of name objects ex. [{ firstName: string, lastName: string }, {...}]. and a string that represents which name to order by (either "first" or "last").  Return a new array container all the name objects in the correct alphabetic order. If grouping by last name and two names are the same, use the first name to decide the order.  Vice versa if ordering by first name.',
     testScriptCode: testScripts.alphabetizeNamesTestScript,
     startingCode: 'const alphabetizeNames = (nameList, sortBy) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
     testCriteria: [
@@ -199,12 +199,26 @@ export const codingExercisesData: codingExerciseData = {
         { first: 'Jim', last: 'Halpert' },
       ],
       'first',
-    ), returns [
+    ), \n returns [
       { first: 'Dwight', last: 'Schrute' },
       { first: 'Jim', last: 'Halpert' },
       { first: 'Michael', last: 'Scott' },
       { first: 'Pam', last: 'Beasly' },
     ]`,
+      `alphabetizeNames(
+      [
+        { first: 'John', last: 'Smith' },
+        { first: 'Jane', last: 'Smith' },
+        { first: 'Other', last: 'Name' },
+        { first: 'Another', last: 'Name' },
+      ],
+      'last',
+    ), \n returns [
+      { first: 'Another', last: 'Name' },
+      { first: 'Other', last: 'Name' },
+      { first: 'Jane', last: 'Smith' },
+      { first: 'John', last: 'Smith' },
+    ],`,
     ],
   },
 
