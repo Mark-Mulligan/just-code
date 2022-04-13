@@ -219,6 +219,20 @@ export const codingExercisesData: codingExerciseData = {
       { first: 'Jane', last: 'Smith' },
       { first: 'John', last: 'Smith' },
     ],`,
+      `alphabetizeNames(
+      [
+        { first: 'John', last: 'Stewart' },
+        { first: 'John', last: 'Stamos' },
+        { first: 'Chris', last: 'Evans' },
+        { first: 'Chris', last: 'Stapleton' },
+      ],
+      'last',
+    ), \n returns [
+      { first: 'Chris', last: 'Evans' },
+      { first: 'Chris', last: 'Stapleton' },
+      { first: 'John', last: 'Stamos' },
+      { first: 'John', last: 'Stewart' },
+    ]`,
     ],
   },
 
