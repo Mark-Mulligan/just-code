@@ -102,6 +102,49 @@ const alphabetizeNamesTests = () => {
       ),
     ),
   });
+  testResults.push({
+    test: `alphabetizeNames(
+      [
+        { first: 'Michael', last: 'Scott' },
+        { first: 'Pam', last: 'Beasly' },
+        { first: 'Dwight', last: 'Schrute' },
+        { first: 'Jim', last: 'Halpert' },
+      ],
+      'first',
+    ), returns [
+      { first: 'Dwight', last: 'Schrute' },
+      { first: 'Jim', last: 'Halpert' },
+      { first: 'Michael', last: 'Scott' },
+      { first: 'Pam', last: 'Beasly' },
+    ],`,
+    passed: object_equals(
+      alphabetizeNames(
+        [
+          { first: 'Michael', last: 'Scott' },
+          { first: 'Pam', last: 'Beasly' },
+          { first: 'Dwight', last: 'Schrute' },
+          { first: 'Jim', last: 'Halpert' },
+        ],
+        'first',
+      ),
+      [
+        { first: 'Dwight', last: 'Schrute' },
+        { first: 'Jim', last: 'Halpert' },
+        { first: 'Michael', last: 'Scott' },
+        { first: 'Pam', last: 'Beasly' },
+      ],
+    ),
+    result: JSON.stringify(
+      alphabetizeNames(
+        [
+          { first: 'Harry', last: 'Potter' },
+          { first: 'Ron', last: 'Weasly' },
+          { first: 'Draco', last: 'Malfoy' },
+        ],
+        'last',
+      ),
+    ),
+  });
 
   return testResults;
 };

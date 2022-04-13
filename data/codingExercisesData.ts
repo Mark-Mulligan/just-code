@@ -186,7 +186,25 @@ export const codingExercisesData: codingExerciseData = {
         { first: 'Draco', last: 'Malfoy' },
       ],
       'last',
-    ), \n returns [{ first: 'Draco', last: 'Malfoy'}, { first: 'Harry', last: 'Potter' }, { first: 'Ron', last: 'Weasly' }]`,
+    ), \n returns [
+      { first: 'Draco', last: 'Malfoy'}, 
+      { first: 'Harry', last: 'Potter' }, 
+      { first: 'Ron', last: 'Weasly' }
+    ]`,
+      `alphabetizeNames(
+      [
+        { first: 'Michael', last: 'Scott' },
+        { first: 'Pam', last: 'Beasly' },
+        { first: 'Dwight', last: 'Schrute' },
+        { first: 'Jim', last: 'Halpert' },
+      ],
+      'first',
+    ), returns [
+      { first: 'Dwight', last: 'Schrute' },
+      { first: 'Jim', last: 'Halpert' },
+      { first: 'Michael', last: 'Scott' },
+      { first: 'Pam', last: 'Beasly' },
+    ]`,
     ],
   },
 
