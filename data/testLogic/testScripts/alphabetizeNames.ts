@@ -121,7 +121,7 @@ const alphabetizeNamesTests = () => {
       { first: 'Jim', last: 'Halpert' },
       { first: 'Michael', last: 'Scott' },
       { first: 'Pam', last: 'Beasly' },
-    ],`,
+    ]`,
     passed:
       JSON.stringify(
         alphabetizeNames(
@@ -166,7 +166,7 @@ const alphabetizeNamesTests = () => {
       { first: 'Other', last: 'Name' },
       { first: 'Jane', last: 'Smith' },
       { first: 'John', last: 'Smith' },
-    ],`,
+    ]`,
     passed: JSON.stringify(
       alphabetizeNames(
         [
@@ -210,7 +210,7 @@ const alphabetizeNamesTests = () => {
       { first: 'Chris', last: 'Stapleton' },
       { first: 'John', last: 'Stamos' },
       { first: 'John', last: 'Stewart' },
-    ],`,
+    ]`,
     passed: JSON.stringify(
       alphabetizeNames(
         [
