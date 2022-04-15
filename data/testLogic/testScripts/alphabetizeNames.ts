@@ -5,17 +5,35 @@ interface Name {
   last: string;
 }
 
-const alphabetizeNames = (nameList: Name[], order: string) => {
-  return '';
+const alphabetizeNames = (nameList: Name[], sortBy: 'first' | 'last') => {
+  let opposite: 'first' | 'last' = sortBy === 'last' ? 'first' : 'last';
+
+  return nameList.sort((a, b) => {
+    if (a[sortBy].localeCompare(b[sortBy]) === 0) {
+      return a[opposite].localeCompare(b[opposite]);
+    }
+
+    return a[sortBy].localeCompare(b[sortBy]);
+  });
 };
 
-const checkFunctionReturnsAListOfNames = (functionResult: any) => {
+const checkFunctionReturnsAListOfNames = (functionResult: Name[]) => {
   if (!Array.isArray(functionResult)) return false;
 
-  functionResult.forEach((name) => {
-    if (!name.hasOwnProperty('first') || !name.hasOwnProperty('last')) return false;
-    if (typeof name.first !== 'string' || typeof name.last !== 'string') return false;
-  });
+  let result = true;
+
+  for (let i = 0; i < functionResult.length; i++) {
+    if (!functionResult[i].hasOwnProperty('first') || !functionResult[i].hasOwnProperty('last')) {
+      result = false;
+      break;
+    }
+    if (typeof functionResult[i].first !== 'string' || typeof functionResult[i].last !== 'string') {
+      result = false;
+      break;
+    }
+
+    return result;
+  }
 };
 
 const object_equals = (x: any, y: any) => {
@@ -167,23 +185,24 @@ const alphabetizeNamesTests = () => {
       { first: 'Jane', last: 'Smith' },
       { first: 'John', last: 'Smith' },
     ]`,
-    passed: JSON.stringify(
-      alphabetizeNames(
-        [
-          { first: 'John', last: 'Smith' },
-          { first: 'Jane', last: 'Smith' },
-          { first: 'Other', last: 'Name' },
-          { first: 'Another', last: 'Name' },
-        ],
-        'last',
+    passed:
+      JSON.stringify(
+        alphabetizeNames(
+          [
+            { first: 'John', last: 'Smith' },
+            { first: 'Jane', last: 'Smith' },
+            { first: 'Other', last: 'Name' },
+            { first: 'Another', last: 'Name' },
+          ],
+          'last',
+        ),
       ) ===
-        JSON.stringify([
-          { first: 'Another', last: 'Name' },
-          { first: 'Other', last: 'Name' },
-          { first: 'Jane', last: 'Smith' },
-          { first: 'John', last: 'Smith' },
-        ]),
-    ),
+      JSON.stringify([
+        { first: 'Another', last: 'Name' },
+        { first: 'Other', last: 'Name' },
+        { first: 'Jane', last: 'Smith' },
+        { first: 'John', last: 'Smith' },
+      ]),
     result: JSON.stringify(
       alphabetizeNames(
         [
@@ -211,23 +230,25 @@ const alphabetizeNamesTests = () => {
       { first: 'John', last: 'Stamos' },
       { first: 'John', last: 'Stewart' },
     ]`,
-    passed: JSON.stringify(
-      alphabetizeNames(
-        [
-          { first: 'John', last: 'Stewart' },
-          { first: 'John', last: 'Stamos' },
-          { first: 'Chris', last: 'Evans' },
-          { first: 'Chris', last: 'Stapleton' },
-        ],
-        'first',
+    passed:
+      JSON.stringify(
+        alphabetizeNames(
+          [
+            { first: 'John', last: 'Stewart' },
+            { first: 'John', last: 'Stamos' },
+            { first: 'Chris', last: 'Evans' },
+            { first: 'Chris', last: 'Stapleton' },
+          ],
+          'first',
+        ),
       ) ===
-        JSON.stringify([
-          { first: 'Chris', last: 'Evans' },
-          { first: 'Chris', last: 'Stapleton' },
-          { first: 'John', last: 'Stamos' },
-          { first: 'John', last: 'Stewart' },
-        ]),
-    ),
+      JSON.stringify([
+        { first: 'Chris', last: 'Evans' },
+        { first: 'Chris', last: 'Stapleton' },
+        { first: 'John', last: 'Stamos' },
+        { first: 'John', last: 'Stewart' },
+      ]),
+
     result: JSON.stringify(
       alphabetizeNames(
         [
@@ -244,4 +265,7 @@ const alphabetizeNamesTests = () => {
   return testResults;
 };
 
-export const alphabetizeNamesTestScript = createTestScriptString(alphabetizeNamesTests);
+export const alphabetizeNamesTestScript = createTestScriptString(alphabetizeNamesTests, [
+  { name: 'checkFunctionReturnsAListOfNames', func: checkFunctionReturnsAListOfNames },
+  { name: 'object_equals', func: object_equals },
+]);
