@@ -1,18 +1,18 @@
 import type { NextPage, GetStaticProps, GetStaticPaths } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import { codingExercisesData } from '../../data/codingExercisesData';
+import { codingExercisesData } from '../../../data/codingExercisesData';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import CodeMirror from '@uiw/react-codemirror';
 import { javascript } from '@codemirror/lang-javascript';
 import axios from 'axios';
-import styles from '../../styles/practiceProblem.module.scss';
+import styles from '../../../styles/practiceProblem.module.scss';
 import { NextParsedUrlQuery } from 'next/dist/server/request-meta';
-import { codingExerciseOverview, testResult } from '../../types';
-import TestInfoPanel from '../../components/TestInfoPanel';
+import { codingExerciseOverview, testResult } from '../../../types';
+import TestInfoPanel from '../../../components/TestInfoPanel';
 import { Modal, Header, Icon, Button } from 'semantic-ui-react';
-import { saveToLocalStorage } from '../../utils/localStorage';
+import { saveToLocalStorage } from '../../../utils/localStorage';
 
 interface IParams extends NextParsedUrlQuery {
   problemKey: string;

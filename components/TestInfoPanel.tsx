@@ -2,6 +2,7 @@ import { Resizable } from 're-resizable';
 import { useState, useEffect } from 'react';
 import { Button, Loader, Dimmer } from 'semantic-ui-react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { codingExerciseOverview, testResult } from '../types';
 import TestResultsDisplay from './TestResultsDisplay';
 import TestInstructionsDisplay from './TestInstructionsDisplay';
@@ -27,6 +28,7 @@ const TestInfoPanel = ({
   handleCodeSubmit,
 }: TestInfoPanelProps) => {
   const [windowWidth, setWindowWidth] = useState(1400);
+  const router = useRouter();
 
   const handleResize = () => {
     setWindowWidth(window.innerWidth);
@@ -78,8 +80,14 @@ const TestInfoPanel = ({
         </Button>
 
         <Link href="/coding-exercises" passHref>
-          <Button fluid inverted>
+          <Button fluid inverted className="mb-10">
             Back To Exercises
+          </Button>
+        </Link>
+
+        <Link href={`${router.asPath}/help`} passHref>
+          <Button fluid inverted>
+            Help
           </Button>
         </Link>
       </Resizable>
@@ -108,6 +116,12 @@ const TestInfoPanel = ({
       <Link href="/coding-exercises" passHref>
         <Button fluid inverted>
           Back To Exercises
+        </Button>
+      </Link>
+
+      <Link href={`${router.asPath}/help`} passHref>
+        <Button fluid inverted>
+          Help
         </Button>
       </Link>
     </div>
