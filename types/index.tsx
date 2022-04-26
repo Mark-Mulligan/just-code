@@ -7,6 +7,9 @@ export type CodingExerciseOverview = {
   testScriptCode: string;
   startingCode: string;
   testCriteria: string[];
+  problemExplaination?: string;
+  hints?: string[];
+  solutionCode?: string;
 };
 
 export type AllExerciseOverviewData = {

@@ -22,16 +22,18 @@ const PracticeProblemHelp: NextPage<PracticeProblemHelpProps> = ({ codingExercis
     <Container className={styles.helpContainer}>
       <h1 className="text-center">{codingExerciseData.title}</h1>
       <h2>Problem Explaination</h2>
-      <p>The goal here is to add two numbers together. Make sure you are returning the result.</p>
+      <p>{codingExerciseData.problemExplaination}</p>
       <h2>Hints</h2>
       <ul>
-        <li>The % operator let gives the remainder after a dividing operation. For example, 4 % 2 = 0. 5 % 2 = 1.</li>
+        {codingExerciseData.hints?.map((hint, index) => {
+          return <li key={`hint-${index}`}>{hint}</li>;
+        })}
       </ul>
       <h2>Solution</h2>
       {showSolution ? (
         <CodeMirror
           theme={'dark'}
-          value={'const evenOrOdd = (num) => {};'}
+          value={codingExerciseData.solutionCode}
           height="auto"
           editable={false}
           extensions={[javascript({ jsx: true })]}

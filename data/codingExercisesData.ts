@@ -1,5 +1,6 @@
 import { CodingExerciseData } from '../types';
 import { testScripts } from './testLogic';
+import { solutions } from './solutions';
 
 export const codingExercisesData: CodingExerciseData = {
   'sum-two-ints': {
@@ -33,6 +34,9 @@ export const codingExercisesData: CodingExerciseData = {
       'evenOrOdd(17) returns "odd"',
       'evenOrOdd(22) returns "even"',
     ],
+    problemExplaination: 'The goal here is to add two numbers together. Make sure you are returing the result',
+    hints: ['The % operator gives the remainder after a dividing operation. For example, 4 % 2 = 0 and 5 % 2 = 1.'],
+    solutionCode: solutions.evenOrOddSolution,
   },
 
   'rock-paper-scissors': {
