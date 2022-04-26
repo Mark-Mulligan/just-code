@@ -17,6 +17,10 @@ export const codingExercisesData: CodingExerciseData = {
       'sum(5, 10) returns 15',
       'sum(-1, -4) returns -5',
     ],
+    problemExplaination:
+      'This one is pretty straight forward. Add two numbers together and make sure to return the result.',
+    hints: ['Make sure you are returning the result in the function.'],
+    solutionCode: solutions.sumTwoIntSolution,
   },
 
   'even-or-odd': {
