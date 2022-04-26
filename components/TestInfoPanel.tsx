@@ -85,11 +85,11 @@ const TestInfoPanel = ({
           </Button>
         </Link>
 
-        <Link href={`${router.asPath}/help`} passHref>
+        <a href={`${router.asPath}/help`} target="_blank" rel="noreferrer">
           <Button fluid inverted>
             Help
           </Button>
-        </Link>
+        </a>
       </Resizable>
     );
   }

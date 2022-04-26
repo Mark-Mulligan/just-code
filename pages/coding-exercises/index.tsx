@@ -4,11 +4,11 @@ import { Container, Button, Form, Dropdown, DropdownProps } from 'semantic-ui-re
 import { codingExercisesData } from '../../data/codingExercisesData';
 import { getItemsComplete } from '../../utils/localStorage';
 import ExerciseList from '../../components/ExerciseList';
-import { allExerciseOverviewData } from '../../types';
+import { AllExerciseOverviewData } from '../../types';
 import styles from '../../styles/codingExercises.module.scss';
 
 type CodingExercisesProps = {
-  codingExercisesOverviews: allExerciseOverviewData;
+  codingExercisesOverviews: AllExerciseOverviewData;
 };
 
 const CodingExercises: NextPage<CodingExercisesProps> = ({ codingExercisesOverviews }) => {
