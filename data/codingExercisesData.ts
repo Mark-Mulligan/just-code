@@ -1,11 +1,7 @@
-import { codingExerciseOverview } from '../types';
+import { CodingExerciseData } from '../types';
 import { testScripts } from './testLogic';
 
-interface codingExerciseData {
-  [key: string]: codingExerciseOverview;
-}
-
-export const codingExercisesData: codingExerciseData = {
+export const codingExercisesData: CodingExerciseData = {
   'sum-two-ints': {
     title: 'Sum Two Integers',
     description: 'Create a function that returns the sum of two integers.',

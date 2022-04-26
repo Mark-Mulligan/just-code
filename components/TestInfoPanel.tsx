@@ -3,14 +3,14 @@ import { useState, useEffect } from 'react';
 import { Button, Loader, Dimmer } from 'semantic-ui-react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { codingExerciseOverview, testResult } from '../types';
+import { CodingExerciseOverview, TestResult } from '../types';
 import TestResultsDisplay from './TestResultsDisplay';
 import TestInstructionsDisplay from './TestInstructionsDisplay';
 import styles from '../styles/testInfoPanel.module.scss';
 
 type TestInfoPanelProps = {
-  codingExerciseOverview: codingExerciseOverview;
-  testResults: testResult[];
+  codingExerciseOverview: CodingExerciseOverview;
+  testResults: TestResult[];
   numTestsPassed: number;
   overallResult: string;
   errorMessage: string;

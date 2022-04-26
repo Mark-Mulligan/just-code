@@ -8,41 +8,26 @@ import CodeMirror from '@uiw/react-codemirror';
 import { javascript } from '@codemirror/lang-javascript';
 import axios from 'axios';
 import styles from '../../../styles/practiceProblem.module.scss';
-import { NextParsedUrlQuery } from 'next/dist/server/request-meta';
-import { codingExerciseOverview, testResult } from '../../../types';
+import {
+  CodingExerciseOverview,
+  TestcodeRouteResponse,
+  CodingExerciseStaticPath,
+  TestResult,
+  IParams,
+} from '../../../types';
 import TestInfoPanel from '../../../components/TestInfoPanel';
 import { Modal, Header, Icon, Button } from 'semantic-ui-react';
 import { saveToLocalStorage } from '../../../utils/localStorage';
 
-interface IParams extends NextParsedUrlQuery {
-  problemKey: string;
-}
-
 interface PracticeProblemProps {
-  codingExerciseData: codingExerciseOverview;
+  codingExerciseData: CodingExerciseOverview;
 }
-
-type testcodeRouteResponse = {
-  status: number;
-  data: {
-    testResults: testResult[];
-    numTestsPassed: number;
-    numTestsFailed: number;
-    overallResult: string;
-  };
-};
-
-type codingExerciseStaticPath = {
-  params: {
-    problemKey: string;
-  };
-};
 
 const PracticeProblem: NextPage<PracticeProblemProps> = ({ codingExerciseData }) => {
   const router = useRouter();
 
   const [userCode, setUserCode] = useState(codingExerciseData?.startingCode || '');
-  const [testResults, setTestResults] = useState([] as testResult[]);
+  const [testResults, setTestResults] = useState([] as TestResult[]);
   const [numTestsPassed, setNumTestsPassed] = useState(0);
   const [overallResult, setOverallResult] = useState('');
   const [isFetchingData, setIsFetchingData] = useState(false);
@@ -55,7 +40,7 @@ const PracticeProblem: NextPage<PracticeProblemProps> = ({ codingExerciseData })
 
     axios
       .post(`/api/testcode/${router.query.problemKey}`, { userCode })
-      .then(({ data }: testcodeRouteResponse) => {
+      .then(({ data }: TestcodeRouteResponse) => {
         setTestResults(data.testResults);
         setNumTestsPassed(data.numTestsPassed);
         setOverallResult(data.overallResult);
@@ -136,7 +121,7 @@ export default PracticeProblem;
 export const getStaticPaths: GetStaticPaths = async () => {
   const codingExercises = Object.keys(codingExercisesData);
 
-  let staticPaths: codingExerciseStaticPath[] = [];
+  let staticPaths: CodingExerciseStaticPath[] = [];
   codingExercises.forEach((exercise) => {
     staticPaths.push({ params: { problemKey: exercise } });
   });
