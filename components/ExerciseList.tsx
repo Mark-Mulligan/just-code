@@ -1,12 +1,12 @@
 import Link from 'next/link';
-import { allExerciseOverviewData } from '../types';
+import { AllExerciseOverviewData } from '../types';
 import dynamic from 'next/dynamic';
 import styles from '../styles/codingExercises.module.scss';
 
 const StatusLabel = dynamic(() => import('./StatusLabel'), { ssr: false });
 
 interface ExerciseListProps {
-  codingExercisesOverviews: allExerciseOverviewData;
+  codingExercisesOverviews: AllExerciseOverviewData;
   itemsComplete: {};
   statusFilter: string;
   search: string;

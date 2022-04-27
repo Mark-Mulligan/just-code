@@ -1,7 +1,7 @@
-import { codingExerciseOverview } from '../types';
+import { CodingExerciseOverview } from '../types';
 
 interface testCriteriaDisplayProps {
-  codingExerciseOverview: codingExerciseOverview;
+  codingExerciseOverview: CodingExerciseOverview;
 }
 
 const TestInstructionsDisplay = ({ codingExerciseOverview }: testCriteriaDisplayProps) => {

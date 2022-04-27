@@ -114,16 +114,16 @@ const TestInfoPanel = ({
       </Button>
 
       <Link href="/coding-exercises" passHref>
-        <Button fluid inverted>
+        <Button className="mb-10" fluid inverted>
           Back To Exercises
         </Button>
       </Link>
 
-      <Link href={`${router.asPath}/help`} passHref>
+      <a href={`${router.asPath}/help`} target="_blank" rel="noreferrer">
         <Button fluid inverted>
           Help
         </Button>
-      </Link>
+      </a>
     </div>
   );
 };

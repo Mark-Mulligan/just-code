@@ -1,9 +1,9 @@
-import { testResult } from '../types';
+import { TestResult } from '../types';
 import { Icon, Message } from 'semantic-ui-react';
 import styles from '../styles/testInfoPanel.module.scss';
 
 interface TestResultsDisplayProps {
-  testResults: testResult[];
+  testResults: TestResult[];
   numTestsPassed: number;
   overallResult: string;
   errorMessage: string;

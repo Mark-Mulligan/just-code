@@ -38,7 +38,8 @@ export const codingExercisesData: CodingExerciseData = {
       'evenOrOdd(17) returns "odd"',
       'evenOrOdd(22) returns "even"',
     ],
-    problemExplaination: 'The goal here is to add two numbers together. Make sure you are returing the result',
+    problemExplaination:
+      'There are only two possiblities for the numbers to be even or odd. Even numbers divided by 2 always equal zero.',
     hints: ['The % operator gives the remainder after a dividing operation. For example, 4 % 2 = 0 and 5 % 2 = 1.'],
     solutionCode: solutions.evenOrOddSolution,
   },
@@ -57,6 +58,13 @@ export const codingExercisesData: CodingExerciseData = {
       'rockPaperScissors("paper") returns "scissors"',
       'rockPaperScissors("scissors") returns "rock"',
     ],
+    problemExplaination:
+      'Remember there are only 3 possible hands a player can play.  You will probably need to use a conditional statement (either an if or switch) to determine the answer based on the string passed to the function',
+    hints: [
+      'You should probably use if statements or switch statements.',
+      'Rember you can use === to see if two strings equal one another',
+    ],
+    solutionCode: solutions.rockPaperScissorsSolution,
   },
 
   'find-the-total-length': {
