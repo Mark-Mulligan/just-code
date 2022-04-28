@@ -4,6 +4,7 @@ import { rockPaperScissorsSolution } from './rockPaperScissors';
 import { findTheTotalLengthSolution } from './findTheTotalLength';
 import { reverseAStringSolution } from './reverseAString';
 import { checkObjectKeysSolution } from './checkObjectKeys';
+import { primeNumberSolution } from './primeNumber';
 
 export const solutions = {
   sumTwoIntSolution,
@@ -11,5 +12,6 @@ export const solutions = {
   rockPaperScissorsSolution,
   findTheTotalLengthSolution,
   reverseAStringSolution,
+  primeNumberSolution,
   checkObjectKeysSolution,
 };

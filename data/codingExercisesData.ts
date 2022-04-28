@@ -164,6 +164,13 @@ export const codingExercisesData: CodingExerciseData = {
       'isPrime(5851) returns true',
       'isPrime(5853) returns false',
     ],
+    problemExplaination:
+      'A prime number is any number that is only divisible by itself and not any of ther number.  For example 17 is a prime number, 16 is not.',
+    hints: [
+      'You will need to check to see if the num is divisible by any number smaller than it excluding 1.',
+      'You can use the % operator to see if there is a remainder in a division problem. If a number is divisible by another number, the % operator will return 0.',
+    ],
+    solutionCode: solutions.primeNumberSolution,
   },
 
   'sort-array-ints': {
