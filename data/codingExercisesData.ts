@@ -81,6 +81,13 @@ export const codingExercisesData: CodingExerciseData = {
       'totalLength(["the", "world", "is", "gonna", "roll", "me"]) return 21',
       'totalLength(["I", "aint", "the", "sharpest", "tool", "in", "the", "shed"]) returns 29',
     ],
+    problemExplaination:
+      'For this problem, you will need to combine the array of words into a string, then it should be easier get the total length of the string.',
+    hints: [
+      'You can combine an array of strings into a single string using the join() method.',
+      'You can find the length of a string with .length.',
+    ],
+    solutionCode: solutions.findTheTotalLengthSolution,
   },
 
   'reverse-string': {
