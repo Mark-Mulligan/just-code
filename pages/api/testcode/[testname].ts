@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
+// import fs from 'fs';
 import { VM } from 'vm2';
-import { testResult } from '../../../types';
+import { TestResult } from '../../../types';
 import { codingExercisesData } from '../../../data/codingExercisesData';
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
@@ -13,11 +13,11 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
     // get test script to add to user input
     let testScriptCode = codingExercisesData[testname].testScriptCode;
-    let testResults = [] as testResult[];
+    let testResults = [] as TestResult[];
 
     // for developer de-bugging purposes
     // Don't remove but also don't push to prod.  It will break in prod environment
-    fs.writeFileSync(`data/${testname}.js`, `${userCode}\n${testScriptCode}`);
+    //fs.writeFileSync(`data/${testname}.js`, `${userCode}\n${testScriptCode}`);
 
     try {
       testResults = vm.run(`${userCode}\n${testScriptCode}`);
