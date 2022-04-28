@@ -104,6 +104,10 @@ export const codingExercisesData: CodingExerciseData = {
       'reverseStr("Reverse Me") returns "eM esreveR"',
       'reverseStr("racecar") returns "racecar"',
     ],
+    problemExplaination:
+      'Take a string and reverse it.  Pretty straight foward. It may be easier to convert the string to a different data type.',
+    hints: ['Try converting the string into an array.', 'There is a method for reversing arrays'],
+    solutionCode: solutions.reverseAStringSolution,
   },
   'largest-num-in-array': {
     title: 'Find Largest Number',
@@ -135,6 +139,12 @@ export const codingExercisesData: CodingExerciseData = {
       'hasKey({ dates: ["12-4-2022", "12-11-2022"], amounts: [10, 20] }, "dates") \n returns true',
       'hasKey({ test: "Test", tester: "Tester" }, "testing") \n returns false',
     ],
+    problemExplaination:
+      'Objects in javascript are made up of key, value pairs. In this case, we want to determine if a given key exists in a given object.',
+    hints: [
+      'the .hasOwnProperty(key: string) function can be called on objects in javascript.  It returns a boolean based on whether or not an object has a provided key.',
+    ],
+    solutionCode: solutions.checkObjectKeysSolution,
   },
 
   'prime-number': {
