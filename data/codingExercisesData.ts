@@ -187,6 +187,13 @@ export const codingExercisesData: CodingExerciseData = {
       'sortArr([10, -3, 2, -1, 7, 9]) returns [-3, -1, 2, 7, 9, 10]',
       'sortArr([-1, 1000, 10, 22, -22, 3]) returns [-22, -1, 3, 10, 22, 1000]',
     ],
+    problemExplaination:
+      'For this problem, you will need to go through an array and order the numbers in that array from least to greatest.',
+    hints: [
+      'You will need way to iterate over the array or you can use the sort method.',
+      'If using the sort method, make sure to pass the correct arguments/function.',
+    ],
+    solutionCode: solutions.sortArrayIntsTestScript,
   },
   'historical-day': {
     title: 'Historical Day',
