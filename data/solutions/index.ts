@@ -5,7 +5,7 @@ import { findTheTotalLengthSolution } from './findTheTotalLength';
 import { reverseAStringSolution } from './reverseAString';
 import { checkObjectKeysSolution } from './checkObjectKeys';
 import { primeNumberSolution } from './primeNumber';
-import { sortArrayIntsTestScript } from '../testLogic/testScripts/sortArrayInts';
+import { sortArrIntsSolution } from './sortArrInts';
 
 export const solutions = {
   sumTwoIntSolution,
@@ -15,5 +15,5 @@ export const solutions = {
   reverseAStringSolution,
   primeNumberSolution,
   checkObjectKeysSolution,
-  sortArrayIntsTestScript,
+  sortArrIntsSolution,
 };

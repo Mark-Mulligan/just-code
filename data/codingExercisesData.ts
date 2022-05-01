@@ -193,7 +193,7 @@ export const codingExercisesData: CodingExerciseData = {
       'You will need way to iterate over the array or you can use the sort method.',
       'If using the sort method, make sure to pass the correct arguments/function.',
     ],
-    solutionCode: solutions.sortArrayIntsTestScript,
+    solutionCode: solutions.sortArrIntsSolution,
   },
   'historical-day': {
     title: 'Historical Day',
