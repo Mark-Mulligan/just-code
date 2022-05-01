@@ -210,6 +210,14 @@ export const codingExercisesData: CodingExerciseData = {
       'findDay("07-21-1969") returns "Monday"',
       'findDay("06-29-2007") returns "Friday"',
     ],
+    problemExplaination:
+      'This problem will require you to do a couple of different things. One, you will need to convert the date string to a date object.  Then use that date object to return a string matching the desired results.',
+    hints: [
+      'You can create a date object by using new Date(pass dateStr)',
+      'dateObj.getDay() returns the day of the week for a given date as a number (0 is Sunday, 6 is Saturday)',
+      'Maybe store the day of the week results as strings in an data structure that can be indexed.',
+    ],
+    solutionCode: solutions.historicalDaySolution,
   },
 
   'alphabetize-names': {
