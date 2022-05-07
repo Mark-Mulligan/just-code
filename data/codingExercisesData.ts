@@ -285,6 +285,14 @@ export const codingExercisesData: CodingExerciseData = {
       { first: 'John', last: 'Stewart' },
     ]`,
     ],
+    problemExplaination:
+      'There are a few parts of this problem that need to be worked out.  First, you will need to find some sort of sorting method.  Then, you will need to iterate over an array of objects.  Lastly, you will need some condition that if two names are the same, you can sort by the other name.',
+    hints: [
+      'Maybe try using the built in sort() method for javascript.',
+      'You can use the javascript localeCompare() to compare two strings for alphabetic order.',
+      'You can use the second argument in the function to index the object.',
+    ],
+    solutionCode: solutions.alphabetizeNamesSolution,
   },
 
   'find-the-index-1': {

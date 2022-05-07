@@ -7,6 +7,7 @@ import { checkObjectKeysSolution } from './checkObjectKeys';
 import { primeNumberSolution } from './primeNumber';
 import { sortArrIntsSolution } from './sortArrInts';
 import { historicalDaySolution } from './historicalDay';
+import { alphabetizeNamesSolution } from './alphabetizeNames';
 import { findTheIndexSolution } from './findTheIndex';
 
 export const solutions = {
@@ -19,5 +20,6 @@ export const solutions = {
   checkObjectKeysSolution,
   sortArrIntsSolution,
   historicalDaySolution,
+  alphabetizeNamesSolution,
   findTheIndexSolution,
 };
