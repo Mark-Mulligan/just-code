@@ -302,6 +302,13 @@ export const codingExercisesData: CodingExerciseData = {
       "findIndex([], 'something') returns -1",
       "findIndex(['apple', 'orange', 'grape'], 'pineapple') returns -1",
     ],
+    problemExplaination:
+      'For this problem, you will only be working with finding primitive values in arrays so you will need to some way to iterate through the array and can use === to comapre values.',
+    hints: [
+      'You will need to iterate over the array (maybe a for loop for example)',
+      'You can use === to compare primative values.',
+    ],
+    solutionCode: solutions.findTheIndexSolution,
   },
   'military-time-conversion': {
     title: 'Military Time Conversion',

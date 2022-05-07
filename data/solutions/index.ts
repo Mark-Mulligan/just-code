@@ -7,6 +7,7 @@ import { checkObjectKeysSolution } from './checkObjectKeys';
 import { primeNumberSolution } from './primeNumber';
 import { sortArrIntsSolution } from './sortArrInts';
 import { historicalDaySolution } from './historicalDay';
+import { findTheIndexSolution } from './findTheIndex';
 
 export const solutions = {
   sumTwoIntSolution,
@@ -18,4 +19,5 @@ export const solutions = {
   checkObjectKeysSolution,
   sortArrIntsSolution,
   historicalDaySolution,
+  findTheIndexSolution,
 };
