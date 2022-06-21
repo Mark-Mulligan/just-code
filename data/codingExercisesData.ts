@@ -341,6 +341,15 @@ export const codingExercisesData: CodingExerciseData = {
       'militaryTimeConverter("15:45:00") returns "03:45:00 PM"',
       'militaryTimeConverter("18:00:10") returns "06:00:10 PM"',
     ],
+    problemExplaination:
+      'Given a string in military time, convert it to standard time. There are many different ways to do this.  Make sure to format the result exactly as the tests expect.',
+    hints: [
+      'It might help to seperate the given time into hours, minutes, and seconds',
+      'You should convert the string values to numbers to make them easier to work with',
+      'Conditionals will help to determine things such as AM/PM or leading 0s (example being 9 seconds on a time which would convert to 09)',
+      'Make sure the result is converted back to a string',
+    ],
+    solutionCode: solutions.militaryTimeConversionSolution,
   },
   'count-the-vowels': {
     title: 'Count The Vowels',

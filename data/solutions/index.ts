@@ -10,6 +10,7 @@ import { sortArrIntsSolution } from './sortArrInts';
 import { historicalDaySolution } from './historicalDay';
 import { alphabetizeNamesSolution } from './alphabetizeNames';
 import { findTheIndexSolution } from './findTheIndex';
+import { militaryTimeConversionSolution } from './militaryTimeConversion';
 
 export const solutions = {
   sumTwoIntSolution,
@@ -24,4 +25,5 @@ export const solutions = {
   historicalDaySolution,
   alphabetizeNamesSolution,
   findTheIndexSolution,
+  militaryTimeConversionSolution,
 };

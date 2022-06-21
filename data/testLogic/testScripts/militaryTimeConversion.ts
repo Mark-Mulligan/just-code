@@ -22,19 +22,19 @@ const militaryTimeConversionTests = () => {
     result: militaryTimeConverter('22:33:06'),
   });
   testResults.push({
-    test: 'militaryTimeConverter("08:15:27") returns "08:15:27 AM"',
-    passed: militaryTimeConverter('08:15:27') === '08:15:27 AM',
+    test: 'militaryTimeConverter("08:15:27") returns "8:15:27 AM"',
+    passed: militaryTimeConverter('08:15:27') === '8:15:27 AM',
     result: militaryTimeConverter('08:15:27'),
   });
 
   testResults.push({
-    test: 'militaryTimeConverter("15:45:00") returns "03:45:00 PM"',
-    passed: militaryTimeConverter('15:45:00') === '03:45:00 PM',
+    test: 'militaryTimeConverter("15:45:00") returns "3:45:00 PM"',
+    passed: militaryTimeConverter('15:45:00') === '3:45:00 PM',
     result: militaryTimeConverter('15:45:00'),
   });
   testResults.push({
-    test: 'militaryTimeConverter("18:00:10") returns "06:00:10 PM"',
-    passed: militaryTimeConverter('18:00:10') === '06:00:10 PM',
+    test: 'militaryTimeConverter("18:00:10") returns "6:00:10 PM"',
+    passed: militaryTimeConverter('18:00:10') === '6:00:10 PM',
     result: militaryTimeConverter('18:00:10'),
   });
 
