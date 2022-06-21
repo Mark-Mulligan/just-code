@@ -122,6 +122,14 @@ export const codingExercisesData: CodingExerciseData = {
       'largestNum([-4, 1, 80, 2, 1]) returns 80',
       'largestNum([-5, -2, -1, -3, -20]) returns -1',
     ],
+    problemExplaination:
+      'You are given an array of intergers. You need to return the largest interger from that array. Numbers can be positive, negative, or both.',
+    hints: [
+      'You will probably need a variable to store your largest number',
+      'You will need to set the variable storing the largest number to an intial value in the array (instead of 0 incase all the numbers are negative)',
+      'You will need to iterate through the entire array to check all numbers.',
+    ],
+    solutionCode: solutions.largestNumInArrSolution,
   },
 
   'check-object-keys': {
