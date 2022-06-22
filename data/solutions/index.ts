@@ -12,6 +12,7 @@ import { alphabetizeNamesSolution } from './alphabetizeNames';
 import { findTheIndexSolution } from './findTheIndex';
 import { militaryTimeConversionSolution } from './militaryTimeConversion';
 import { countTheVowelsSolution } from './countTheVowels';
+import { calculateTheTipSolution } from './calculateTheTip';
 
 export const solutions = {
   sumTwoIntSolution,
@@ -28,4 +29,5 @@ export const solutions = {
   findTheIndexSolution,
   militaryTimeConversionSolution,
   countTheVowelsSolution,
+  calculateTheTipSolution,
 };

@@ -389,7 +389,17 @@ export const codingExercisesData: CodingExerciseData = {
       'tipCalc("$12.63", "18%") returns $2.27',
       'tipCalc("$101.73", "25%") returns $25.43',
       'tipCalc("$10.91", "5%") retuns $0.55',
+      'tipCalc("$32.12", "19%") returns $6.10',
     ],
+    problemExplaination:
+      'This problem will require you to convert strings to numbers and back to a string. It also deals with some import aspects in programming such as dealing with percents and money values.',
+    hints: [
+      'You will need to take the meal price and convert it to a number',
+      'You will need to convert the tip percent to a floating point number (decimal)',
+      'You will need to round the result to the nearst hundredth',
+      'The result needs to be converted to money format (starts with a $ and always has two decimal numbers even if they are 0)',
+    ],
+    solutionCode: solutions.calculateTheTipSolution,
   },
   'remove-duplicates-array': {
     title: 'Remove Duplicates From Array',

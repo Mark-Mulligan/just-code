@@ -37,9 +37,14 @@ const calculateTheTipTests = () => {
     result: tipCalc('$101.73', '25%'),
   });
   testResults.push({
-    test: 'tipCalc("$10.91", "5%") retuns $0.55',
+    test: 'tipCalc("$10.91", "5%") returns $0.55',
     passed: tipCalc('$10.91', '5%') === '$0.55',
     result: tipCalc('$10.91', '5%'),
+  });
+  testResults.push({
+    test: 'tipCalc("$32.12, "19%") returns $6.10',
+    passed: tipCalc('$32.12', '19%') === '$6.10',
+    result: tipCalc('$32.12', '19%'),
   });
 
   return testResults;
