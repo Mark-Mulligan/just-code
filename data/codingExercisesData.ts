@@ -365,6 +365,14 @@ export const codingExercisesData: CodingExerciseData = {
       "vowelCount('If you have not checked out FreeCodeCamp, you should. It is Awesome!!!') returns 27",
       "vowelCount('THIS IS UPPER CASE. this is lowercase.') returns 12",
     ],
+    problemExplaination:
+      'You are given a string and need to count how many times vowels occur in that string. Vowels in this case will be a,e,i,o,u (not counting y in this case).',
+    hints: [
+      'Converting the string into an array will make it easier to check if each individual character is a vowel (the javascript split method can be of use)',
+      'You will need a variable to keep track of home vowels have been counted',
+      'For a challenge, consider storing the possible vowel values in the form of an array or object, then you can check each character against that instead of using a bunch of conditional statements',
+    ],
+    solutionCode: solutions.countTheVowelsSolution,
   },
   'calculate-the-tip': {
     title: 'Tip Calculator',

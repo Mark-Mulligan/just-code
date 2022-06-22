@@ -11,6 +11,7 @@ import { historicalDaySolution } from './historicalDay';
 import { alphabetizeNamesSolution } from './alphabetizeNames';
 import { findTheIndexSolution } from './findTheIndex';
 import { militaryTimeConversionSolution } from './militaryTimeConversion';
+import { countTheVowelsSolution } from './countTheVowels';
 
 export const solutions = {
   sumTwoIntSolution,
@@ -26,4 +27,5 @@ export const solutions = {
   alphabetizeNamesSolution,
   findTheIndexSolution,
   militaryTimeConversionSolution,
+  countTheVowelsSolution,
 };
