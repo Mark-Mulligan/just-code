@@ -415,6 +415,13 @@ export const codingExercisesData: CodingExerciseData = {
       'removeDuplcates(["Sam", "Frodo", "Sam", "Gollum", "Gollum", "Aragon"]) returns ["Sam", "Frodo", "Gollum", "Aragon"]',
       'removeDuplcates([10, 10, "test", "test", 73, "73"]) returns [10, "test", 73, "73"]',
     ],
+    problemExplaination:
+      'For this problem, you will need to take an array and remove extra occurances of the same value. The result will be an array of only unique values.',
+    hints: [
+      'There are many ways to do this problem, but using the javascript set type is probably the easiest.',
+      'When using the javascript set type, you will need es6 spread syntax as well.',
+    ],
+    solutionCode: solutions.removeDuplicatesArrSolution,
   },
 
   'sort-the-days': {

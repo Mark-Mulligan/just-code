@@ -13,6 +13,7 @@ import { findTheIndexSolution } from './findTheIndex';
 import { militaryTimeConversionSolution } from './militaryTimeConversion';
 import { countTheVowelsSolution } from './countTheVowels';
 import { calculateTheTipSolution } from './calculateTheTip';
+import { removeDuplicatesArrSolution } from './removeDuplicatesArr';
 
 export const solutions = {
   sumTwoIntSolution,
@@ -30,4 +31,5 @@ export const solutions = {
   militaryTimeConversionSolution,
   countTheVowelsSolution,
   calculateTheTipSolution,
+  removeDuplicatesArrSolution,
 };
