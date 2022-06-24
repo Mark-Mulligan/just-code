@@ -14,6 +14,7 @@ import { militaryTimeConversionSolution } from './militaryTimeConversion';
 import { countTheVowelsSolution } from './countTheVowels';
 import { calculateTheTipSolution } from './calculateTheTip';
 import { removeDuplicatesArrSolution } from './removeDuplicatesArr';
+import { sortTheDaysSolution } from './sortTheDays';
 
 export const solutions = {
   sumTwoIntSolution,
@@ -32,4 +33,5 @@ export const solutions = {
   countTheVowelsSolution,
   calculateTheTipSolution,
   removeDuplicatesArrSolution,
+  sortTheDaysSolution,
 };

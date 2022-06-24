@@ -438,6 +438,14 @@ export const codingExercisesData: CodingExerciseData = {
       "sortDays('sun,sat,fri,thurs,wed,tues,mon') returns 'mon,tues,wed,thrus,fri,sat,sun'",
       "sortDays('wed,tues,sat,fri') returns 'tues,wed,fri,sat'",
     ],
+    problemExplaination:
+      'For this problem, you are given a comma seperated string of abbreviated day values. You will need to sort these values and return the new sorted string. Note that for this problem, first value will be monday (not sunday which is the default in javascript). This problem will require several steps to complete and will require you to convert and format different data types.',
+    hints: [
+      'You will need to find a way to give values to the day strings.',
+      'The javascript split() and join() functions may be of use in this challenge.',
+      'There are only 7 possible day values so use that to your advantage',
+    ],
+    solutionCode: solutions.sortTheDaysSolution,
   },
 
   'compare-two-objs': {
