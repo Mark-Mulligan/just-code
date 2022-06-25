@@ -480,6 +480,15 @@ export const codingExercisesData: CodingExerciseData = {
       'combineArrs([5, -3, -1, 8, 2], [10, 9, -2, -4, 7]) \n returns [-4, -3, -2, -1, 2, 5, 7, 8, 9, 10]',
       'combineArrs(["mIxedCasing", "mIXedCase", "MixedcaSes"], ["MIXEDCASED", "mistake", "Mistaken"]) \n returns ["mistake", "Mistaken", "mIXedCase", "MIXEDCASED", "MixedcaSes", "mIxedCasing"])',
     ],
+    problemExplaination:
+      'For this problem you will need to combine the values from two arrays into a new single array.  This array will also be sorted.  The arrays will either be numbers or strings only.  Make sure to watch out for capitalization as well when putting an array in aplhabetical order.',
+    hints: [
+      'You will need to first combine the two arrays into one',
+      'After create the new combination array, you can use the javascript sort method to put the array in the correct order',
+      'The sort method will need two different sorting logic passed into it.  One for sorting numbers and the other for sorting strings.',
+      'Make sure to account for upper and lower case letters in your string sorting logic (maybe convert all letters to a single case).',
+    ],
+    solutionCode: solutions.combineTwoArraysSolution,
   },
 
   'snake-to-camel': {

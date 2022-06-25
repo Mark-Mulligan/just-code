@@ -15,6 +15,7 @@ import { countTheVowelsSolution } from './countTheVowels';
 import { calculateTheTipSolution } from './calculateTheTip';
 import { removeDuplicatesArrSolution } from './removeDuplicatesArr';
 import { sortTheDaysSolution } from './sortTheDays';
+import { combineTwoArraysSolution } from './combineTwoArrays';
 
 export const solutions = {
   sumTwoIntSolution,
@@ -34,4 +35,5 @@ export const solutions = {
   calculateTheTipSolution,
   removeDuplicatesArrSolution,
   sortTheDaysSolution,
+  combineTwoArraysSolution,
 };
