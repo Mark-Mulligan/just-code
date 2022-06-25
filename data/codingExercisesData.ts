@@ -506,6 +506,13 @@ export const codingExercisesData: CodingExerciseData = {
       'snakeToCamel("what_about_stack_overflow") \n returns "whatAboutStackOverflow"',
       'snakeToCamel("Bad_ExAMPle_Of_SnakE_Case") \n returns "badExampleOfSnakeCase"',
     ],
+    problemExplaination:
+      'This problem will involve you having to work and manipulate strings in javascript. Most variables in python are formatted in snake case while javascript mainly uses camelcase. By creating a function that converts snake case to camelcase, you will not only learn about the two naming conventions, you will also get exposed to many of javascript tools for working with strings.',
+    hints: [
+      'regex (aka regular expressions) might be useful for solving this problem.',
+      'Some of the inputs are not 100% correct versions of snake case so account for that.',
+    ],
+    solutionCode: solutions.snakeToCamelSolution,
   },
 
   'count-unique-values': {

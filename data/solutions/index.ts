@@ -16,6 +16,7 @@ import { calculateTheTipSolution } from './calculateTheTip';
 import { removeDuplicatesArrSolution } from './removeDuplicatesArr';
 import { sortTheDaysSolution } from './sortTheDays';
 import { combineTwoArraysSolution } from './combineTwoArrays';
+import { snakeToCamelSolution } from './snakeToCamel';
 import { countUniqueValuesSolution } from './countUniqueValues';
 
 export const solutions = {
@@ -37,5 +38,6 @@ export const solutions = {
   removeDuplicatesArrSolution,
   sortTheDaysSolution,
   combineTwoArraysSolution,
+  snakeToCamelSolution,
   countUniqueValuesSolution,
 };
