@@ -522,6 +522,15 @@ export const codingExercisesData: CodingExerciseData = {
       'countUnique(["Pam", "Jim", "Michael", "Pam", "Toby", "Jim", "Jim", "Michael"]) returns { Pam: 2, Jim: 3, Michael: 2, Toby: 1 }',
       'countUnique(["test", 1, "test", 1, "test", 2, "test", 3]) returns { test: 4, 1: 2, 2: 1, 3: 1 }',
     ],
+    problemExplaination:
+      'For this problem, you will basically be converting an array into a javascript object. The keys of that object will be the unique values from the array, and the values for those keys will be the number of times each of those values occurs in the array.',
+    hints: [
+      'You will need to create a variable to store your new object',
+      'You can use the hasOwnProperty function on an object to see a certain key already exsists on an object.',
+      'You will need a way to intialize new properties to your result object.',
+      'You can access property on any object dynamically using the bracket syntax (obj[targetKeyAsString]).',
+    ],
+    solutionCode: solutions.countUniqueValuesSolution,
   },
 
   'query-parameters': {
