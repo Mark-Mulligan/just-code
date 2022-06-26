@@ -544,7 +544,7 @@ export const codingExercisesData: CodingExerciseData = {
     title: 'Query Parameters',
     description: 'Create a function that extracts the query paramters from a search url.',
     instructions:
-      'Create a function called extractQueryParams that gets the query parameters from and search and stores them in an object. For example "https://example?search=test&length=3" would return { search: "test", length: "3" }. Normally I would recommend using URL and URLSearchParams api. However, due to the sandbox environment, you will not have access to these javascript apis, so you have have to find a different way to get the query parameters.',
+      'Create a function called extractQueryParams that gets the query parameters from a search and stores them in an object. For example "https://example?search=test&length=3" would return { search: "test", length: "3" }. Normally I would recommend using URL and URLSearchParams api. However, due to the sandbox environment, you will not have access to these javascript apis, so you have have to find a different way to get the query parameters.',
     testScriptCode: testScripts.queryParametersTestScript,
     startingCode: 'const extractQueryParams = (urlStr) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
     testCriteria: [
@@ -554,6 +554,16 @@ export const codingExercisesData: CodingExerciseData = {
       'extractQueryParams("https://mysearchwebsite?q=google&results=50&past=false") returns  { q: "google", results: "50", past: "false" }',
       'extractQueryParams("https://weather?city=dallas&forecast=3day&unit=fahrenheit") returns  { city: "dallas", forecast: "3day", unit: "fahrenheit" }',
     ],
+    problemExplaination:
+      'This problem simulates a real world example of working with a url string. For this, you will be tasked with removing the query paramters from the url string and putting them into a javascript object.',
+    hints: [
+      'Normally when working with url strings, javascript has some built in options.  However, for this problem, you will not be able to use those.',
+      'Try using regex or some other method for search through the string.',
+      'Begin by breaking off the search parameters in the string (everything after the ?)',
+      'From this point note all search params will be stored as [key]=[value] in the string',
+      'Each parameter grouping is seperated by an "&" sign.',
+    ],
+    solutionCode: solutions.queryParametersSolution,
   },
 
   'world-timezones': {

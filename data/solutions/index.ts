@@ -18,6 +18,7 @@ import { sortTheDaysSolution } from './sortTheDays';
 import { combineTwoArraysSolution } from './combineTwoArrays';
 import { snakeToCamelSolution } from './snakeToCamel';
 import { countUniqueValuesSolution } from './countUniqueValues';
+import { queryParametersSolution } from './queryParameters';
 
 export const solutions = {
   sumTwoIntSolution,
@@ -40,4 +41,5 @@ export const solutions = {
   combineTwoArraysSolution,
   snakeToCamelSolution,
   countUniqueValuesSolution,
+  queryParametersSolution,
 };
