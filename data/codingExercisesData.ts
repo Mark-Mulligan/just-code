@@ -462,6 +462,14 @@ export const codingExercisesData: CodingExerciseData = {
       'compareObjs({ title: "The Witcher", streaming: "Netflix" }, { title: "The Witcher", streaming: "Netflix" }) returns true',
       'compareObjs({ favorites: { food: "pizza", color: "green" }, age: 27 }, { age: 27, favorites: {food: "pizza", color: "green" }}) returns true',
     ],
+    problemExplaination:
+      'This problem is a little more difficult then it may first appear. Remember, to compare two objects, you will need to do a deep comparision, make sure all keys and values are the same.',
+    hints: [
+      'Javascript objs are reference types so you can not compare them using ===',
+      'You will need to look through all keys and values of each object directly.',
+      'Do not forget to account for different data types such as Dates or Functions.',
+    ],
+    solutionCode: solutions.compareTwoObjsSolution,
   },
 
   'combine-two-arrays': {

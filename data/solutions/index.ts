@@ -15,6 +15,7 @@ import { countTheVowelsSolution } from './countTheVowels';
 import { calculateTheTipSolution } from './calculateTheTip';
 import { removeDuplicatesArrSolution } from './removeDuplicatesArr';
 import { sortTheDaysSolution } from './sortTheDays';
+import { compareTwoObjsSolution } from './compareTwoObjs';
 import { combineTwoArraysSolution } from './combineTwoArrays';
 import { snakeToCamelSolution } from './snakeToCamel';
 import { countUniqueValuesSolution } from './countUniqueValues';
@@ -38,6 +39,7 @@ export const solutions = {
   calculateTheTipSolution,
   removeDuplicatesArrSolution,
   sortTheDaysSolution,
+  compareTwoObjsSolution,
   combineTwoArraysSolution,
   snakeToCamelSolution,
   countUniqueValuesSolution,
