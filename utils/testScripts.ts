@@ -1,3 +1,5 @@
+import { TestResult } from '../types';
+
 interface testUtilFunction {
   name: string;
   func: Function;
@@ -13,4 +15,10 @@ export const createTestScriptString = (testFunc: Function, utilFuncs?: testUtilF
 
   resultStr += `const runTests = ${testFunc.toString()} \n runTests();`;
   return resultStr;
+};
+
+export const extractTestCriteria = (testLogic: TestResult[]) => {
+  return testLogic.map((testResult) => {
+    return testResult.test;
+  });
 };

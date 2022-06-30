@@ -1,11 +1,12 @@
 import { createTestScriptString } from '../../../utils/testScripts';
+import { TestResult } from '../../../types';
 
 const sum = (num1: number, num2: number) => {
   return num1 + num2;
 };
 
-const sumTwoIntsTests = () => {
-  const testResults = [];
+export const sumTwoIntsTests = () => {
+  const testResults: TestResult[] = [];
   testResults.push({
     test: 'User created a function called sum.',
     passed: typeof sum === 'function',

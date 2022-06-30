@@ -1,7 +1,7 @@
 import { CodingExerciseData } from '../types';
-import { testScripts } from './testLogic';
+import { testScripts, tests } from './testLogic';
 import { solutions } from './solutions';
-import { javascript } from '@codemirror/lang-javascript';
+import { extractTestCriteria } from '../utils/testScripts';
 
 export const codingExercisesData: CodingExerciseData = {
   'sum-two-ints': {
@@ -11,13 +11,7 @@ export const codingExercisesData: CodingExerciseData = {
       'Create a function that takes in two arguments (num1 & num2 that will both be integers) and returns a number that is the sum of the two integers provided.',
     testScriptCode: testScripts.sumTwoIntsTestScript,
     startingCode: 'const sum = (num1, num2) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
-    testCriteria: [
-      'User created a function called sum',
-      'Function returns a number',
-      'sum(1, 2) returns 3',
-      'sum(5, 10) returns 15',
-      'sum(-1, -4) returns -5',
-    ],
+    testCriteria: extractTestCriteria(tests.sumTwoIntsTests()),
     problemExplaination:
       'This one is pretty straight forward. Add two numbers together and make sure to return the result.',
     hints: ['Make sure you are returning the result in the function.'],

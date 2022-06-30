@@ -1,4 +1,4 @@
-import { sumTwoIntsTestScript } from './testScripts/sumTwoInt';
+import { sumTwoIntsTestScript, sumTwoIntsTests } from './testScripts/sumTwoInt';
 import { evenOrOddTestScript } from './testScripts/evenOrOdd';
 import { rockPaperScissorsTestScript } from './testScripts/rockPaperScissors';
 import { findTheTotalLengthTestScript } from './testScripts/findTheTotalLength';
@@ -22,6 +22,10 @@ import { snakeToCamelTestScript } from './testScripts/snakeToCamel';
 import { countUniqueValuesTestScript } from './testScripts/countUniqueValues';
 import { queryParametersTestScript } from './testScripts/queryParameters';
 import { ticTacToeTestScript } from './testScripts/ticTacToe';
+
+export const tests = {
+  sumTwoIntsTests,
+};
 
 export const testScripts = {
   sumTwoIntsTestScript,
