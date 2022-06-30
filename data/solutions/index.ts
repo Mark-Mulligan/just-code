@@ -11,6 +11,7 @@ import { historicalDaySolution } from './historicalDay';
 import { alphabetizeNamesSolution } from './alphabetizeNames';
 import { findTheIndexSolution } from './findTheIndex';
 import { militaryTimeConversionSolution } from './militaryTimeConversion';
+import { sortTheDatesSolution } from './sortTheDates';
 import { countTheVowelsSolution } from './countTheVowels';
 import { calculateTheTipSolution } from './calculateTheTip';
 import { removeDuplicatesArrSolution } from './removeDuplicatesArr';
@@ -36,6 +37,7 @@ export const solutions = {
   alphabetizeNamesSolution,
   findTheIndexSolution,
   militaryTimeConversionSolution,
+  sortTheDatesSolution,
   countTheVowelsSolution,
   calculateTheTipSolution,
   removeDuplicatesArrSolution,

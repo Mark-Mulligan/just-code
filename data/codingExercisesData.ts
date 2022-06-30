@@ -1,6 +1,7 @@
 import { CodingExerciseData } from '../types';
 import { testScripts } from './testLogic';
 import { solutions } from './solutions';
+import { javascript } from '@codemirror/lang-javascript';
 
 export const codingExercisesData: CodingExerciseData = {
   'sum-two-ints': {
@@ -351,6 +352,30 @@ export const codingExercisesData: CodingExerciseData = {
     ],
     solutionCode: solutions.militaryTimeConversionSolution,
   },
+  'sort-the-dates': {
+    title: 'Sort The Dates',
+    description: 'Create a function that puts an array of dates in order from earliest to latest.',
+    instructions:
+      'Create a function that takes in an array of date strings (formatted like "12-25-2018") and return an array of those same dates in order from earliest to latest.',
+    testScriptCode: testScripts.sortTheDatesTestScript,
+    startingCode: 'const sortDates = (inputArrDateStrs) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+    testCriteria: [
+      'User created a function called sortDates.',
+      'Function returns an array.',
+      'sortDates(["12-25-2018", "11-24-2018", "10-31-2018"]) returns ["10-31-2018", "11-24-2018", "12-25-2018"]',
+      'sortDates(["4-1-2000", "4-1-2008", "4-1-1994"]) returns ["4-1-1994", "4-1-2000", "4-1-2008"]',
+      'sortDates(["5-1-1990", "5-2-1990", "10-6-1980", "11-7-2000", "7-3-2030"]) \n returns ["10-6-1980", "5-1-1990", "5-2-1990", "11-7-2000", "7-3-2030"]',
+    ],
+    problemExplaination:
+      'For this problem, you will need to take an array of date strings and sort them in order from earliest date to latest date.',
+    hints: [
+      'The javascript sort method would be a good way to sort the dates',
+      'You will need to provide a function to the sort method in order for the dates to be sorted',
+      'You will need to convert the sorted strings to javascript date objects in order to sort them.',
+    ],
+    solutionCode: solutions.sortTheDatesSolution,
+  },
+
   'count-the-vowels': {
     title: 'Count The Vowels',
     description: 'Create a function that counts the number of vowels there are in a string.',

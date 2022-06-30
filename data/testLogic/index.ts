@@ -9,6 +9,7 @@ import { primeNumberTestScript } from './testScripts/primeNumber';
 import { sortArrayIntsTestScript } from './testScripts/sortArrayInts';
 import { removeDuplicatesArrTestScript } from './testScripts/removeDuplicatesArr';
 import { militaryTimeConversionTestScript } from './testScripts/militaryTimeConversion';
+import { sortTheDatesTestScript } from './testScripts/sortTheDates';
 import { countTheVowelsTestScript } from './testScripts/countTheVowels';
 import { calculateTheTipTestScript } from './testScripts/calculateTheTip';
 import { sortTheDaysTestScript } from './testScripts/sortTheDays';
@@ -34,6 +35,7 @@ export const testScripts = {
   sortArrayIntsTestScript,
   removeDuplicatesArrTestScript,
   militaryTimeConversionTestScript,
+  sortTheDatesTestScript,
   countTheVowelsTestScript,
   calculateTheTipTestScript,
   sortTheDaysTestScript,
