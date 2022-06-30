@@ -1,4 +1,5 @@
 import { createTestScriptString } from '../../../utils/testScripts';
+import { extractTestCriteria } from '../../../utils/testScripts';
 import { TestResult } from '../../../types';
 
 const sum = (num1: number, num2: number) => {
@@ -24,3 +25,4 @@ export const sumTwoIntsTests = () => {
 };
 
 export const sumTwoIntsTestScript = createTestScriptString(sumTwoIntsTests);
+export const sumTwoIntsTestCriteria = extractTestCriteria(sumTwoIntsTests());

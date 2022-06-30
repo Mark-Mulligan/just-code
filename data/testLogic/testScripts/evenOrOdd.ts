@@ -1,11 +1,13 @@
 import { createTestScriptString } from '../../../utils/testScripts';
+import { TestResult } from '../../../types';
+import { extractTestCriteria } from '../../../utils/testScripts';
 
 const evenOrOdd = (num: number) => {
   return num % 2 === 0 ? 'even' : 'odd';
 };
 
 const evenOrOddTests = () => {
-  const testResults = [];
+  const testResults: TestResult[] = [];
   testResults.push({
     test: 'User created a function evenOrOdd.',
     passed: typeof evenOrOdd === 'function',
@@ -41,3 +43,4 @@ const evenOrOddTests = () => {
 };
 
 export const evenOrOddTestScript = createTestScriptString(evenOrOddTests);
+export const evenOrOddTestCriteria = extractTestCriteria(evenOrOddTests());

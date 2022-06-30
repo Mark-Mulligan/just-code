@@ -1,7 +1,6 @@
 import { CodingExerciseData } from '../types';
-import { testScripts, tests } from './testLogic';
+import { testScripts, testCriteria } from './testLogic';
 import { solutions } from './solutions';
-import { extractTestCriteria } from '../utils/testScripts';
 
 export const codingExercisesData: CodingExerciseData = {
   'sum-two-ints': {
@@ -11,7 +10,7 @@ export const codingExercisesData: CodingExerciseData = {
       'Create a function that takes in two arguments (num1 & num2 that will both be integers) and returns a number that is the sum of the two integers provided.',
     testScriptCode: testScripts.sumTwoIntsTestScript,
     startingCode: 'const sum = (num1, num2) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
-    testCriteria: extractTestCriteria(tests.sumTwoIntsTests()),
+    testCriteria: testCriteria.sumTwoIntsTestCriteria,
     problemExplaination:
       'This one is pretty straight forward. Add two numbers together and make sure to return the result.',
     hints: ['Make sure you are returning the result in the function.'],
@@ -25,14 +24,7 @@ export const codingExercisesData: CodingExerciseData = {
       'Create a function that takes in a single argument, an interger greater than 0, and returns "even" if the number is even or "odd" if the number is odd.',
     testScriptCode: testScripts.evenOrOddTestScript,
     startingCode: 'const evenOrOdd = (num) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
-    testCriteria: [
-      'User created a function called evenOrOdd',
-      'Function returns a string',
-      'evenOrOdd(11) returns "odd"',
-      'evenOrOdd(30) returns "even"',
-      'evenOrOdd(17) returns "odd"',
-      'evenOrOdd(22) returns "even"',
-    ],
+    testCriteria: testCriteria.evenOrOddTestCriteria,
     problemExplaination:
       'There are only two possiblities for the numbers to be even or odd. Even numbers divided by 2 always equal zero.',
     hints: ['The % operator gives the remainder after a dividing operation. For example, 4 % 2 = 0 and 5 % 2 = 1.'],
