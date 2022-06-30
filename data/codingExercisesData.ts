@@ -574,77 +574,6 @@ export const codingExercisesData: CodingExerciseData = {
     solutionCode: solutions.queryParametersSolution,
   },
 
-  'world-timezones': {
-    title: 'World Timezones',
-    description:
-      'Create a function that takes a GMT time stamp and converts it to the local time for a given region in the world.',
-    instructions:
-      'Create a function that takes in 2 arguments, inputDateTime - a GMT time, locationArr - An array objects with two properties, location (string) and offset (integer indicating the locations offset from GMT).  For example, Dallas, TX in the United states is -6 hours from GMT time. Hint, GMT is in military time so you will need to convert that to AM/PM.  Also, pay close attention to the test criteria examples so you format your result object correctly.',
-    testScriptCode: testScripts.queryParametersTestScript,
-    startingCode:
-      'const worldTimezone = (inputDateTime, locationArr) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
-    testCriteria: [
-      'User create a function called worldTimezone',
-      'Function returns a string',
-      `worldTimezone("04 Dec 1995 00:12:00 GMT", 
-      [
-      \b \b { location: "Samoa", offset: 13},
-      \b \b { location: "Seoul", offset: 9},
-      \b \b { location: "Istanbul", offset: 2},
-      \b \b { location: "London", offset: 0},
-      \b \b { location: "Eastern Time (US & Canada)", offset: -5},
-      \b \b { location: "Hawaii", offset: -10 },
-      \b \b { location: "International Date Line West", offset: -12 },
-      ]) 
-      returns { "Samoa": "01:12:00 PM",
-        "Seoul": "09:12:00 AM",
-        "Istanbul": "02:12:00 AM",
-        "London": "00:12:00 AM",
-        "Eastern Time (US & Canada)": "07:12:00: PM",
-        "Hawaii": "02:12:00 PM",
-        "International Date Line West": "12:12:00 PM",
-      }`,
-      `worldTimezone("04 Dec 1995 23:25:00 GMT", 
-      [
-       \b \b { location: "Samoa", offset: 13},
-       \b \b { location: "Seoul", offset: 9},
-       \b \b { location: "Istanbul", offset: 2},
-       \b \b { location: "London", offset: 0},
-       \b \b { location: "Eastern Time (US & Canada)", offset: -5},
-       \b \b { location: "Hawaii", offset: -10 },
-       \b \b { location: "International Date Line West", offset: -12 },
-      ]) 
-      returns { "Samoa": "12:25:00 PM",
-        "Seoul": "08:25:00 AM",
-        "Istanbul": "01:25:00 AM",
-        "London": "11:25:00 PM",
-        "Eastern Time (US & Canada)": "06:25:00: PM",
-        "Hawaii": "01:25:00 PM",
-        "International Date Line West": "11:25:00 AM",
-      }`,
-      `worldTimezone("04 Dec 1995 13:55:00 GMT", 
-      [
-        \b \b { location: "Samoa", offset: 13},
-        \b \b { location: "Seoul", offset: 9},
-        \b \b { location: "Istanbul", offset: 2},
-        \b \b { location: "London", offset: 0},
-        \b \b { location: "Eastern Time (US & Canada)", offset: -5},
-        \b \b { location: "Hawaii", offset: -10 },
-        \b \b { location: "International Date Line West", offset: -12 },
-      ])`,
-      `worldTimezone("04 Dec 1995 06:10:00 GMT", 
-      [
-        \b \b { location: "Samoa", offset: 13},
-        \b \b { location: "Seoul", offset: 9},
-        \b \b { location: "Istanbul", offset: 2},
-        \b \b { location: "London", offset: 0},
-        \b \b { location: "Eastern Time (US & Canada)", offset: -5},
-        \b \b { location: "Hawaii", offset: -10 },
-        \b \b { location: "International Date Line West", offset: -12 },
-      ])`,
-    ],
-  },
-
   'tic-tac-toe': {
     title: 'Tic-Tac-Toe',
     description: 'Create a function that determines the winner (if there is one) in a game of tic-tac-toe.',
@@ -662,5 +591,13 @@ export const codingExercisesData: CodingExerciseData = {
       'ticTacToe([["X", "", "O"], ["X", "O", ""], ["X", "O", "X"]]) \n returns "X wins"',
       'ticTacToe([["X", "O", "O"], ["O", "X", "X"], ["X", "X", "O"]]) \n returns "tie"',
     ],
+    problemExplaination:
+      'Given an array of arrays that represent a tic tac toe gameboard, write a function that determines the winner or if there is a tie.',
+    hints: [
+      'Tic tac toe can be won in 3 different ways, 3 in row, 3 in a column, or 3 diagonally.',
+      'You will need to iterate though the arrays in different orders to look for either X to win or O to win',
+      'If you use nested for loops, you can change the index values (e.g. gamboard[firstIndexValue][secondIndexValue]) to iterate over the gamboard in different ways',
+    ],
+    solutionCode: solutions.ticTacToeSolution,
   },
 };

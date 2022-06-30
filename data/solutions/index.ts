@@ -20,6 +20,7 @@ import { combineTwoArraysSolution } from './combineTwoArrays';
 import { snakeToCamelSolution } from './snakeToCamel';
 import { countUniqueValuesSolution } from './countUniqueValues';
 import { queryParametersSolution } from './queryParameters';
+import { ticTacToeSolution } from './ticTacToe';
 
 export const solutions = {
   sumTwoIntSolution,
@@ -44,4 +45,5 @@ export const solutions = {
   snakeToCamelSolution,
   countUniqueValuesSolution,
   queryParametersSolution,
+  ticTacToeSolution,
 };
