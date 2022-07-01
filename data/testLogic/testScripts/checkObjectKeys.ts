@@ -1,11 +1,13 @@
 import { createTestScriptString } from '../../../utils/testScripts';
+import { TestResult } from '../../../types';
+import { extractTestCriteria } from '../../../utils/testScripts';
 
 const hasKey = (obj: any, targetKey: string) => {
   return obj.hasOwnProperty(targetKey);
 };
 
 const checkObjectKeysTests = () => {
-  const testResults = [];
+  const testResults: TestResult[] = [];
   testResults.push({
     test: 'User created a function hasKey.',
     passed: typeof hasKey === 'function',
@@ -41,3 +43,4 @@ const checkObjectKeysTests = () => {
 };
 
 export const checkObjectKeysTestScript = createTestScriptString(checkObjectKeysTests);
+export const checkObjectKeysTestCriteria = extractTestCriteria(checkObjectKeysTests());

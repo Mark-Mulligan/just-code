@@ -4,7 +4,7 @@ import { rockPaperScissorsTestScript, rockPaperScissorsTestCriteria } from './te
 import { findTheTotalLengthTestScript } from './testScripts/findTheTotalLength';
 import { reverseStringTestScript } from './testScripts/reverseString';
 import { largestNumInArrayTestScript } from './testScripts/largestNumInArray';
-import { checkObjectKeysTestScript } from './testScripts/checkObjectKeys';
+import { checkObjectKeysTestScript, checkObjectKeysTestCriteria } from './testScripts/checkObjectKeys';
 import { primeNumberTestScript } from './testScripts/primeNumber';
 import { sortArrayIntsTestScript } from './testScripts/sortArrayInts';
 import { removeDuplicatesArrTestScript } from './testScripts/removeDuplicatesArr';
@@ -16,8 +16,8 @@ import { sortTheDaysTestScript } from './testScripts/sortTheDays';
 import { historicalDayTestScript } from './testScripts/historicalDay';
 import { alphabetizeNamesTestScript, alphabetizeNamesTestCriteria } from './testScripts/alphabetizeNames';
 import { findTheIndex1TestScript } from './testScripts/findTheIndex';
-import { compareTwoObjsTestScript } from './testScripts/compareTwoObjs';
-import { combineTwoArraysTestScript } from './testScripts/combineTwoArrays';
+import { compareTwoObjsTestScript, compareTwoObjsTestCriteria } from './testScripts/compareTwoObjs';
+import { combineTwoArraysTestScript, combineTwoArraysTestCriteria } from './testScripts/combineTwoArrays';
 import { snakeToCamelTestScript } from './testScripts/snakeToCamel';
 import { countUniqueValuesTestScript } from './testScripts/countUniqueValues';
 import { queryParametersTestScript } from './testScripts/queryParameters';
@@ -27,8 +27,11 @@ export const testCriteria = {
   sumTwoIntsTestCriteria,
   evenOrOddTestCriteria,
   rockPaperScissorsTestCriteria,
+  checkObjectKeysTestCriteria,
   alphabetizeNamesTestCriteria,
   calculateTheTipTestCriteria,
+  compareTwoObjsTestCriteria,
+  combineTwoArraysTestCriteria,
 };
 
 export const testScripts = {

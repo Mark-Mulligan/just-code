@@ -1,11 +1,13 @@
 import { createTestScriptString } from '../../../utils/testScripts';
+import { TestResult } from '../../../types';
+import { extractTestCriteria } from '../../../utils/testScripts';
 
 const compareObjs = (obj1: any, obj2: any): boolean => {
   return true;
 };
 
 const compareTwoObjsTests = () => {
-  const testResults = [];
+  const testResults: TestResult[] = [];
   testResults.push({
     test: 'User created a function called compareObjs.',
     passed: typeof compareObjs === 'function',
@@ -48,3 +50,4 @@ const compareTwoObjsTests = () => {
 };
 
 export const compareTwoObjsTestScript = createTestScriptString(compareTwoObjsTests);
+export const compareTwoObjsTestCriteria = extractTestCriteria(compareTwoObjsTests());

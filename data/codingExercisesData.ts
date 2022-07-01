@@ -120,14 +120,7 @@ export const codingExercisesData: CodingExerciseData = {
       'Create a function called hasKey that takes in an object, and targetKey as a string.  The function should return a boolean value based on whether the given object contains the target key.',
     testScriptCode: testScripts.checkObjectKeysTestScript,
     startingCode: 'const hasKey = (obj, targetKey) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
-    testCriteria: [
-      'User created a function called hasKey',
-      'function returns a boolean',
-      'hasKey({ firstName: "Mark", lastName: "Mulligan" }, "firstName") \n returns true',
-      'hasKey({ label: "Program on", value: "1" }, "labels") \n returns false',
-      'hasKey({ dates: ["12-4-2022", "12-11-2022"], amounts: [10, 20] }, "dates") \n returns true',
-      'hasKey({ test: "Test", tester: "Tester" }, "testing") \n returns false',
-    ],
+    testCriteria: testCriteria.checkObjectKeysTestCriteria,
     problemExplaination:
       'Objects in javascript are made up of key, value pairs. In this case, we want to determine if a given key exists in a given object.',
     hints: [
@@ -394,13 +387,7 @@ export const codingExercisesData: CodingExerciseData = {
       'Create a function that takes in two arguments, two objects, and returns a boolean of whether or not those two objects have the same key, value pairs. Remember, objects in javascript are reference types so you can use === to compare them.',
     testScriptCode: testScripts.compareTwoObjsTestScript,
     startingCode: 'const compareObjs = (obj1, obj2) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
-    testCriteria: [
-      'User created a function called compareObjs',
-      'Functions reutrns a boolean',
-      'compareObjs({ name: "John", job: "Web Developer" }, { name: "Steve", job: "Welder" }) returns false',
-      'compareObjs({ title: "The Witcher", streaming: "Netflix" }, { title: "The Witcher", streaming: "Netflix" }) returns true',
-      'compareObjs({ favorites: { food: "pizza", color: "green" }, age: 27 }, { age: 27, favorites: {food: "pizza", color: "green" }}) returns true',
-    ],
+    testCriteria: testCriteria.compareTwoObjsTestCriteria,
     problemExplaination:
       'This problem is a little more difficult then it may first appear. Remember, to compare two objects, you will need to do a deep comparision, make sure all keys and values are the same.',
     hints: [
@@ -418,15 +405,7 @@ export const codingExercisesData: CodingExerciseData = {
       'Create a function that takes in two agruments, both arrays, and combines them into a new array. This array must also be sorted. The arrays will have either strings or numbers so make sure the function can sort alphabetically. Also watch out for capitalization in the string values.',
     testScriptCode: testScripts.combineTwoArraysTestScript,
     startingCode: 'const combineArrs = (arr1, arr2) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
-    testCriteria: [
-      'User created a function called combineArrs',
-      'Function returns an array',
-      'The Function returns a new array (not a reference to arr1 or arr2)',
-      'combineArrs([1, 3, 5], [2, 4, 6]) \n returns [1, 2, 3, 4, 5, 6]',
-      'combineArrs(["dogs", "cats", "hampsters"], ["snakes", "rats", "chickens"]) \n returns ["cats", "chickens", "dogs", "hampsters", "rats", "snakes"])',
-      'combineArrs([5, -3, -1, 8, 2], [10, 9, -2, -4, 7]) \n returns [-4, -3, -2, -1, 2, 5, 7, 8, 9, 10]',
-      'combineArrs(["mIxedCasing", "mIXedCase", "MixedcaSes"], ["MIXEDCASED", "mistake", "Mistaken"]) \n returns ["mistake", "Mistaken", "mIXedCase", "MIXEDCASED", "MixedcaSes", "mIxedCasing"])',
-    ],
+    testCriteria: testCriteria.combineTwoArraysTestCriteria,
     problemExplaination:
       'For this problem you will need to combine the values from two arrays into a new single array.  This array will also be sorted.  The arrays will either be numbers or strings only.  Make sure to watch out for capitalization as well when putting an array in aplhabetical order.',
     hints: [
