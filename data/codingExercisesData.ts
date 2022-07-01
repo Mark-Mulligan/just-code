@@ -38,13 +38,7 @@ export const codingExercisesData: CodingExerciseData = {
       'Create a function that takes in a string ("rock", "paper", or "scissors") and returns the hand that would beat it. For example, if "rock" is passed in, the function would return "paper"',
     testScriptCode: testScripts.rockPaperScissorsTestScript,
     startingCode: 'const rockPaperScissors = (turn) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
-    testCriteria: [
-      'User created a function called rockPaperScissors',
-      'Function returns a string',
-      'rockPaperScissors("rock") returns "paper"',
-      'rockPaperScissors("paper") returns "scissors"',
-      'rockPaperScissors("scissors") returns "rock"',
-    ],
+    testCriteria: testCriteria.rockPaperScissorsTestCriteria,
     problemExplaination:
       'Remember there are only 3 possible hands a player can play.  You will probably need to use a conditional statement (either an if or switch) to determine the answer based on the string passed to the function',
     hints: [

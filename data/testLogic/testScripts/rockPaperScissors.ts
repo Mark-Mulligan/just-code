@@ -1,4 +1,6 @@
 import { createTestScriptString } from '../../../utils/testScripts';
+import { TestResult } from '../../../types';
+import { extractTestCriteria } from '../../../utils/testScripts';
 
 const rockPaperScissors = (hand: string) => {
   if (hand === 'rock') return 'paper';
@@ -7,7 +9,7 @@ const rockPaperScissors = (hand: string) => {
 };
 
 const rockPaperScissorsTests = () => {
-  const testResults = [];
+  const testResults: TestResult[] = [];
   testResults.push({
     test: 'User created a function rockPaperScissors.',
     passed: typeof rockPaperScissors === 'function',
@@ -38,3 +40,4 @@ const rockPaperScissorsTests = () => {
 };
 
 export const rockPaperScissorsTestScript = createTestScriptString(rockPaperScissorsTests);
+export const rockPaperScissorsTestCriteria = extractTestCriteria(rockPaperScissorsTests());

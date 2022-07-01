@@ -1,6 +1,6 @@
 import { sumTwoIntsTestScript, sumTwoIntsTestCriteria } from './testScripts/sumTwoInt';
 import { evenOrOddTestScript, evenOrOddTestCriteria } from './testScripts/evenOrOdd';
-import { rockPaperScissorsTestScript } from './testScripts/rockPaperScissors';
+import { rockPaperScissorsTestScript, rockPaperScissorsTestCriteria } from './testScripts/rockPaperScissors';
 import { findTheTotalLengthTestScript } from './testScripts/findTheTotalLength';
 import { reverseStringTestScript } from './testScripts/reverseString';
 import { largestNumInArrayTestScript } from './testScripts/largestNumInArray';
@@ -26,6 +26,7 @@ import { ticTacToeTestScript } from './testScripts/ticTacToe';
 export const testCriteria = {
   sumTwoIntsTestCriteria,
   evenOrOddTestCriteria,
+  rockPaperScissorsTestCriteria,
 };
 
 export const testScripts = {
