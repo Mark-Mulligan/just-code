@@ -1,11 +1,13 @@
 import { createTestScriptString } from '../../../utils/testScripts';
+import { TestResult } from '../../../types';
+import { extractTestCriteria } from '../../../utils/testScripts';
 
 const isPrime = (num: number) => {
   return true;
 };
 
 const primeNumberTests = () => {
-  const testResults = [];
+  const testResults: TestResult[] = [];
   testResults.push({
     test: 'User created a function isPrime.',
     passed: typeof isPrime === 'function',
@@ -51,3 +53,4 @@ const primeNumberTests = () => {
 };
 
 export const primeNumberTestScript = createTestScriptString(primeNumberTests);
+export const primeNumberTestCriteria = extractTestCriteria(primeNumberTests());

@@ -1,4 +1,6 @@
 import { createTestScriptString } from '../../../utils/testScripts';
+import { TestResult } from '../../../types';
+import { extractTestCriteria } from '../../../utils/testScripts';
 
 const vowelCount = (text: string) => {
   const vowels = ['a', 'e', 'i', 'o', 'u'];
@@ -15,7 +17,7 @@ const vowelCount = (text: string) => {
 };
 
 const countTheVowelsTests = () => {
-  const testResults = [];
+  const testResults: TestResult[] = [];
   testResults.push({
     test: 'User created a function called vowelCount.',
     passed: typeof vowelCount === 'function',
@@ -45,3 +47,4 @@ const countTheVowelsTests = () => {
 };
 
 export const countTheVowelsTestScript = createTestScriptString(countTheVowelsTests);
+export const countTheVowelsTestCriteria = extractTestCriteria(countTheVowelsTests());

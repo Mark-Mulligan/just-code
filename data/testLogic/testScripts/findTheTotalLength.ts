@@ -1,11 +1,13 @@
 import { createTestScriptString } from '../../../utils/testScripts';
+import { TestResult } from '../../../types';
+import { extractTestCriteria } from '../../../utils/testScripts';
 
 const totalLength = (inputArr: string[]) => {
   return inputArr.join('').length;
 };
 
 const findTheTotalLengthTests = () => {
-  const testResults = [];
+  const testResults: TestResult[] = [];
   testResults.push({
     test: 'User created a function totalLength.',
     passed: typeof totalLength === 'function',
@@ -36,3 +38,4 @@ const findTheTotalLengthTests = () => {
 };
 
 export const findTheTotalLengthTestScript = createTestScriptString(findTheTotalLengthTests);
+export const findTheTotalLengthTestCriteria = extractTestCriteria(findTheTotalLengthTests());

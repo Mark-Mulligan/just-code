@@ -1,6 +1,8 @@
 import { createTestScriptString } from '../../../utils/testScripts';
+import { TestResult } from '../../../types';
+import { extractTestCriteria } from '../../../utils/testScripts';
 
-function object_equals(x: any, y: any) {
+const object_equals = (x: any, y: any) => {
   if (x === y) return true;
   if (!(x instanceof Object) || !(y instanceof Object)) return false;
   if (x.constructor !== y.constructor) return false;
@@ -16,14 +18,14 @@ function object_equals(x: any, y: any) {
   for (p in y) if (y.hasOwnProperty(p) && !x.hasOwnProperty(p)) return false;
 
   return true;
-}
+};
 
 const extractQueryParams = (urlStr: string) => {
   return {};
 };
 
 export const queryParametersTests = () => {
-  const testResults = [];
+  const testResults: TestResult[] = [];
   testResults.push({
     test: 'User create a function called extractQueryParams',
     passed: typeof extractQueryParams === 'function',
@@ -64,3 +66,4 @@ export const queryParametersTests = () => {
 export const queryParametersTestScript = createTestScriptString(queryParametersTests, [
   { name: 'object_equals', func: object_equals },
 ]);
+export const queryParamatersTestCriteria = extractTestCriteria(queryParametersTests());

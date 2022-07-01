@@ -1,11 +1,13 @@
 import { createTestScriptString } from '../../../utils/testScripts';
+import { TestResult } from '../../../types';
+import { extractTestCriteria } from '../../../utils/testScripts';
 
 const militaryTimeConverter = (time: string) => {
   return time;
 };
 
 const militaryTimeConversionTests = () => {
-  const testResults = [];
+  const testResults: TestResult[] = [];
   testResults.push({
     test: 'User created a function militaryTimeConverter.',
     passed: typeof militaryTimeConverter === 'function',
@@ -42,3 +44,4 @@ const militaryTimeConversionTests = () => {
 };
 
 export const militaryTimeConversionTestScript = createTestScriptString(militaryTimeConversionTests);
+export const militaryTimeConversionTestCriteria = extractTestCriteria(militaryTimeConversionTests());

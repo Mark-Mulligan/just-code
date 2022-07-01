@@ -1,4 +1,6 @@
 import { createTestScriptString } from '../../../utils/testScripts';
+import { TestResult } from '../../../types';
+import { extractTestCriteria } from '../../../utils/testScripts';
 
 function isPrimitive(obj: { [key: string]: any }) {
   return obj !== Object(obj);
@@ -34,7 +36,7 @@ const countUnique = (arr: any[]) => {
 };
 
 const countUniqueValuesTests = () => {
-  const testResults = [];
+  const testResults: TestResult[] = [];
   testResults.push({
     test: 'User created a function countUnique.',
     passed: typeof countUnique === 'function',
@@ -73,3 +75,4 @@ export const countUniqueValuesTestScript = createTestScriptString(countUniqueVal
   { name: 'isPrimitive', func: isPrimitive },
   { name: 'deepEqual', func: deepEqual },
 ]);
+export const countUniqueValuesTestCriteria = extractTestCriteria(countUniqueValuesTests());

@@ -1,11 +1,12 @@
-import { createTestScriptString } from '../../../utils/testScripts';
+import { createTestScriptString, extractTestCriteria } from '../../../utils/testScripts';
+import { TestResult } from '../../../types';
 
 const sortDays = (inputStr: string) => {
   return inputStr;
 };
 
 const sortTheDaysTests = () => {
-  const testResults = [];
+  const testResults: TestResult[] = [];
   testResults.push({
     test: 'User created a function called sortDays.',
     passed: typeof sortDays === 'function',
@@ -35,3 +36,4 @@ const sortTheDaysTests = () => {
 };
 
 export const sortTheDaysTestScript = createTestScriptString(sortTheDaysTests);
+export const sortTheDaysTestCriteria = extractTestCriteria(sortTheDaysTests());

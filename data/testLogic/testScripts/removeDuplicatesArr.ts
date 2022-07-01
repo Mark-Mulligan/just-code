@@ -1,11 +1,13 @@
 import { createTestScriptString } from '../../../utils/testScripts';
+import { TestResult } from '../../../types';
+import { extractTestCriteria } from '../../../utils/testScripts';
 
 const removeDuplicates = (inputArr: any[]) => {
   return inputArr;
 };
 
 export const removeDuplicatesArrTests = () => {
-  const testResults = [];
+  const testResults: TestResult[] = [];
   testResults.push({
     test: 'User created a function called removeDuplicates.',
     passed: typeof removeDuplicates === 'function',
@@ -39,3 +41,4 @@ export const removeDuplicatesArrTests = () => {
 };
 
 export const removeDuplicatesArrTestScript = createTestScriptString(removeDuplicatesArrTests);
+export const removeDuplicatesArrTestCriteria = extractTestCriteria(removeDuplicatesArrTests());

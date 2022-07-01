@@ -1,37 +1,56 @@
 import { sumTwoIntsTestScript, sumTwoIntsTestCriteria } from './testScripts/sumTwoInt';
 import { evenOrOddTestScript, evenOrOddTestCriteria } from './testScripts/evenOrOdd';
 import { rockPaperScissorsTestScript, rockPaperScissorsTestCriteria } from './testScripts/rockPaperScissors';
-import { findTheTotalLengthTestScript } from './testScripts/findTheTotalLength';
-import { reverseStringTestScript } from './testScripts/reverseString';
-import { largestNumInArrayTestScript } from './testScripts/largestNumInArray';
+import { findTheTotalLengthTestScript, findTheTotalLengthTestCriteria } from './testScripts/findTheTotalLength';
+import { reverseStringTestScript, reverseStringTestCriteria } from './testScripts/reverseString';
+import { largestNumInArrayTestScript, largestNumInArrayTestCriteria } from './testScripts/largestNumInArray';
 import { checkObjectKeysTestScript, checkObjectKeysTestCriteria } from './testScripts/checkObjectKeys';
-import { primeNumberTestScript } from './testScripts/primeNumber';
-import { sortArrayIntsTestScript } from './testScripts/sortArrayInts';
-import { removeDuplicatesArrTestScript } from './testScripts/removeDuplicatesArr';
-import { militaryTimeConversionTestScript } from './testScripts/militaryTimeConversion';
-import { sortTheDatesTestScript } from './testScripts/sortTheDates';
-import { countTheVowelsTestScript } from './testScripts/countTheVowels';
+import { primeNumberTestScript, primeNumberTestCriteria } from './testScripts/primeNumber';
+import { sortArrayIntsTestScript, sortArrayIntsTestCriteria } from './testScripts/sortArrayInts';
+import { removeDuplicatesArrTestScript, removeDuplicatesArrTestCriteria } from './testScripts/removeDuplicatesArr';
+import {
+  militaryTimeConversionTestScript,
+  militaryTimeConversionTestCriteria,
+} from './testScripts/militaryTimeConversion';
+import { sortTheDatesTestScript, sortTheDatesTestCriteria } from './testScripts/sortTheDates';
+import { countTheVowelsTestScript, countTheVowelsTestCriteria } from './testScripts/countTheVowels';
 import { calculateTheTipTestScript, calculateTheTipTestCriteria } from './testScripts/calculateTheTip';
-import { sortTheDaysTestScript } from './testScripts/sortTheDays';
-import { historicalDayTestScript } from './testScripts/historicalDay';
+import { sortTheDaysTestScript, sortTheDaysTestCriteria } from './testScripts/sortTheDays';
+import { historicalDayTestScript, historicalDayTestCriteria } from './testScripts/historicalDay';
 import { alphabetizeNamesTestScript, alphabetizeNamesTestCriteria } from './testScripts/alphabetizeNames';
-import { findTheIndex1TestScript } from './testScripts/findTheIndex';
+import { findTheIndex1TestScript, findTheIndex1TestCriteria } from './testScripts/findTheIndex';
 import { compareTwoObjsTestScript, compareTwoObjsTestCriteria } from './testScripts/compareTwoObjs';
 import { combineTwoArraysTestScript, combineTwoArraysTestCriteria } from './testScripts/combineTwoArrays';
-import { snakeToCamelTestScript } from './testScripts/snakeToCamel';
-import { countUniqueValuesTestScript } from './testScripts/countUniqueValues';
-import { queryParametersTestScript } from './testScripts/queryParameters';
-import { ticTacToeTestScript } from './testScripts/ticTacToe';
+import { snakeToCamelTestScript, snakeToCamelTestCriteria } from './testScripts/snakeToCamel';
+import { countUniqueValuesTestScript, countUniqueValuesTestCriteria } from './testScripts/countUniqueValues';
+import { queryParametersTestScript, queryParamatersTestCriteria } from './testScripts/queryParameters';
+import { ticTacToeTestScript, ticTacToeTestCriteria } from './testScripts/ticTacToe';
 
 export const testCriteria = {
   sumTwoIntsTestCriteria,
   evenOrOddTestCriteria,
   rockPaperScissorsTestCriteria,
+  findTheTotalLengthTestCriteria,
+  reverseStringTestCriteria,
+  largestNumInArrayTestCriteria,
   checkObjectKeysTestCriteria,
+  primeNumberTestCriteria,
+  sortArrayIntsTestCriteria,
+  removeDuplicatesArrTestCriteria,
+  militaryTimeConversionTestCriteria,
+  historicalDayTestCriteria,
   alphabetizeNamesTestCriteria,
+  sortTheDatesTestCriteria,
+  countTheVowelsTestCriteria,
   calculateTheTipTestCriteria,
+  sortTheDaysTestCriteria,
+  findTheIndex1TestCriteria,
   compareTwoObjsTestCriteria,
   combineTwoArraysTestCriteria,
+  snakeToCamelTestCriteria,
+  countUniqueValuesTestCriteria,
+  queryParamatersTestCriteria,
+  ticTacToeTestCriteria,
 };
 
 export const testScripts = {

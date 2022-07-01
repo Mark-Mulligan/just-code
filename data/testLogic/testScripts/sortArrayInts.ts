@@ -1,11 +1,13 @@
 import { createTestScriptString } from '../../../utils/testScripts';
+import { TestResult } from '../../../types';
+import { extractTestCriteria } from '../../../utils/testScripts';
 
 const sortArr = (inputArr: number[]) => {
   return inputArr;
 };
 
 const sortArrayIntsTests = () => {
-  const testResults = [];
+  const testResults: TestResult[] = [];
   testResults.push({
     test: 'User created a function called sortArr.',
     passed: typeof sortArr === 'function',
@@ -35,3 +37,4 @@ const sortArrayIntsTests = () => {
 };
 
 export const sortArrayIntsTestScript = createTestScriptString(sortArrayIntsTests);
+export const sortArrayIntsTestCriteria = extractTestCriteria(sortArrayIntsTests());

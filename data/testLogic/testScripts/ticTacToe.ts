@@ -1,11 +1,13 @@
 import { createTestScriptString } from '../../../utils/testScripts';
+import { TestResult } from '../../../types';
+import { extractTestCriteria } from '../../../utils/testScripts';
 
 const ticTacToe = (gameboard: string[][]) => {
   return '';
 };
 
 const ticTackToeTests = () => {
-  const testResults = [];
+  const testResults: TestResult[] = [];
   testResults.push({
     test: 'User created a function ticTacToe.',
     passed: typeof ticTacToe === 'function',
@@ -114,3 +116,4 @@ const ticTackToeTests = () => {
 };
 
 export const ticTacToeTestScript = createTestScriptString(ticTackToeTests);
+export const ticTacToeTestCriteria = extractTestCriteria(ticTackToeTests());

@@ -1,23 +1,25 @@
 import { createTestScriptString } from '../../../utils/testScripts';
+import { TestResult } from '../../../types';
+import { extractTestCriteria } from '../../../utils/testScripts';
 
 const sortDates = (inputDateArr: string[]) => {
   return inputDateArr;
 };
 
 const sortTheDatesTests = () => {
-  const testResults = [];
+  const testResults: TestResult[] = [];
   testResults.push({
     test: 'User created a function called sortDates.',
     passed: typeof sortDates === 'function',
     result: typeof sortDates,
   });
   testResults.push({
-    test: 'Function returns an array',
+    test: 'Function returns an array.',
     passed: Array.isArray(sortDates(['12-2-2020', '12-3-2020', '5-3-2020'])),
     result: JSON.stringify(sortDates(['12-2-2020', '12-3-2020', '5-3-2020'])),
   });
   testResults.push({
-    test: 'sortDates(["12-25-2018", "11-24-2018", "10-31-2018"]) returns ["10-31-2018", "11-24-2018", "12-25-2018"] ',
+    test: 'sortDates(["12-25-2018", "11-24-2018", "10-31-2018"]) returns ["10-31-2018", "11-24-2018", "12-25-2018"]',
     passed:
       JSON.stringify(sortDates(['12-25-2018', '11-24-2018', '10-31-2018'])) ===
       JSON.stringify(['10-31-2018', '11-24-2018', '12-25-2018']),
@@ -41,3 +43,4 @@ const sortTheDatesTests = () => {
 };
 
 export const sortTheDatesTestScript = createTestScriptString(sortTheDatesTests);
+export const sortTheDatesTestCriteria = extractTestCriteria(sortTheDatesTests());

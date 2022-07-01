@@ -1,11 +1,13 @@
 import { createTestScriptString } from '../../../utils/testScripts';
+import { TestResult } from '../../../types';
+import { extractTestCriteria } from '../../../utils/testScripts';
 
 const findDay = (inputDate: string) => {
   return '';
 };
 
 const historicalDayTests = () => {
-  const testResults = [];
+  const testResults: TestResult[] = [];
   testResults.push({
     test: 'User created a function findDay.',
     passed: typeof findDay === 'function',
@@ -17,17 +19,17 @@ const historicalDayTests = () => {
     result: typeof findDay('10-19-1987'),
   });
   testResults.push({
-    test: 'findDay("10-19-1987") returns Monday',
+    test: 'findDay("10-19-1987") returns "Monday"',
     passed: findDay('10-19-1987') === 'Monday',
     result: findDay('10-19-1987'),
   });
   testResults.push({
-    test: 'findDay("05-25-1977") returns Wednesday',
+    test: 'findDay("05-25-1977") returns "Wednesday"',
     passed: findDay('05-25-1977') === 'Wednesday',
     result: findDay('05-25-1977'),
   });
   testResults.push({
-    test: 'findDay("07-21-1969") returns Monday',
+    test: 'findDay("07-21-1969") returns "Monday"',
     passed: findDay('07-21-1969') === 'Monday',
     result: findDay('07-21-1969'),
   });
@@ -41,3 +43,4 @@ const historicalDayTests = () => {
 };
 
 export const historicalDayTestScript = createTestScriptString(historicalDayTests);
+export const historicalDayTestCriteria = extractTestCriteria(historicalDayTests());

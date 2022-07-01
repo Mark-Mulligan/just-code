@@ -1,4 +1,6 @@
 import { createTestScriptString } from '../../../utils/testScripts';
+import { TestResult } from '../../../types';
+import { extractTestCriteria } from '../../../utils/testScripts';
 
 const largestNum = (numArr: number[]) => {
   let largestNum = numArr[0];
@@ -11,7 +13,7 @@ const largestNum = (numArr: number[]) => {
 };
 
 const largestNumInArrayTests = () => {
-  const testResults = [];
+  const testResults: TestResult[] = [];
   testResults.push({
     test: 'User created a function called largestNum.',
     passed: typeof largestNum === 'function',
@@ -41,3 +43,4 @@ const largestNumInArrayTests = () => {
 };
 
 export const largestNumInArrayTestScript = createTestScriptString(largestNumInArrayTests);
+export const largestNumInArrayTestCriteria = extractTestCriteria(largestNumInArrayTests());

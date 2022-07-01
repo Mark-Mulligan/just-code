@@ -1,11 +1,13 @@
 import { createTestScriptString } from '../../../utils/testScripts';
+import { TestResult } from '../../../types';
+import { extractTestCriteria } from '../../../utils/testScripts';
 
 const reverseStr = (inputStr: string) => {
   return inputStr.split('').reverse().join('');
 };
 
 const reverseStringTests = () => {
-  const testResults = [];
+  const testResults: TestResult[] = [];
   testResults.push({
     test: 'User created a function called reverseStr.',
     passed: typeof reverseStr === 'function',
@@ -36,3 +38,4 @@ const reverseStringTests = () => {
 };
 
 export const reverseStringTestScript = createTestScriptString(reverseStringTests);
+export const reverseStringTestCriteria = extractTestCriteria(reverseStringTests());

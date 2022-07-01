@@ -1,11 +1,13 @@
 import { createTestScriptString } from '../../../utils/testScripts';
+import { TestResult } from '../../../types';
+import { extractTestCriteria } from '../../../utils/testScripts';
 
 const snakeToCamel = (inputStr: string) => {
   return inputStr;
 };
 
 const snakeToCamelTests = () => {
-  const testResults = [];
+  const testResults: TestResult[] = [];
   testResults.push({
     test: 'User created a function called snakeToCamel.',
     passed: typeof snakeToCamel === 'function',
@@ -41,3 +43,4 @@ const snakeToCamelTests = () => {
 };
 
 export const snakeToCamelTestScript = createTestScriptString(snakeToCamelTests);
+export const snakeToCamelTestCriteria = extractTestCriteria(snakeToCamelTests());
