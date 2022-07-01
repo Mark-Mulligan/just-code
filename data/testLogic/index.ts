@@ -11,10 +11,10 @@ import { removeDuplicatesArrTestScript } from './testScripts/removeDuplicatesArr
 import { militaryTimeConversionTestScript } from './testScripts/militaryTimeConversion';
 import { sortTheDatesTestScript } from './testScripts/sortTheDates';
 import { countTheVowelsTestScript } from './testScripts/countTheVowels';
-import { calculateTheTipTestScript } from './testScripts/calculateTheTip';
+import { calculateTheTipTestScript, calculateTheTipTestCriteria } from './testScripts/calculateTheTip';
 import { sortTheDaysTestScript } from './testScripts/sortTheDays';
 import { historicalDayTestScript } from './testScripts/historicalDay';
-import { alphabetizeNamesTestScript } from './testScripts/alphabetizeNames';
+import { alphabetizeNamesTestScript, alphabetizeNamesTestCriteria } from './testScripts/alphabetizeNames';
 import { findTheIndex1TestScript } from './testScripts/findTheIndex';
 import { compareTwoObjsTestScript } from './testScripts/compareTwoObjs';
 import { combineTwoArraysTestScript } from './testScripts/combineTwoArrays';
@@ -27,6 +27,8 @@ export const testCriteria = {
   sumTwoIntsTestCriteria,
   evenOrOddTestCriteria,
   rockPaperScissorsTestCriteria,
+  alphabetizeNamesTestCriteria,
+  calculateTheTipTestCriteria,
 };
 
 export const testScripts = {

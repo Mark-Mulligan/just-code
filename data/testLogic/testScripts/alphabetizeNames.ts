@@ -1,4 +1,6 @@
 import { createTestScriptString } from '../../../utils/testScripts';
+import { TestResult } from '../../../types';
+import { extractTestCriteria } from '../../../utils/testScripts';
 
 interface Name {
   first: string;
@@ -31,9 +33,9 @@ const checkFunctionReturnsAListOfNames = (functionResult: Name[]) => {
       result = false;
       break;
     }
-
-    return result;
   }
+
+  return result;
 };
 
 const object_equals = (x: any, y: any) => {
@@ -55,7 +57,7 @@ const object_equals = (x: any, y: any) => {
 };
 
 const alphabetizeNamesTests = () => {
-  const testResults = [];
+  const testResults: TestResult[] = [];
   testResults.push({
     test: 'User created a function alphabetizeNames.',
     passed: typeof alphabetizeNames === 'function',
@@ -93,7 +95,7 @@ const alphabetizeNamesTests = () => {
         { first: 'Draco', last: 'Malfoy' },
       ],
       'last',
-    ), returns [
+    ), \n returns [
       { first: 'Draco', last: 'Malfoy'}, 
       { first: 'Harry', last: 'Potter' }, 
       { first: 'Ron', last: 'Weasly' }
@@ -134,7 +136,7 @@ const alphabetizeNamesTests = () => {
         { first: 'Jim', last: 'Halpert' },
       ],
       'first',
-    ), returns [
+    ), \n returns [
       { first: 'Dwight', last: 'Schrute' },
       { first: 'Jim', last: 'Halpert' },
       { first: 'Michael', last: 'Scott' },
@@ -179,7 +181,7 @@ const alphabetizeNamesTests = () => {
         { first: 'Another', last: 'Name' },
       ],
       'last',
-    ), returns [
+    ), \n returns [
       { first: 'Another', last: 'Name' },
       { first: 'Other', last: 'Name' },
       { first: 'Jane', last: 'Smith' },
@@ -224,7 +226,7 @@ const alphabetizeNamesTests = () => {
         { first: 'Chris', last: 'Stapleton' },
       ],
       'last',
-    ), returns [
+    ), \n returns [
       { first: 'Chris', last: 'Evans' },
       { first: 'Chris', last: 'Stapleton' },
       { first: 'John', last: 'Stamos' },
@@ -269,3 +271,5 @@ export const alphabetizeNamesTestScript = createTestScriptString(alphabetizeName
   { name: 'checkFunctionReturnsAListOfNames', func: checkFunctionReturnsAListOfNames },
   { name: 'object_equals', func: object_equals },
 ]);
+
+export const alphabetizeNamesTestCriteria = extractTestCriteria(alphabetizeNamesTests());

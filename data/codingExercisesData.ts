@@ -216,64 +216,7 @@ export const codingExercisesData: CodingExerciseData = {
       'Create a function alphabetizeNames that takes in an two arguments, an array of name objects ex. [{ firstName: string, lastName: string }, {...}]. and a string that represents which name to order by (either "first" or "last").  Return a new array container all the name objects in the correct alphabetic order. If grouping by last name and two names are the same, use the first name to decide the order.  Vice versa if ordering by first name.',
     testScriptCode: testScripts.alphabetizeNamesTestScript,
     startingCode: 'const alphabetizeNames = (nameList, sortBy) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
-    testCriteria: [
-      'User created a function called alphabetizeNames',
-      'Function returns a array of name objects',
-      `alphabetizeNames(
-      [
-        { first: 'Harry', last: 'Potter' },
-        { first: 'Ron', last: 'Weasly' },
-        { first: 'Draco', last: 'Malfoy' },
-      ],
-      'last',
-    ), \n returns [
-      { first: 'Draco', last: 'Malfoy'}, 
-      { first: 'Harry', last: 'Potter' }, 
-      { first: 'Ron', last: 'Weasly' }
-    ]`,
-      `alphabetizeNames(
-      [
-        { first: 'Michael', last: 'Scott' },
-        { first: 'Pam', last: 'Beasly' },
-        { first: 'Dwight', last: 'Schrute' },
-        { first: 'Jim', last: 'Halpert' },
-      ],
-      'first',
-    ), \n returns [
-      { first: 'Dwight', last: 'Schrute' },
-      { first: 'Jim', last: 'Halpert' },
-      { first: 'Michael', last: 'Scott' },
-      { first: 'Pam', last: 'Beasly' },
-    ]`,
-      `alphabetizeNames(
-      [
-        { first: 'John', last: 'Smith' },
-        { first: 'Jane', last: 'Smith' },
-        { first: 'Other', last: 'Name' },
-        { first: 'Another', last: 'Name' },
-      ],
-      'last',
-    ), \n returns [
-      { first: 'Another', last: 'Name' },
-      { first: 'Other', last: 'Name' },
-      { first: 'Jane', last: 'Smith' },
-      { first: 'John', last: 'Smith' },
-    ],`,
-      `alphabetizeNames(
-      [
-        { first: 'John', last: 'Stewart' },
-        { first: 'John', last: 'Stamos' },
-        { first: 'Chris', last: 'Evans' },
-        { first: 'Chris', last: 'Stapleton' },
-      ],
-      'last',
-    ), \n returns [
-      { first: 'Chris', last: 'Evans' },
-      { first: 'Chris', last: 'Stapleton' },
-      { first: 'John', last: 'Stamos' },
-      { first: 'John', last: 'Stewart' },
-    ]`,
-    ],
+    testCriteria: testCriteria.alphabetizeNamesTestCriteria,
     problemExplaination:
       'There are a few parts of this problem that need to be worked out.  First, you will need to find some sort of sorting method.  Then, you will need to iterate over an array of objects.  Lastly, you will need some condition that if two names are the same, you can sort by the other name.',
     hints: [
@@ -386,16 +329,7 @@ export const codingExercisesData: CodingExerciseData = {
       'Create a function that takes in two arguments, the meal price (a string, ex. "$24.94") and the tip percent (a string, ex. "20%"), and returns the amount the tip should be. This amout should be return as a string in dollar format (ex. "$5.23", $10.00"). Include two digits for the decimal place even if they are 0.',
     testScriptCode: testScripts.calculateTheTipTestScript,
     startingCode: 'const tipCalc = (mealPrice, tipPercent) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
-    testCriteria: [
-      'User created a function called tipCalc',
-      'tipCalc returns a string',
-      'tipCalc("$25.97", "20%") returns $5.19',
-      'tipCalc("$43.28", "21%") returns $9.09',
-      'tipCalc("$12.63", "18%") returns $2.27',
-      'tipCalc("$101.73", "25%") returns $25.43',
-      'tipCalc("$10.91", "5%") retuns $0.55',
-      'tipCalc("$32.12", "19%") returns $6.10',
-    ],
+    testCriteria: testCriteria.calculateTheTipTestCriteria,
     problemExplaination:
       'This problem will require you to convert strings to numbers and back to a string. It also deals with some import aspects in programming such as dealing with percents and money values.',
     hints: [

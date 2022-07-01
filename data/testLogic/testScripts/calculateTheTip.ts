@@ -1,11 +1,13 @@
 import { createTestScriptString } from '../../../utils/testScripts';
+import { TestResult } from '../../../types';
+import { extractTestCriteria } from '../../../utils/testScripts';
 
 const tipCalc = (bill: string, pctTip: string) => {
   return '';
 };
 
 const calculateTheTipTests = () => {
-  const testResults = [];
+  const testResults: TestResult[] = [];
   testResults.push({
     test: 'User created a function tipCalc.',
     passed: typeof tipCalc === 'function',
@@ -51,3 +53,4 @@ const calculateTheTipTests = () => {
 };
 
 export const calculateTheTipTestScript = createTestScriptString(calculateTheTipTests);
+export const calculateTheTipTestCriteria = extractTestCriteria(calculateTheTipTests());
