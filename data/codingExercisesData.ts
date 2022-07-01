@@ -97,7 +97,7 @@ export const codingExercisesData: CodingExerciseData = {
 
   'check-object-keys': {
     title: 'Check Key in Object',
-    description: 'Create a function that determines wether a given key exsits in an object',
+    description: 'Create a function that determines wether a given key exsits in an object.',
     instructions:
       'Create a function called hasKey that takes in an object, and targetKey as a string.  The function should return a boolean value based on whether the given object contains the target key.',
     testScriptCode: testScripts.checkObjectKeysTestScript,
@@ -109,6 +109,23 @@ export const codingExercisesData: CodingExerciseData = {
       'the .hasOwnProperty(key: string) function can be called on objects in javascript.  It returns a boolean based on whether or not an object has a provided key.',
     ],
     solutionCode: solutions.checkObjectKeysSolution,
+  },
+  'fizz-buzz': {
+    title: 'Fizz Buzz',
+    description: 'The classic fizzbuzz exercise used in a lot of coding interviews.',
+    instructions: `Write a function called fizzBuzz that returns an array of numbers from 1 to 100. If the number is number is a multiple of 3, it should print 'fizz'. If the number is a multiple of 5, it shuld print 'buzz'.  If the number is a multiple of 3 and 5, it should print 'fizzbuzz'. All other numbers should just be printed as numbers (ex 1 would print 1).`,
+    testScriptCode: testScripts.fizzBuzzTestScript,
+    startingCode: 'const fizzBuzz = () => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+    testCriteria: testCriteria.fizzBuzzTestCriteria,
+    problemExplaination:
+      'This problem is a take on the famous fizzBuzz interview question. In this case, your function will return an array of number from 1 to 100, replacing those numbers divisible by 3 with "fizz", numbers divisible by 5 with "buzz", and numbers divisible by both 3 and 5 with "fizzbuzz".  All other numbers will be exsist as themselves in the returned array.',
+    hints: [
+      'You will need to use an iterator to move from 1 to 100.',
+      'You will need to push values into an array.',
+      `The '%' operator can be used to see how much is left over after dividing by a number.`,
+      'Remember in conditional statements, start with the most speific cases first.',
+    ],
+    solutionCode: solutions.fizzBuzzSolution,
   },
 
   'prime-number': {

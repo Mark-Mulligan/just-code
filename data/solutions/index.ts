@@ -5,6 +5,7 @@ import { findTheTotalLengthSolution } from './findTheTotalLength';
 import { reverseAStringSolution } from './reverseAString';
 import { largestNumInArrSolution } from './largestNumInArr';
 import { checkObjectKeysSolution } from './checkObjectKeys';
+import { fizzBuzzSolution } from './fizzBuzz';
 import { primeNumberSolution } from './primeNumber';
 import { sortArrIntsSolution } from './sortArrInts';
 import { historicalDaySolution } from './historicalDay';
@@ -30,6 +31,7 @@ export const solutions = {
   findTheTotalLengthSolution,
   reverseAStringSolution,
   largestNumInArrSolution,
+  fizzBuzzSolution,
   primeNumberSolution,
   checkObjectKeysSolution,
   sortArrIntsSolution,

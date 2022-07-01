@@ -5,6 +5,7 @@ import { findTheTotalLengthTestScript, findTheTotalLengthTestCriteria } from './
 import { reverseStringTestScript, reverseStringTestCriteria } from './testScripts/reverseString';
 import { largestNumInArrayTestScript, largestNumInArrayTestCriteria } from './testScripts/largestNumInArray';
 import { checkObjectKeysTestScript, checkObjectKeysTestCriteria } from './testScripts/checkObjectKeys';
+import { fizzBuzzTestScript, fizzBuzzTestCriteria } from './testScripts/fizzBuzz';
 import { primeNumberTestScript, primeNumberTestCriteria } from './testScripts/primeNumber';
 import { sortArrayIntsTestScript, sortArrayIntsTestCriteria } from './testScripts/sortArrayInts';
 import { removeDuplicatesArrTestScript, removeDuplicatesArrTestCriteria } from './testScripts/removeDuplicatesArr';
@@ -35,6 +36,7 @@ export const testCriteria = {
   largestNumInArrayTestCriteria,
   checkObjectKeysTestCriteria,
   primeNumberTestCriteria,
+  fizzBuzzTestCriteria,
   sortArrayIntsTestCriteria,
   removeDuplicatesArrTestCriteria,
   militaryTimeConversionTestCriteria,
@@ -62,6 +64,7 @@ export const testScripts = {
   largestNumInArrayTestScript,
   checkObjectKeysTestScript,
   primeNumberTestScript,
+  fizzBuzzTestScript,
   sortArrayIntsTestScript,
   removeDuplicatesArrTestScript,
   militaryTimeConversionTestScript,
