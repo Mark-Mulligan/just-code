@@ -25,6 +25,7 @@ import { combineTwoArraysTestScript, combineTwoArraysTestCriteria } from './test
 import { snakeToCamelTestScript, snakeToCamelTestCriteria } from './testScripts/snakeToCamel';
 import { countUniqueValuesTestScript, countUniqueValuesTestCriteria } from './testScripts/countUniqueValues';
 import { queryParametersTestScript, queryParamatersTestCriteria } from './testScripts/queryParameters';
+import { largestSumTestScript, largestSumTestCriteria } from './testScripts/largestSum';
 import { ticTacToeTestScript, ticTacToeTestCriteria } from './testScripts/ticTacToe';
 
 export const testCriteria = {
@@ -52,6 +53,7 @@ export const testCriteria = {
   snakeToCamelTestCriteria,
   countUniqueValuesTestCriteria,
   queryParamatersTestCriteria,
+  largestSumTestCriteria,
   ticTacToeTestCriteria,
 };
 
@@ -80,5 +82,6 @@ export const testScripts = {
   snakeToCamelTestScript,
   countUniqueValuesTestScript,
   queryParametersTestScript,
+  largestSumTestScript,
   ticTacToeTestScript,
 };

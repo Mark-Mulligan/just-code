@@ -22,6 +22,7 @@ import { combineTwoArraysSolution } from './combineTwoArrays';
 import { snakeToCamelSolution } from './snakeToCamel';
 import { countUniqueValuesSolution } from './countUniqueValues';
 import { queryParametersSolution } from './queryParameters';
+import { largestSumSolution } from './largestSum';
 import { ticTacToeSolution } from './ticTacToe';
 
 export const solutions = {
@@ -49,5 +50,6 @@ export const solutions = {
   snakeToCamelSolution,
   countUniqueValuesSolution,
   queryParametersSolution,
+  largestSumSolution,
   ticTacToeSolution,
 };

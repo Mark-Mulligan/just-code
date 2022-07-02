@@ -412,6 +412,24 @@ export const codingExercisesData: CodingExerciseData = {
     solutionCode: solutions.queryParametersSolution,
   },
 
+  'largest-sum': {
+    title: 'Largest Sum',
+    description: 'Create a function that returns the largest sum possible in a given array.',
+    instructions:
+      'Create function that take in one argument, an array of intergers and returns the largest sum possible using any two numbers from that array. You will also need to include the indexs of those two numbers in the given area. The result should be stored in a object with two keys, largestSum (a number) and indexs (a 2 value number[]).',
+    testScriptCode: testScripts.largestSumTestScript,
+    startingCode: 'const largestSum = (numberArr) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+    testCriteria: testCriteria.largestSumTestCriteria,
+    problemExplaination:
+      'Create a function that returns the largest sum possible in a given array as well as the indexes for those two numbers. This problem will require you to iterate through all the combninations in an array. It will also require that you can manipulate objects since you have to return multiple vaules for this function. This problem is useful for showing you how to derive multiple pieces of data from a single function.',
+    hints: [
+      'There are two main approaches for solving this, either looping through every combination of two numbers in the array, or sorting the array.',
+      'Looping through every combination will require nested for loops. You will also need to stored the largest sum in a variable.',
+      `If you sort the array, you will need to use the last two numbers for the largest sum in the sorted array. Then you will need to search for those two number's indexes in the original array`,
+    ],
+    solutionCode: solutions.largestSumSolution,
+  },
+
   'tic-tac-toe': {
     title: 'Tic-Tac-Toe',
     description: 'Create a function that determines the winner (if there is one) in a game of tic-tac-toe.',
