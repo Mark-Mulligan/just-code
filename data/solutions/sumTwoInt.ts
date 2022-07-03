@@ -1,3 +1,3 @@
-export const sumTwoIntSolution = `const sum = (num 1, num2) => {
+export const sumTwoIntSolution = `const sum = (num1, num2) => {
   return num1 + num2;
 };`;
