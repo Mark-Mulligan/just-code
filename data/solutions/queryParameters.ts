@@ -1,6 +1,6 @@
 export const queryParametersSolution = `const extractQueryParams = (urlStr) => {
   // Extract the query string from the url
-  let queryParamsRegex = /\?.*/
+  let queryParamsRegex = ${/\?.*/}
   let queryParamsStr = urlStr.match(queryParamsRegex)[0].slice(1);
 
   // Split the query string into key values gropuings
