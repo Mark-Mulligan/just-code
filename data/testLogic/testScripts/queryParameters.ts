@@ -66,4 +66,4 @@ export const queryParametersTests = () => {
 export const queryParametersTestScript = createTestScriptString(queryParametersTests, [
   { name: 'object_equals', func: object_equals },
 ]);
-export const queryParamatersTestCriteria = extractTestCriteria(queryParametersTests());
+export const queryParametersTestCriteria = extractTestCriteria(queryParametersTests());

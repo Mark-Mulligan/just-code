@@ -7,7 +7,7 @@ export type CodingExerciseOverview = {
   testScriptCode: string;
   startingCode: string;
   testCriteria: string[];
-  problemExplaination: string;
+  problemExplanation: string;
   hints: string[];
   solutionCode: string;
 };
@@ -26,7 +26,7 @@ export interface IParams extends NextParsedUrlQuery {
   problemKey: string;
 }
 
-export type TestcodeRouteResponse = {
+export type TestCodeRouteResponse = {
   status: number;
   data: {
     testResults: TestResult[];

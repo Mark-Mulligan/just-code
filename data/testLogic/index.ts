@@ -24,7 +24,7 @@ import { compareTwoObjsTestScript, compareTwoObjsTestCriteria } from './testScri
 import { combineTwoArraysTestScript, combineTwoArraysTestCriteria } from './testScripts/combineTwoArrays';
 import { snakeToCamelTestScript, snakeToCamelTestCriteria } from './testScripts/snakeToCamel';
 import { countUniqueValuesTestScript, countUniqueValuesTestCriteria } from './testScripts/countUniqueValues';
-import { queryParametersTestScript, queryParamatersTestCriteria } from './testScripts/queryParameters';
+import { queryParametersTestScript, queryParametersTestCriteria } from './testScripts/queryParameters';
 import { largestSumTestScript, largestSumTestCriteria } from './testScripts/largestSum';
 import { ticTacToeTestScript, ticTacToeTestCriteria } from './testScripts/ticTacToe';
 
@@ -52,7 +52,7 @@ export const testCriteria = {
   combineTwoArraysTestCriteria,
   snakeToCamelTestCriteria,
   countUniqueValuesTestCriteria,
-  queryParamatersTestCriteria,
+  queryParametersTestCriteria,
   largestSumTestCriteria,
   ticTacToeTestCriteria,
 };

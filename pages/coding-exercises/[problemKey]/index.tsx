@@ -10,7 +10,7 @@ import axios from 'axios';
 import styles from '../../../styles/practiceProblem.module.scss';
 import {
   CodingExerciseOverview,
-  TestcodeRouteResponse,
+  TestCodeRouteResponse,
   CodingExerciseStaticPath,
   TestResult,
   IParams,
@@ -40,7 +40,7 @@ const PracticeProblem: NextPage<PracticeProblemProps> = ({ codingExerciseData })
 
     axios
       .post(`/api/testcode/${router.query.problemKey}`, { userCode })
-      .then(({ data }: TestcodeRouteResponse) => {
+      .then(({ data }: TestCodeRouteResponse) => {
         setTestResults(data.testResults);
         setNumTestsPassed(data.numTestsPassed);
         setOverallResult(data.overallResult);
