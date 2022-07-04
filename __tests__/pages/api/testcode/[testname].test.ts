@@ -9,6 +9,7 @@ type ApiRequest = NextApiRequest & ReturnType<typeof createRequest>;
 type APiResponse = NextApiResponse & ReturnType<typeof createResponse>;
 
 describe.each(Object.keys(codingExercisesData))(`/api/testcode/[%s] API Endpoint`, (dataKey) => {
+  jest.setTimeout(30000);
   const mockRequestResponse = (options: RequestOptions) => {
     const req = createRequest<ApiRequest>(options);
     const res = createResponse<APiResponse>();
