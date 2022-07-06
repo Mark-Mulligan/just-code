@@ -1,14 +1,14 @@
-import handler from '../../../../pages/api/testcode/[testname]';
-import { sumTwoIntSolution } from '../../../../data/solutions/sumTwoInt';
+import handler from '../../pages/api/testcode/[testname]';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createRequest, createResponse, RequestOptions } from 'node-mocks-http';
-import { TestResult } from '../../../../types';
-import { codingExercisesData } from '../../../../data/codingExercisesData';
+import { TestResult } from '../../types';
+import { codingExercisesData } from '../../data/codingExercisesData';
 
 type ApiRequest = NextApiRequest & ReturnType<typeof createRequest>;
 type APiResponse = NextApiResponse & ReturnType<typeof createResponse>;
 
 describe.each(Object.keys(codingExercisesData))(`/api/testcode/[%s] API Endpoint`, (dataKey) => {
+  jest.setTimeout(30000);
   const mockRequestResponse = (options: RequestOptions) => {
     const req = createRequest<ApiRequest>(options);
     const res = createResponse<APiResponse>();
