@@ -20,7 +20,7 @@ const object_equals = (x: any, y: any) => {
   return true;
 };
 
-const largestSumReturnTypeCheck = (largestSumResult: { largestSum: number; indexs: number[] }) => {
+const largestSumReturnTypeCheck = (largestSumResult: { largestSum: number; indexes: number[] }) => {
   if (typeof largestSumResult !== 'object') {
     return false;
   }
@@ -29,19 +29,19 @@ const largestSumReturnTypeCheck = (largestSumResult: { largestSum: number; index
     return false;
   }
 
-  if (!largestSumResult.hasOwnProperty('largestSum') || !largestSumResult.hasOwnProperty('indexs')) {
+  if (!largestSumResult.hasOwnProperty('largestSum') || !largestSumResult.hasOwnProperty('indexes')) {
     return false;
   }
 
   if (
     typeof largestSumResult['largestSum'] !== 'number' ||
-    !Array.isArray(largestSumResult['indexs']) ||
-    largestSumResult['indexs'].length !== 2
+    !Array.isArray(largestSumResult['indexes']) ||
+    largestSumResult['indexes'].length !== 2
   ) {
     return false;
   }
 
-  if (typeof largestSumResult['indexs'][0] !== 'number' || typeof largestSumResult['indexs'][1] !== 'number') {
+  if (typeof largestSumResult['indexes'][0] !== 'number' || typeof largestSumResult['indexes'][1] !== 'number') {
     return false;
   }
 
@@ -49,10 +49,10 @@ const largestSumReturnTypeCheck = (largestSumResult: { largestSum: number; index
 };
 
 const largestSum = (numberArr: number[]) => {
-  return { largestSum: 0, indexs: [0, 1] };
+  return { largestSum: 0, indexes: [0, 1] };
 };
 
-export const queryParametersTests = () => {
+export const largestSumTests = () => {
   const testResults: TestResult[] = [];
   testResults.push({
     test: 'User create a function called largestSum',
@@ -60,28 +60,28 @@ export const queryParametersTests = () => {
     result: typeof largestSum,
   });
   testResults.push({
-    test: 'Function returns an object containing two keys, largestSum (number), and indexs, (number[])',
+    test: 'Function returns an object containing two keys, largestSum (number), and indexes, (number[])',
     passed: largestSumReturnTypeCheck(largestSum([1, 2, 3])),
     result: JSON.stringify(largestSum([1, 2, 3])),
   });
   testResults.push({
-    test: 'largestSum([1, 2, 3]) returns { largestSum: 5, indexs: [1, 2] }',
-    passed: object_equals(largestSum([1, 2, 3]), { largestSum: 5, indexs: [1, 2] }),
+    test: 'largestSum([1, 2, 3]) returns { largestSum: 5, indexes: [1, 2] }',
+    passed: object_equals(largestSum([1, 2, 3]), { largestSum: 5, indexes: [1, 2] }),
     result: JSON.stringify(largestSum([1, 2, 3])),
   });
   testResults.push({
-    test: 'largestSum([10, 6, 2, 7]) returns { largestSum: 17, indexs: [0, 3]}',
+    test: 'largestSum([10, 6, 2, 7]) returns { largestSum: 17, indexes: [0, 3]}',
     passed: object_equals(largestSum([10, 6, 2, 7]), {
       largestSum: 17,
-      indexs: [0, 3],
+      indexes: [0, 3],
     }),
     result: JSON.stringify(largestSum([10, 6, 2, 7])),
   });
   testResults.push({
-    test: 'largestSum([3, 27, 31, 4]) returns { largestSum: 58, indexs: [1, 2] }',
+    test: 'largestSum([3, 27, 31, 4]) returns { largestSum: 58, indexes: [1, 2] }',
     passed: object_equals(largestSum([3, 27, 31, 4]), {
       largestSum: 58,
-      indexs: [1, 2],
+      indexes: [1, 2],
     }),
     result: JSON.stringify(largestSum([3, 27, 31, 4])),
   });
@@ -89,8 +89,8 @@ export const queryParametersTests = () => {
   return testResults;
 };
 
-export const largestSumTestScript = createTestScriptString(queryParametersTests, [
+export const largestSumTestScript = createTestScriptString(largestSumTests, [
   { name: 'object_equals', func: object_equals },
   { name: 'largestSumReturnTypeCheck', func: largestSumReturnTypeCheck },
 ]);
-export const largestSumTestCriteria = extractTestCriteria(queryParametersTests());
+export const largestSumTestCriteria = extractTestCriteria(largestSumTests());

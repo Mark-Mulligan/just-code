@@ -34,3 +34,31 @@ export function object_equals(x: any, y: any) {
 
   return true;
 }
+
+export const largestSumReturnTypeCheck = (largestSumResult: { largestSum: number; indexes: number[] }) => {
+  if (typeof largestSumResult !== 'object') {
+    return false;
+  }
+
+  if (Object.keys(largestSumResult).length !== 2) {
+    return false;
+  }
+
+  if (!largestSumResult.hasOwnProperty('largestSum') || !largestSumResult.hasOwnProperty('indexes')) {
+    return false;
+  }
+
+  if (
+    typeof largestSumResult['largestSum'] !== 'number' ||
+    !Array.isArray(largestSumResult['indexes']) ||
+    largestSumResult['indexes'].length !== 2
+  ) {
+    return false;
+  }
+
+  if (typeof largestSumResult['indexes'][0] !== 'number' || typeof largestSumResult['indexes'][1] !== 'number') {
+    return false;
+  }
+
+  return true;
+};

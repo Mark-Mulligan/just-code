@@ -21,8 +21,8 @@ const PracticeProblemHelp: NextPage<PracticeProblemHelpProps> = ({ codingExercis
   return (
     <Container className={styles.helpContainer}>
       <h1 className="text-center">{codingExerciseData.title}</h1>
-      <h2>Problem Explaination</h2>
-      <p>{codingExerciseData.problemExplaination}</p>
+      <h2>Problem Explanation</h2>
+      <p>{codingExerciseData.problemExplanation}</p>
       <h2>Hints</h2>
       <ul>
         {codingExerciseData.hints?.map((hint, index) => {
