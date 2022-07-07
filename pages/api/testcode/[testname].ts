@@ -23,7 +23,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     try {
       testResults = vm.run(`${userCode}\n${testScriptCode}`);
     } catch (err: any) {
-      console.log('err', err);
+      // console.log('err', err);
       res.status(400).json({ message: `${err.message}. Code failed to compile.` });
       return;
     }
@@ -38,6 +38,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     const overallResult = testResults.length === numTestsPassed ? 'passed' : 'failed';
 
     res.status(200).json({ testResults, numTestsPassed, overallResult });
+  } else {
+    res.status(404);
   }
 };
 

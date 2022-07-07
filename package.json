@@ -21,6 +21,11 @@
     "resetMocks": false,
     "setupFiles": [
       "jest-localstorage-mock"
+    ],
+    "coveragePathIgnorePatterns": [
+      "node_modules",
+      "/utils/utilityFunctions.ts",
+      "/data/testLogic/testScripts/*"
     ]
   },
   "dependencies": {

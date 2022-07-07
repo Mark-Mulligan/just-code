@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { createTestScriptString } from '../../../utils/testScripts';
 import { TestResult } from '../../../types';
 import { extractTestCriteria } from '../../../utils/testScripts';

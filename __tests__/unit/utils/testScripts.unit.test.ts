@@ -30,6 +30,8 @@ describe('Test Script Util Functions', () => {
         { name: 'largestSumReturnTypeCheck', func: largestSumReturnTypeCheck },
       ]);
 
+      console.log(result);
+
       expect(typeof result).toBe('string');
     });
 
@@ -39,6 +41,7 @@ describe('Test Script Util Functions', () => {
         { name: 'largestSumReturnTypeCheck', func: largestSumReturnTypeCheck },
       ]);
       const vm = new VM({ timeout: 1000, sandbox: {} });
+      // console.log('testScriptString', testScriptString);
 
       let error = undefined;
 

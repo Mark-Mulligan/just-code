@@ -13,22 +13,20 @@ export const saveToLocalStorage = (currentExercise: string) => {
 };
 
 export const checkItemComplete = (currentItemKey: string): boolean => {
-  if (typeof window !== 'undefined' && localStorage.getItem('exercisesComplete')) {
-    let exerciseDataString = window.localStorage.getItem('exercisesComplete');
+  if (localStorage.getItem('exercisesComplete')) {
+    let exerciseDataString = localStorage.getItem('exercisesComplete');
 
     if (exerciseDataString) {
       let exercisesData = JSON.parse(exerciseDataString);
       return exercisesData.hasOwnProperty(currentItemKey);
     }
-
-    return false;
   }
 
   return false;
 };
 
 export const getItemsComplete = (): {} => {
-  if (typeof window !== 'undefined' && localStorage.getItem('exercisesComplete')) {
+  if (localStorage.getItem('exercisesComplete')) {
     let itemsComplete = localStorage.getItem('exercisesComplete');
     return itemsComplete ? JSON.parse(itemsComplete) : {};
   }
