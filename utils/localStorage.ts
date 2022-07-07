@@ -1,6 +1,5 @@
 export const saveToLocalStorage = (currentExercise: string) => {
   if (!localStorage.getItem('exercisesComplete')) {
-    console.log('save to local storage ran');
     localStorage.setItem('exercisesComplete', JSON.stringify({ [currentExercise]: 'completed' }));
   } else {
     let exerciseDataString = localStorage.getItem('exercisesComplete');
