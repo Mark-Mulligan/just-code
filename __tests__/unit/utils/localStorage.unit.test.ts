@@ -55,6 +55,18 @@ describe('Local Storage Util functions', () => {
     });
 
     it('should return object if exercises complete', () => {
+      function mockWindow(search: string, pathname: string) {
+        Object.defineProperty(global, 'window', {
+          value: {
+            location: {
+              search,
+              pathname,
+            },
+          },
+          writable: true,
+        });
+      }
+      mockWindow('test-word', '/');
       saveToLocalStorage('add-two-ints');
       expect(object_equals(getItemsComplete(), { 'add-two-ints': 'completed' })).toBe(true);
     });

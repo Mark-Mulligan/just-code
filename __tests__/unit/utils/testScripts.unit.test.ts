@@ -30,8 +30,6 @@ describe('Test Script Util Functions', () => {
         { name: 'largestSumReturnTypeCheck', func: largestSumReturnTypeCheck },
       ]);
 
-      console.log(result);
-
       expect(typeof result).toBe('string');
     });
 
