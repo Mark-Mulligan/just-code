@@ -25,6 +25,7 @@ import { queryParametersSolution } from './queryParameters';
 import { largestSumSolution } from './largestSum';
 import { ticTacToeSolution } from './ticTacToe';
 import { divideAndRoundSolution } from './divideAndRound';
+import { longestWordSolution } from './longestWord';
 
 export const solutions = {
   sumTwoIntSolution,
@@ -34,9 +35,10 @@ export const solutions = {
   divideAndRoundSolution,
   reverseAStringSolution,
   largestNumInArrSolution,
+  checkObjectKeysSolution,
+  longestWordSolution,
   fizzBuzzSolution,
   primeNumberSolution,
-  checkObjectKeysSolution,
   sortArrIntsSolution,
   historicalDaySolution,
   alphabetizeNamesSolution,

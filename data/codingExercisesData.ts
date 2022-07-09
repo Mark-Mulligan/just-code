@@ -128,6 +128,24 @@ export const codingExercisesData: CodingExerciseData = {
     ],
     solutionCode: solutions.checkObjectKeysSolution,
   },
+
+  'longest-word': {
+    title: 'Longest Word',
+    description: 'Create a function that finds the longest word in a sentence.',
+    instructions:
+      'Create a function called longestWord, that takes in a string and returns the longest word in that string. The string will be a normal sentence that begins with a capital letter and ends with punctuation. If two of the longest words have the same length, return the first one that occurs in the sentence.',
+    testScriptCode: testScripts.longestWordTestScript,
+    startingCode: 'const longestWord = (sentence) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+    testCriteria: testCriteria.longestWordTestCriteria,
+    problemExplanation:
+      'You will need to find the longest word in a the sentence. Words are separated by spaces so use this to you advantage. Remember the built in length property for strings and to removed the punctuation if the longest word happens to be at the end of the sentence.',
+    hints: [
+      `Make sure to get ride of the punctuation at the end of the sentence`,
+      `Separate the sentence into words. You can use the split(' ') method to put all the words into an array`,
+    ],
+    solutionCode: solutions.longestWordSolution,
+  },
+
   'fizz-buzz': {
     title: 'Fizz Buzz',
     description: 'The classic fizzBuzz exercise used in a lot of coding interviews.',

@@ -29,9 +29,9 @@ const findTheTotalLengthTests = () => {
     result: totalLength(['the', 'world', 'is', 'gonna', 'roll', 'me']),
   });
   testResults.push({
-    test: 'totalLength(["I", "aint", "the", "sharpest", "tool", "in", "the", "shed"] returns 29',
-    passed: totalLength(['I', 'aint', 'the', 'sharpest', 'tool', 'in', 'the', 'shed']) === 29,
-    result: totalLength(['I', 'aint', 'the', 'sharpest', 'tool', 'in', 'the', 'shed']),
+    test: `totalLength(["I", "ain't", "the", "sharpest", "tool", "in", "the", "shed"] returns 30`,
+    passed: totalLength(['I', `ain't`, 'the', 'sharpest', 'tool', 'in', 'the', 'shed']) === 30,
+    result: totalLength(['I', `ain't`, 'the', 'sharpest', 'tool', 'in', 'the', 'shed']),
   });
 
   return testResults;
