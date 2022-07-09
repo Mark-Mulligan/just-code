@@ -113,6 +113,25 @@ export const codingExercisesData: CodingExerciseData = {
     solutionCode: solutions.largestNumInArrSolution,
   },
 
+  'add-numbers-in-range': {
+    title: 'Add Numbers in Range',
+    description: 'Create a function that adds all the numbers together in a given range.',
+    instructions:
+      'Create a function called addNumbersInRange that takes in two integers, startingNum and endingNum. The function should return the sum of all numbers in that range including the starting and ending number.',
+    testScriptCode: testScripts.addNumbersInRangeTestScript,
+    startingCode:
+      'const addNumbersInRange = (startingNum, endingNum) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+    testCriteria: testCriteria.addNumbersInRangeTestCriteria,
+    problemExplanation:
+      'Given a range, calculate the sum of all numbers in that range. The simplest way to go about this is using a for loop and a variable to keep track of the total.',
+    hints: [
+      'You can use a for loop to iterate through all the numbers in the range.',
+      'Consider using a variable to keep track of the total,',
+      'The for loop should start at the startingNum and end at the endingNum (not before)',
+    ],
+    solutionCode: solutions.addNumbersInRangeSolution,
+  },
+
   'check-object-keys': {
     title: 'Check Key in Object',
     description: 'Create a function that determines wether a given key exist in an object.',

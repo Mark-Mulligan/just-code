@@ -27,6 +27,7 @@ import { ticTacToeSolution } from './ticTacToe';
 import { divideAndRoundSolution } from './divideAndRound';
 import { longestWordSolution } from './longestWord';
 import { thanksgivingDateSolution } from './thanksgivingDate';
+import { addNumbersInRangeSolution } from './addNumbersInRange';
 
 export const solutions = {
   sumTwoIntSolution,
@@ -37,6 +38,7 @@ export const solutions = {
   reverseAStringSolution,
   largestNumInArrSolution,
   checkObjectKeysSolution,
+  addNumbersInRangeSolution,
   longestWordSolution,
   fizzBuzzSolution,
   primeNumberSolution,

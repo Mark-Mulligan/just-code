@@ -5,6 +5,7 @@ import { findTheTotalLengthTestScript, findTheTotalLengthTestCriteria } from './
 import { divideAndRoundTestScript, divideAndRoundTestCriteria } from './testScripts/divideAndRound';
 import { reverseStringTestScript, reverseStringTestCriteria } from './testScripts/reverseString';
 import { largestNumInArrayTestScript, largestNumInArrayTestCriteria } from './testScripts/largestNumInArray';
+import { addNumbersInRangeTestScript, addNumbersInRangeTestCriteria } from './testScripts/addNumbersInRange';
 import { checkObjectKeysTestScript, checkObjectKeysTestCriteria } from './testScripts/checkObjectKeys';
 import { longestWordTestScript, longestWordTestCriteria } from './testScripts/longestWord';
 import { fizzBuzzTestScript, fizzBuzzTestCriteria } from './testScripts/fizzBuzz';
@@ -39,6 +40,7 @@ export const testCriteria = {
   divideAndRoundTestCriteria,
   reverseStringTestCriteria,
   largestNumInArrayTestCriteria,
+  addNumbersInRangeTestCriteria,
   checkObjectKeysTestCriteria,
   longestWordTestCriteria,
   primeNumberTestCriteria,
@@ -71,6 +73,7 @@ export const testScripts = {
   divideAndRoundTestScript,
   reverseStringTestScript,
   largestNumInArrayTestScript,
+  addNumbersInRangeTestScript,
   checkObjectKeysTestScript,
   longestWordTestScript,
   primeNumberTestScript,
