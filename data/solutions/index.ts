@@ -26,6 +26,7 @@ import { largestSumSolution } from './largestSum';
 import { ticTacToeSolution } from './ticTacToe';
 import { divideAndRoundSolution } from './divideAndRound';
 import { longestWordSolution } from './longestWord';
+import { thanksgivingDateSolution } from './thanksgivingDate';
 
 export const solutions = {
   sumTwoIntSolution,
@@ -50,6 +51,7 @@ export const solutions = {
   removeDuplicatesArrSolution,
   sortTheDaysSolution,
   compareTwoObjsSolution,
+  thanksgivingDateSolution,
   combineTwoArraysSolution,
   snakeToCamelSolution,
   countUniqueValuesSolution,

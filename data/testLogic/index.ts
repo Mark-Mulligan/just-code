@@ -23,6 +23,7 @@ import { historicalDayTestScript, historicalDayTestCriteria } from './testScript
 import { alphabetizeNamesTestScript, alphabetizeNamesTestCriteria } from './testScripts/alphabetizeNames';
 import { findTheIndex1TestScript, findTheIndex1TestCriteria } from './testScripts/findTheIndex';
 import { compareTwoObjsTestScript, compareTwoObjsTestCriteria } from './testScripts/compareTwoObjs';
+import { thanksgivingDateTestScript, thanksgivingDateTestCriteria } from './testScripts/thanksgivingDate';
 import { combineTwoArraysTestScript, combineTwoArraysTestCriteria } from './testScripts/combineTwoArrays';
 import { snakeToCamelTestScript, snakeToCamelTestCriteria } from './testScripts/snakeToCamel';
 import { countUniqueValuesTestScript, countUniqueValuesTestCriteria } from './testScripts/countUniqueValues';
@@ -53,6 +54,7 @@ export const testCriteria = {
   sortTheDaysTestCriteria,
   findTheIndex1TestCriteria,
   compareTwoObjsTestCriteria,
+  thanksgivingDateTestCriteria,
   combineTwoArraysTestCriteria,
   snakeToCamelTestCriteria,
   countUniqueValuesTestCriteria,
@@ -84,6 +86,7 @@ export const testScripts = {
   alphabetizeNamesTestScript,
   findTheIndex1TestScript,
   compareTwoObjsTestScript,
+  thanksgivingDateTestScript,
   combineTwoArraysTestScript,
   snakeToCamelTestScript,
   countUniqueValuesTestScript,
