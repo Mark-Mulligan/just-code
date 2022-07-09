@@ -65,6 +65,24 @@ export const codingExercisesData: CodingExerciseData = {
     solutionCode: solutions.findTheTotalLengthSolution,
   },
 
+  'divide-and-round': {
+    title: 'Divide and Round',
+    description:
+      'Create a function that takes two numbers and divides the first number by the second and rounds the result.',
+    instructions:
+      'Create a function called divide that takes in two numbers, num1 and num2. The function will divide num1 by num2 and return the result as a number rounded to the nearest hundredths',
+    testScriptCode: testScripts.divideAndRoundTestScript,
+    startingCode: 'const divide = (num1, num2) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+    testCriteria: testCriteria.divideAndRoundTestCriteria,
+    problemExplanation:
+      'The trickiest part about this problem is the rounding and order of operations. Make sure to first divide and then round the result of that division problem.',
+    hints: [
+      'Math.round() is usefully for rounding. However, you will need to use a modified version of it to round to the hundredths',
+      `If you don't want to use math.round, you can use .toFixed(2). Just make sure to convert the result of the toFixed function to a number (toFixed returns a string).`,
+    ],
+    solutionCode: solutions.divideAndRoundSolution,
+  },
+
   'reverse-string': {
     title: 'Reverse A String',
     description: 'Create a function that returns a string reversed.',

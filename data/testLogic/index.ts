@@ -2,6 +2,7 @@ import { sumTwoIntsTestScript, sumTwoIntsTestCriteria } from './testScripts/sumT
 import { evenOrOddTestScript, evenOrOddTestCriteria } from './testScripts/evenOrOdd';
 import { rockPaperScissorsTestScript, rockPaperScissorsTestCriteria } from './testScripts/rockPaperScissors';
 import { findTheTotalLengthTestScript, findTheTotalLengthTestCriteria } from './testScripts/findTheTotalLength';
+import { divideAndRoundTestScript, divideAndRoundTestCriteria } from './testScripts/divideAndRound';
 import { reverseStringTestScript, reverseStringTestCriteria } from './testScripts/reverseString';
 import { largestNumInArrayTestScript, largestNumInArrayTestCriteria } from './testScripts/largestNumInArray';
 import { checkObjectKeysTestScript, checkObjectKeysTestCriteria } from './testScripts/checkObjectKeys';
@@ -33,6 +34,7 @@ export const testCriteria = {
   evenOrOddTestCriteria,
   rockPaperScissorsTestCriteria,
   findTheTotalLengthTestCriteria,
+  divideAndRoundTestCriteria,
   reverseStringTestCriteria,
   largestNumInArrayTestCriteria,
   checkObjectKeysTestCriteria,
@@ -62,6 +64,7 @@ export const testScripts = {
   evenOrOddTestScript,
   rockPaperScissorsTestScript,
   findTheTotalLengthTestScript,
+  divideAndRoundTestScript,
   reverseStringTestScript,
   largestNumInArrayTestScript,
   checkObjectKeysTestScript,

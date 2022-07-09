@@ -24,12 +24,14 @@ import { countUniqueValuesSolution } from './countUniqueValues';
 import { queryParametersSolution } from './queryParameters';
 import { largestSumSolution } from './largestSum';
 import { ticTacToeSolution } from './ticTacToe';
+import { divideAndRoundSolution } from './divideAndRound';
 
 export const solutions = {
   sumTwoIntSolution,
   evenOrOddSolution,
   rockPaperScissorsSolution,
   findTheTotalLengthSolution,
+  divideAndRoundSolution,
   reverseAStringSolution,
   largestNumInArrSolution,
   fizzBuzzSolution,
