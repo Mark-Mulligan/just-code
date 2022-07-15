@@ -200,6 +200,21 @@ export const codingExercisesData: CodingExerciseData = {
     solutionCode: solutions.primeNumberSolution,
   },
 
+  'clone-and-insert': {
+    title: 'Insert And Clone',
+    description: 'Create a function that adds a new key and value pair to a provided object',
+    instructions:
+      'Create a function called addKeyValuePair that takes in two objects, a starting object and another object with a single key and value pair. The function should return a copy of the original object with the second objects key value pair included.',
+    testScriptCode: '',
+    startingCode:
+      'const addKeyValuePair = (originalObj, keyValuePair) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+    testCriteria: [''],
+    problemExplanation:
+      'For this problem, you will first need to clone the object. Then insert the key value pair in the object you clone.',
+    hints: [''],
+    solutionCode: '',
+  },
+
   'sort-array-ints': {
     title: 'Sort Array Of Integers',
     description: 'Create a function that returns a sorted array of integers',
