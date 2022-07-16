@@ -183,6 +183,21 @@ export const codingExercisesData: CodingExerciseData = {
     solutionCode: solutions.fizzBuzzSolution,
   },
 
+  'clone-and-insert': {
+    title: 'Insert And Clone',
+    description: 'Create a function that adds a new key and value pair to a provided object',
+    instructions:
+      'Create a function called addKeyValuePair that takes in two objects, a starting object and another object with some key and value pairs. The function should return a copy of the original object with the second objects key value pair included.',
+    testScriptCode: testScripts.cloneAndInsertTestScript,
+    startingCode:
+      'const addKeyValuePair = (originalObj, keyValuePair) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+    testCriteria: testCriteria.cloneAndInsertTestCriteria,
+    problemExplanation:
+      'For this problem, you will first need to clone the object. Then insert the key value pair in the object you clone.',
+    hints: [''],
+    solutionCode: '',
+  },
+
   'prime-number': {
     title: 'Prime Number',
     description: 'Create a function that determines wether or not a given number is a prime number.',
@@ -198,21 +213,6 @@ export const codingExercisesData: CodingExerciseData = {
       'You can use the % operator to see if there is a remainder in a division problem. If a number is divisible by another number, the % operator will return 0.',
     ],
     solutionCode: solutions.primeNumberSolution,
-  },
-
-  'clone-and-insert': {
-    title: 'Insert And Clone',
-    description: 'Create a function that adds a new key and value pair to a provided object',
-    instructions:
-      'Create a function called addKeyValuePair that takes in two objects, a starting object and another object with a single key and value pair. The function should return a copy of the original object with the second objects key value pair included.',
-    testScriptCode: '',
-    startingCode:
-      'const addKeyValuePair = (originalObj, keyValuePair) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
-    testCriteria: [''],
-    problemExplanation:
-      'For this problem, you will first need to clone the object. Then insert the key value pair in the object you clone.',
-    hints: [''],
-    solutionCode: '',
   },
 
   'sort-array-ints': {
