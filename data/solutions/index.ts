@@ -28,6 +28,7 @@ import { divideAndRoundSolution } from './divideAndRound';
 import { longestWordSolution } from './longestWord';
 import { thanksgivingDateSolution } from './thanksgivingDate';
 import { addNumbersInRangeSolution } from './addNumbersInRange';
+import { combineTwoObjsSolution } from './combineTwoObjs';
 
 export const solutions = {
   sumTwoIntSolution,
@@ -41,6 +42,7 @@ export const solutions = {
   addNumbersInRangeSolution,
   longestWordSolution,
   fizzBuzzSolution,
+  combineTwoObjsSolution,
   primeNumberSolution,
   sortArrIntsSolution,
   historicalDaySolution,

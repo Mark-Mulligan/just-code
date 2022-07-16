@@ -183,19 +183,18 @@ export const codingExercisesData: CodingExerciseData = {
     solutionCode: solutions.fizzBuzzSolution,
   },
 
-  'clone-and-insert': {
-    title: 'Insert And Clone',
-    description: 'Create a function that adds a new key and value pair to a provided object',
+  'combine-two-objs': {
+    title: 'Combine Two Objects',
+    description: 'Create a function that combines two objects into a single one.',
     instructions:
-      'Create a function called addKeyValuePair that takes in two objects, a starting object and another object with some key and value pairs. The function should return a copy of the original object with the second objects key value pair included.',
-    testScriptCode: testScripts.cloneAndInsertTestScript,
-    startingCode:
-      'const addKeyValuePair = (originalObj, keyValuePair) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
-    testCriteria: testCriteria.cloneAndInsertTestCriteria,
+      'Create a function called combineTwoObjs that takes in two objects, and returns a single object with all the key value pairs from each object. The function should return a new object. You can assume both objects will have unique key value pairs.',
+    testScriptCode: testScripts.combineTwoObjsTestScript,
+    startingCode: 'const combineTwoObjs = (obj1, obj2) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+    testCriteria: testCriteria.combineTwoObjsTestCriteria,
     problemExplanation:
-      'For this problem, you will first need to clone the object. Then insert the key value pair in the object you clone.',
-    hints: [''],
-    solutionCode: '',
+      'There a different ways to do this problem, but the easiest will be using some of the ES6 syntax of working with objects.',
+    hints: ['Make sure to return a new object.', 'Using the spread syntax will make this problem a lot easier.'],
+    solutionCode: solutions.combineTwoObjsSolution,
   },
 
   'prime-number': {

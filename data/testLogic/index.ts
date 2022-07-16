@@ -9,7 +9,7 @@ import { addNumbersInRangeTestScript, addNumbersInRangeTestCriteria } from './te
 import { checkObjectKeysTestScript, checkObjectKeysTestCriteria } from './testScripts/checkObjectKeys';
 import { longestWordTestScript, longestWordTestCriteria } from './testScripts/longestWord';
 import { fizzBuzzTestScript, fizzBuzzTestCriteria } from './testScripts/fizzBuzz';
-import { cloneAndInsertTestScript, cloneAndInsertTestCriteria } from './testScripts/cloneAndInsert';
+import { combineTwoObjsTestScript, combineTwoObjsTestCriteria } from './testScripts/combineTwoObjs';
 import { primeNumberTestScript, primeNumberTestCriteria } from './testScripts/primeNumber';
 import { sortArrayIntsTestScript, sortArrayIntsTestCriteria } from './testScripts/sortArrayInts';
 import { removeDuplicatesArrTestScript, removeDuplicatesArrTestCriteria } from './testScripts/removeDuplicatesArr';
@@ -44,7 +44,7 @@ export const testCriteria = {
   addNumbersInRangeTestCriteria,
   checkObjectKeysTestCriteria,
   longestWordTestCriteria,
-  cloneAndInsertTestCriteria,
+  combineTwoObjsTestCriteria,
   primeNumberTestCriteria,
   fizzBuzzTestCriteria,
   sortArrayIntsTestCriteria,
@@ -78,7 +78,7 @@ export const testScripts = {
   addNumbersInRangeTestScript,
   checkObjectKeysTestScript,
   longestWordTestScript,
-  cloneAndInsertTestScript,
+  combineTwoObjsTestScript,
   primeNumberTestScript,
   fizzBuzzTestScript,
   sortArrayIntsTestScript,
