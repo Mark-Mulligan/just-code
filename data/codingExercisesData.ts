@@ -282,6 +282,21 @@ export const codingExercisesData: CodingExerciseData = {
     ],
     solutionCode: solutions.findTheIndexSolution,
   },
+
+  'largest-result': {
+    title: 'Largest Result',
+    description:
+      'Given 2 numbers return the largest possible value of those two numbers when doing a standard arithmetic process (add, subtract, multiply, divide).',
+    instructions:
+      'Create a function called largestResult, that takes in two numbers and returns the largest value from those two numbers achieved through either addition, subtraction, division, or multiplication.',
+    testScriptCode: '',
+    startingCode: 'const largestResult = (timeStr) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+    testCriteria: [''],
+    problemExplanation: '',
+    hints: [''],
+    solutionCode: '',
+  },
+
   'military-time-conversion': {
     title: 'Military Time Conversion',
     description: 'Convert a given military time to standard time with AM/PM.',
