@@ -24,6 +24,7 @@ import { sortTheDaysTestScript, sortTheDaysTestCriteria } from './testScripts/so
 import { historicalDayTestScript, historicalDayTestCriteria } from './testScripts/historicalDay';
 import { alphabetizeNamesTestScript, alphabetizeNamesTestCriteria } from './testScripts/alphabetizeNames';
 import { findTheIndex1TestScript, findTheIndex1TestCriteria } from './testScripts/findTheIndex';
+import { largestResultTestScript, largestResultTestCriteria } from './testScripts/largestResult';
 import { compareTwoObjsTestScript, compareTwoObjsTestCriteria } from './testScripts/compareTwoObjs';
 import { thanksgivingDateTestScript, thanksgivingDateTestCriteria } from './testScripts/thanksgivingDate';
 import { combineTwoArraysTestScript, combineTwoArraysTestCriteria } from './testScripts/combineTwoArrays';
@@ -57,6 +58,7 @@ export const testCriteria = {
   calculateTheTipTestCriteria,
   sortTheDaysTestCriteria,
   findTheIndex1TestCriteria,
+  largestResultTestCriteria,
   compareTwoObjsTestCriteria,
   thanksgivingDateTestCriteria,
   combineTwoArraysTestCriteria,
@@ -91,6 +93,7 @@ export const testScripts = {
   historicalDayTestScript,
   alphabetizeNamesTestScript,
   findTheIndex1TestScript,
+  largestResultTestScript,
   compareTwoObjsTestScript,
   thanksgivingDateTestScript,
   combineTwoArraysTestScript,

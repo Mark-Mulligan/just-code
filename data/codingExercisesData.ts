@@ -289,12 +289,16 @@ export const codingExercisesData: CodingExerciseData = {
       'Given 2 numbers return the largest possible value of those two numbers when doing a standard arithmetic process (add, subtract, multiply, divide).',
     instructions:
       'Create a function called largestResult, that takes in two numbers and returns the largest value from those two numbers achieved through either addition, subtraction, division, or multiplication.',
-    testScriptCode: '',
+    testScriptCode: testScripts.largestResultTestScript,
     startingCode: 'const largestResult = (timeStr) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
-    testCriteria: [''],
-    problemExplanation: '',
-    hints: [''],
-    solutionCode: '',
+    testCriteria: testCriteria.largestResultTestCriteria,
+    problemExplanation:
+      'For this problem, you will need to use the most common arithmetic expressions in javascript. You will need to check all the possible values from these expressions to see which yield the largest result.',
+    hints: [
+      'Make sure to check all possible arithmetic expressions.',
+      `Some expressions will yield different answers depending on the order they are called (for example num1 / num2 may be different than num2 / num1).`,
+    ],
+    solutionCode: solutions.largestResultSolution,
   },
 
   'military-time-conversion': {

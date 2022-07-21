@@ -11,6 +11,7 @@ import { sortArrIntsSolution } from './sortArrInts';
 import { historicalDaySolution } from './historicalDay';
 import { alphabetizeNamesSolution } from './alphabetizeNames';
 import { findTheIndexSolution } from './findTheIndex';
+import { largestResultSolution } from './largestResult';
 import { militaryTimeConversionSolution } from './militaryTimeConversion';
 import { sortTheDatesSolution } from './sortTheDates';
 import { countTheVowelsSolution } from './countTheVowels';
@@ -48,6 +49,7 @@ export const solutions = {
   historicalDaySolution,
   alphabetizeNamesSolution,
   findTheIndexSolution,
+  largestResultSolution,
   militaryTimeConversionSolution,
   sortTheDatesSolution,
   countTheVowelsSolution,
