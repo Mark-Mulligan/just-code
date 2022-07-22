@@ -183,6 +183,19 @@ export const codingExercisesData: CodingExerciseData = {
     solutionCode: solutions.fizzBuzzSolution,
   },
 
+  'update-user': {
+    title: 'Update User',
+    description: 'Update a user in given collection.',
+    instructions:
+      'Create a function called updateUser that takes in two arguments, an array of user objects and an object with a userId and updated username. Users will be objects that have a userId and username.',
+    testScriptCode: '',
+    startingCode: '',
+    testCriteria: [''],
+    problemExplanation: '',
+    hints: [''],
+    solutionCode: '',
+  },
+
   'combine-two-objs': {
     title: 'Combine Two Objects',
     description: 'Create a function that combines two objects into a single one.',
