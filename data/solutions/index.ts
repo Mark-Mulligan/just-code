@@ -30,6 +30,7 @@ import { longestWordSolution } from './longestWord';
 import { thanksgivingDateSolution } from './thanksgivingDate';
 import { addNumbersInRangeSolution } from './addNumbersInRange';
 import { combineTwoObjsSolution } from './combineTwoObjs';
+import { checkForDuplcatesSolution } from './checkForDuplicates';
 
 export const solutions = {
   sumTwoIntSolution,
@@ -50,6 +51,7 @@ export const solutions = {
   alphabetizeNamesSolution,
   findTheIndexSolution,
   largestResultSolution,
+  checkForDuplcatesSolution,
   militaryTimeConversionSolution,
   sortTheDatesSolution,
   countTheVowelsSolution,

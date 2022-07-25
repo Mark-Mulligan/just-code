@@ -13,6 +13,7 @@ import { combineTwoObjsTestScript, combineTwoObjsTestCriteria } from './testScri
 import { primeNumberTestScript, primeNumberTestCriteria } from './testScripts/primeNumber';
 import { sortArrayIntsTestScript, sortArrayIntsTestCriteria } from './testScripts/sortArrayInts';
 import { removeDuplicatesArrTestScript, removeDuplicatesArrTestCriteria } from './testScripts/removeDuplicatesArr';
+import { checkForDuplicatesTestScript, checkForDuplicatesTestCriteria } from './testScripts/checkForDuplicates';
 import {
   militaryTimeConversionTestScript,
   militaryTimeConversionTestCriteria,
@@ -50,6 +51,7 @@ export const testCriteria = {
   fizzBuzzTestCriteria,
   sortArrayIntsTestCriteria,
   removeDuplicatesArrTestCriteria,
+  checkForDuplicatesTestCriteria,
   militaryTimeConversionTestCriteria,
   historicalDayTestCriteria,
   alphabetizeNamesTestCriteria,
@@ -85,6 +87,7 @@ export const testScripts = {
   fizzBuzzTestScript,
   sortArrayIntsTestScript,
   removeDuplicatesArrTestScript,
+  checkForDuplicatesTestScript,
   militaryTimeConversionTestScript,
   sortTheDatesTestScript,
   countTheVowelsTestScript,
