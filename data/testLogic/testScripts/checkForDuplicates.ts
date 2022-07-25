@@ -2,41 +2,41 @@ import { createTestScriptString } from '../../../utils/testScripts';
 import { TestResult } from '../../../types';
 import { extractTestCriteria } from '../../../utils/testScripts';
 
-const checkForDuplicates = (arr: string[] | number[]) => {
+const hasDuplicateValues = (arr: string[] | number[]) => {
   return true;
 };
 
 const checkForDuplicatesTests = () => {
   const testResults: TestResult[] = [];
   testResults.push({
-    test: 'User created a function checkForDuplicates.',
-    passed: typeof checkForDuplicates === 'function',
-    result: typeof checkForDuplicates,
+    test: 'User created a function hasDuplicateValues.',
+    passed: typeof hasDuplicateValues === 'function',
+    result: typeof hasDuplicateValues,
   });
   testResults.push({
     test: 'Function returns a boolean.',
-    passed: typeof checkForDuplicates([1, 2, 3, 4, 5, 1]) === 'boolean',
-    result: typeof checkForDuplicates([1, 2, 3, 4, 5, 1]),
+    passed: typeof hasDuplicateValues([1, 2, 3, 4, 5, 1]) === 'boolean',
+    result: typeof hasDuplicateValues([1, 2, 3, 4, 5, 1]),
   });
   testResults.push({
-    test: 'checkForDuplicates([1, 2, 3, 4, 5, 1]) return true',
-    passed: checkForDuplicates([1, 2, 3, 4, 5, 1]) === true,
-    result: checkForDuplicates([1, 2, 3, 4, 5, 1]),
+    test: 'hasDuplicateValues([1, 2, 3, 4, 5, 1]) returns true',
+    passed: hasDuplicateValues([1, 2, 3, 4, 5, 1]) === true,
+    result: JSON.stringify(hasDuplicateValues([1, 2, 3, 4, 5, 1])),
   });
   testResults.push({
-    test: 'checkForDuplicates(10, 12, 31, 4, 25, -3]) return false',
-    passed: checkForDuplicates([10, 12, 31, 4, 25, -3]) === false,
-    result: checkForDuplicates([10, 12, 31, 4, 25, -3]),
+    test: 'hasDuplicateValues(10, 12, 31, 4, 25, -3]) returns false',
+    passed: hasDuplicateValues([10, 12, 31, 4, 25, -3]) === false,
+    result: JSON.stringify(hasDuplicateValues([10, 12, 31, 4, 25, -3])),
   });
   testResults.push({
-    test: `checkForDuplicates(['cheese', 'cake', 'cookies', 'fries']) return false`,
-    passed: checkForDuplicates(['cheese', 'cake', 'cookies', 'fries']) === false,
-    result: checkForDuplicates(['cheese', 'cake', 'cookies', 'fries']),
+    test: `hasDuplicateValues(['cheese', 'cake', 'cookies', 'fries']) returns false`,
+    passed: hasDuplicateValues(['cheese', 'cake', 'cookies', 'fries']) === false,
+    result: JSON.stringify(hasDuplicateValues(['cheese', 'cake', 'cookies', 'fries'])),
   });
   testResults.push({
-    test: `checkForDuplicates(['test', 'testing', 'test', 'testing', 'tested']) return true`,
-    passed: checkForDuplicates(['test', 'testing', 'test', 'testing', 'tested']) === true,
-    result: checkForDuplicates(['test', 'testing', 'test', 'testing', 'tested']),
+    test: `hasDuplicateValues(['test', 'testing', 'test', 'testing', 'tested']) returns true`,
+    passed: hasDuplicateValues(['test', 'testing', 'test', 'testing', 'tested']) === true,
+    result: JSON.stringify(hasDuplicateValues(['test', 'testing', 'test', 'testing', 'tested'])),
   });
 
   return testResults;

@@ -329,7 +329,7 @@ export const codingExercisesData: CodingExerciseData = {
       'You can use "===" to compare two primitive values for equality.',
       'As soon you find a duplicate value, you can return the result without having to continue going through the array',
     ],
-    solutionCode: solutions.checkForDuplcatesSolution,
+    solutionCode: solutions.checkForDuplicatesSolution,
   },
 
   'military-time-conversion': {
