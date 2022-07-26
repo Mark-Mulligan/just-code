@@ -261,6 +261,19 @@ export const codingExercisesData: CodingExerciseData = {
     solutionCode: solutions.historicalDaySolution,
   },
 
+  'phone-number-checker': {
+    title: 'Phone Number Checker',
+    description: 'Create a function that reads a phone number and determines if it is in a valid format.',
+    instructions:
+      'Create a function called validPhoneNum that takes in a string (phoneNum) and returns boolean of whether or not the provided phone number is in a valid format. Valid formats are: XXXXXXXXXX, XXX XXX XXXX, XXX-XXX-XXXX, (XXX) XXX-XXXX, (XXX)-XXX-XXXX. Phone numbers will not have a 1 extension on the front so should have 10 digits.',
+    testScriptCode: '',
+    startingCode: 'const validPhoneNum = (phoneNum) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
+    testCriteria: [''],
+    problemExplanation: '',
+    hints: [''],
+    solutionCode: '',
+  },
+
   'alphabetize-names': {
     title: 'Alphabetize Names',
     description: 'Create a function that returns a list of name objects alphabetized.',
