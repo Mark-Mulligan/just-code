@@ -9,6 +9,7 @@ import { fizzBuzzSolution } from './fizzBuzz';
 import { primeNumberSolution } from './primeNumber';
 import { sortArrIntsSolution } from './sortArrInts';
 import { historicalDaySolution } from './historicalDay';
+import { phoneNumberCheckerSolution } from './phoneNumberChecker';
 import { alphabetizeNamesSolution } from './alphabetizeNames';
 import { findTheIndexSolution } from './findTheIndex';
 import { largestResultSolution } from './largestResult';
@@ -48,6 +49,7 @@ export const solutions = {
   primeNumberSolution,
   sortArrIntsSolution,
   historicalDaySolution,
+  phoneNumberCheckerSolution,
   alphabetizeNamesSolution,
   findTheIndexSolution,
   largestResultSolution,

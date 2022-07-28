@@ -275,7 +275,7 @@ export const codingExercisesData: CodingExerciseData = {
       'Regex would be useful for this problem',
       `If you don't want to use regex, then you will need to write a way to analyze each character in the provided string.`,
     ],
-    solutionCode: '',
+    solutionCode: solutions.phoneNumberCheckerSolution,
   },
 
   'alphabetize-names': {
