@@ -266,11 +266,15 @@ export const codingExercisesData: CodingExerciseData = {
     description: 'Create a function that reads a phone number and determines if it is in a valid format.',
     instructions:
       'Create a function called validPhoneNum that takes in a string (phoneNum) and returns boolean of whether or not the provided phone number is in a valid format. Valid formats are: XXXXXXXXXX, XXX XXX XXXX, XXX-XXX-XXXX, (XXX) XXX-XXXX, (XXX)-XXX-XXXX. Phone numbers will not have a 1 extension on the front so should have 10 digits.',
-    testScriptCode: '',
+    testScriptCode: testScripts.phoneNumberCheckerTestScript,
     startingCode: 'const validPhoneNum = (phoneNum) => {\n  // Add Code Below\n\n\n  // Add Code Above\n}',
-    testCriteria: [''],
-    problemExplanation: '',
-    hints: [''],
+    testCriteria: testCriteria.phoneNumberCheckerTestCriteria,
+    problemExplanation:
+      'For this problem, you will need to check for a couple of things. First, make sure the input string has 10 digits. Then make sure those 10 digits are separated by an acceptable characters or all together. Remember, valid formats include: XXXXXXXXXX, XXX XXX XXXX, XXX-XXX-XXXX, (XXX) XXX-XXXX, (XXX)-XXX-XXXX',
+    hints: [
+      'Regex would be useful for this problem',
+      `If you don't want to use regex, then you will need to write a way to analyze each character in the provided string.`,
+    ],
     solutionCode: '',
   },
 

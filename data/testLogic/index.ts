@@ -23,6 +23,7 @@ import { countTheVowelsTestScript, countTheVowelsTestCriteria } from './testScri
 import { calculateTheTipTestScript, calculateTheTipTestCriteria } from './testScripts/calculateTheTip';
 import { sortTheDaysTestScript, sortTheDaysTestCriteria } from './testScripts/sortTheDays';
 import { historicalDayTestScript, historicalDayTestCriteria } from './testScripts/historicalDay';
+import { phoneNumberCheckerTestScript, phoneNumberCheckerTestCriteria } from './testScripts/phoneNumberChecker';
 import { alphabetizeNamesTestScript, alphabetizeNamesTestCriteria } from './testScripts/alphabetizeNames';
 import { findTheIndex1TestScript, findTheIndex1TestCriteria } from './testScripts/findTheIndex';
 import { largestResultTestScript, largestResultTestCriteria } from './testScripts/largestResult';
@@ -54,6 +55,7 @@ export const testCriteria = {
   checkForDuplicatesTestCriteria,
   militaryTimeConversionTestCriteria,
   historicalDayTestCriteria,
+  phoneNumberCheckerTestCriteria,
   alphabetizeNamesTestCriteria,
   sortTheDatesTestCriteria,
   countTheVowelsTestCriteria,
@@ -94,6 +96,7 @@ export const testScripts = {
   calculateTheTipTestScript,
   sortTheDaysTestScript,
   historicalDayTestScript,
+  phoneNumberCheckerTestScript,
   alphabetizeNamesTestScript,
   findTheIndex1TestScript,
   largestResultTestScript,
