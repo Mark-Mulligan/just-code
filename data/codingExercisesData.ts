@@ -183,6 +183,7 @@ export const codingExercisesData: CodingExerciseData = {
     solutionCode: solutions.fizzBuzzSolution,
   },
 
+  // Need to re-think this
   // 'update-user': {
   //   title: 'Update User',
   //   description: 'Update a user in given collection.',
