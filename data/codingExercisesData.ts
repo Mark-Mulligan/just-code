@@ -184,6 +184,7 @@ export const codingExercisesData: CodingExerciseData = {
   },
 
   // Need to re-think this
+  // come up with a different problem
   // 'update-user': {
   //   title: 'Update User',
   //   description: 'Update a user in given collection.',
