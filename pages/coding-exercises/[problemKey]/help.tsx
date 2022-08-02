@@ -1,5 +1,6 @@
 import { codingExercisesData } from '../../../data/codingExercisesData';
 import { useState } from 'react';
+import Head from 'next/head';
 import type { NextPage, GetStaticProps, GetStaticPaths } from 'next';
 import { Button, Container } from 'semantic-ui-react';
 import { CodingExerciseStaticPath, IParams, CodingExerciseOverview } from '../../../types';
@@ -19,29 +20,36 @@ const PracticeProblemHelp: NextPage<PracticeProblemHelpProps> = ({ codingExercis
   };
 
   return (
-    <Container className={styles.helpContainer}>
-      <h1 className="text-center">{codingExerciseData.title}</h1>
-      <h2>Problem Explanation</h2>
-      <p>{codingExerciseData.problemExplanation}</p>
-      <h2>Hints</h2>
-      <ul>
-        {codingExerciseData.hints?.map((hint, index) => {
-          return <li key={`hint-${index}`}>{hint}</li>;
-        })}
-      </ul>
-      <h2>Solution</h2>
-      {showSolution ? (
-        <CodeMirror
-          theme={'dark'}
-          value={codingExerciseData.solutionCode}
-          height="auto"
-          editable={false}
-          extensions={[javascript({ jsx: true })]}
-        />
-      ) : (
-        <Button onClick={handleShowSolution}>Show Solution</Button>
-      )}
-    </Container>
+    <>
+      <Head>
+        <title>Just Code - {codingExerciseData.title} Help</title>
+        <meta name="description" content={codingExerciseData.problemExplanation} />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Container className={styles.helpContainer}>
+        <h1 className="text-center">{codingExerciseData.title}</h1>
+        <h2>Problem Explanation</h2>
+        <p>{codingExerciseData.problemExplanation}</p>
+        <h2>Hints</h2>
+        <ul>
+          {codingExerciseData.hints?.map((hint, index) => {
+            return <li key={`hint-${index}`}>{hint}</li>;
+          })}
+        </ul>
+        <h2>Solution</h2>
+        {showSolution ? (
+          <CodeMirror
+            theme={'dark'}
+            value={codingExerciseData.solutionCode}
+            height="auto"
+            editable={false}
+            extensions={[javascript({ jsx: true })]}
+          />
+        ) : (
+          <Button onClick={handleShowSolution}>Show Solution</Button>
+        )}
+      </Container>
+    </>
   );
 };
 
