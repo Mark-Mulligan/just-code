@@ -9,7 +9,10 @@ const Home: NextPage = () => {
     <div>
       <Head>
         <title>Just Code</title>
-        <meta name="description" content="Simple, straightfoward javascript practice." />
+        <meta
+          name="description"
+          content="Series of javascript coding challenges covering a wide range of algorithms and basic programming skills."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.heroWrapper}>
