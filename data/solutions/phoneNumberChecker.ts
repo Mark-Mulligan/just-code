@@ -5,6 +5,6 @@ export const phoneNumberCheckerSolution = `const validPhoneNum = (phoneNum) => {
   }
   
   // works for all scenarios other than 10 digits only
-  let phoneNumberRegex = /^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/;
+  let phoneNumberRegex = ${/^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/};
   return phoneNumberRegex.test(phoneNum);
 }`;

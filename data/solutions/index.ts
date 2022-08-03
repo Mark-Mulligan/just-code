@@ -32,6 +32,7 @@ import { thanksgivingDateSolution } from './thanksgivingDate';
 import { addNumbersInRangeSolution } from './addNumbersInRange';
 import { combineTwoObjsSolution } from './combineTwoObjs';
 import { checkForDuplicatesSolution } from './checkForDuplicates';
+import { luckyNumberThreeSolution } from './luckyNumberThree';
 
 export const solutions = {
   sumTwoIntSolution,
@@ -45,6 +46,7 @@ export const solutions = {
   addNumbersInRangeSolution,
   longestWordSolution,
   fizzBuzzSolution,
+  luckyNumberThreeSolution,
   combineTwoObjsSolution,
   primeNumberSolution,
   sortArrIntsSolution,

@@ -9,6 +9,7 @@ import { addNumbersInRangeTestScript, addNumbersInRangeTestCriteria } from './te
 import { checkObjectKeysTestScript, checkObjectKeysTestCriteria } from './testScripts/checkObjectKeys';
 import { longestWordTestScript, longestWordTestCriteria } from './testScripts/longestWord';
 import { fizzBuzzTestScript, fizzBuzzTestCriteria } from './testScripts/fizzBuzz';
+import { luckyNumberThreeTestScript, luckyNumberThreeTestCriteria } from './testScripts/luckyNumberThree';
 import { combineTwoObjsTestScript, combineTwoObjsTestCriteria } from './testScripts/combineTwoObjs';
 import { primeNumberTestScript, primeNumberTestCriteria } from './testScripts/primeNumber';
 import { sortArrayIntsTestScript, sortArrayIntsTestCriteria } from './testScripts/sortArrayInts';
@@ -50,6 +51,7 @@ export const testCriteria = {
   combineTwoObjsTestCriteria,
   primeNumberTestCriteria,
   fizzBuzzTestCriteria,
+  luckyNumberThreeTestCriteria,
   sortArrayIntsTestCriteria,
   removeDuplicatesArrTestCriteria,
   checkForDuplicatesTestCriteria,
@@ -87,6 +89,7 @@ export const testScripts = {
   combineTwoObjsTestScript,
   primeNumberTestScript,
   fizzBuzzTestScript,
+  luckyNumberThreeTestScript,
   sortArrayIntsTestScript,
   removeDuplicatesArrTestScript,
   checkForDuplicatesTestScript,
