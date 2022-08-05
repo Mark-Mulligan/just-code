@@ -64,10 +64,12 @@ const PracticeProblem: NextPage<PracticeProblemProps> = ({ codingExerciseData })
       });
   };
 
+  let title = `Just Code - ${codingExerciseData.title}`;
+
   return (
     <>
       <Head>
-        <title>Just Code - {codingExerciseData.title}</title>
+        <title>{title}</title>
         <meta name="description" content={codingExerciseData.description} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
