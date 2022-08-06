@@ -41,7 +41,7 @@ const CodingExercises: NextPage<CodingExercisesProps> = ({ codingExercisesOvervi
     <>
       <Head>
         <title>Just Code - Coding Exercises</title>
-        <meta name="description" content="Javascript practice problems" />
+        <meta name="description" content="Javascript practice problems." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container className={styles.container}>
